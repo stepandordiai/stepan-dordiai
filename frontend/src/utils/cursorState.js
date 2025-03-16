@@ -27,3 +27,13 @@ export function showText() {
         }, 100 * index);
     });
 }
+
+export function interactCursor() {
+    document.querySelector("#custom-cursor").classList.add("cursor--interact");
+}
+
+export function removeInteractCursor() {
+    document
+        .querySelector("#custom-cursor")
+        .classList.remove("cursor--interact");
+}

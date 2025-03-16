@@ -1,3 +1,5 @@
+@use "./../../mixins" as *;
+
 #custom-cursor {
     position: fixed;
     top: -100px;
@@ -5,14 +7,15 @@
     display: none;
     justify-content: center;
     align-items: center;
-    background: var(--txt-clr);
+    background: var(--bg-semi-tp-50);
+    border: 2.5px solid var(--txt-clr);
+    @include glass-effect;
     width: 10px;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     pointer-events: none;
-    transition: width 0.5s, height 0.5s, top 0.1s, left 0.1s,
-        background-color 0.3s;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
 }
 
 .text {
@@ -28,7 +31,7 @@
         left: 50%;
         transform-origin: 0px 75px;
         opacity: 0;
-        color: var(--bg-clr);
+        color: var(--txt-clr);
         font-weight: 300;
     }
 }
@@ -47,4 +50,8 @@
 
 .cursor--active {
     width: 150px !important;
+}
+
+.cursor--interact {
+    width: 20px !important;
 }

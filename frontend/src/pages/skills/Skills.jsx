@@ -5,13 +5,11 @@ import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Skills.scss";
 
 function Skills() {
-    const pageTitle = "Skills";
-
     return (
         <>
             <section className="skills js-skills">
                 <Helmet>
-                    <title>{pageTitle}</title>
+                    <title>SKILLS</title>
                 </Helmet>
                 <div className="skills-grid">
                     {skillsData.map((skill) => {

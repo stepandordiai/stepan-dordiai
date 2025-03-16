@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import img1 from "./images/css3.svg";
 import img2 from "./images/html5.svg";
 import img3 from "./images/figma.svg";
@@ -12,8 +13,6 @@ import img8 from "./images/react.svg";
 import "./MemoryCardGame.scss";
 
 const MemoryCardGame = () => {
-    const pageTitle = "Memory Card Game";
-
     const section = useRef(null);
 
     useEffect(() => {
@@ -257,13 +256,21 @@ const MemoryCardGame = () => {
         <>
             <section className="game-1-section">
                 <Helmet>
-                    <title>{pageTitle}</title>
+                    <title>MEMORY CARD GAME</title>
                 </Helmet>
-                <NavLink className="game-one__back-btn" to="/games">
+                <NavLink
+                    onMouseEnter={interactCursor}
+                    onMouseLeave={removeInteractCursor}
+                    onMouseDown={removeInteractCursor}
+                    onMouseUp={interactCursor}
+                    onClick={removeInteractCursor}
+                    className="game-one__back-btn"
+                    to="/games"
+                >
                     Back
                 </NavLink>
                 <p className="game-one__title-result js-game-one__title-result">
-                    Memory Card Game
+                    MEMORY CARD GAME
                 </p>
                 <p className="game-one__lives">
                     Lives: <span className="js-lives-count"></span>
@@ -272,12 +279,20 @@ const MemoryCardGame = () => {
                     <section className="cards-grid" ref={section}></section>
                     <div className="game-one__btn-container">
                         <button
+                            onMouseEnter={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
                             className="game-one__btn"
                             onClick={() => stopGameOne("Memory Card Game")}
                         >
                             Stop
                         </button>
                         <button
+                            onMouseEnter={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
                             className="game-one__btn js-inactive-btn"
                             onClick={() => playGameOne("Memory Card Game")}
                         >

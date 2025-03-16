@@ -35,11 +35,6 @@ function Project({
             project.addEventListener("touchstart", () => {
                 projectVideos[index].play();
             });
-
-            //    project.addEventListener("touchend", () => {
-            //        projectVideos[index].pause();
-            //        projectVideos[index].currentTime = 0;
-            //    });
         });
     }, []);
 
@@ -52,23 +47,24 @@ function Project({
             <NavLink
                 onClick={makeCursorNormal}
                 className="project__link"
-                to={`/project-page/${index}`}
+                to={`/project-page/${id}`}
             ></NavLink>
-            <p className="project__number">{id < 10 ? `0${id}` : id}</p>
+            <p className="project__number">
+                {index + 1 < 10 ? `0${index + 1}` : index + 1}
+            </p>
             <div className="right-side">
                 <div>
                     <h3 className="project__title">{title}</h3>
-                    <p className="project__production">{production}</p>
+                    {production && (
+                        <p className="project__production">{production}</p>
+                    )}
                 </div>
                 <video
                     className="project__video js-project__video"
-                    // autoPlay={true}
                     loop
                     muted
                     poster={projectVideoPoster}
                     playsInline
-
-                    // controls={false}
                 >
                     <source src={projectVideo} type="video/mp4" />
                     Your browser does not support the video tag. Please try

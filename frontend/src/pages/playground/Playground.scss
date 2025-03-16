@@ -15,52 +15,42 @@
 }
 
 .pg-project {
-    height: 110px;
+    min-height: 100px;
     width: 100%;
     @include flex-between;
     flex-shrink: 0;
     background: var(--semi-tp-05);
-    padding: 5px;
+    padding: 0 25px;
     transition: background-color 0.3s;
-
-    &:hover {
-        background: var(--semi-tp-10);
-    }
 }
 
 .pg-project__right-side {
     @include flex-center;
     column-gap: 25px;
+
     div {
         height: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-end;
+        @include flex-evenly-end;
         flex-direction: column;
     }
-    video {
-        height: 100px;
-    }
 }
 
-.pg-project__number {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--txt-clr);
-}
-
+.pg-project__number,
 .pg-project__title {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--txt-clr);
+    transition: all 0.3s;
 }
 
 .pg-project__links {
     @include flex-center;
     column-gap: 25px;
+
     a {
         color: var(--txt-clr);
-        transition: opacity 0.3s;
+        transition: all 0.3s;
+
         &:hover {
             opacity: 0.5;
         }
@@ -71,7 +61,6 @@
     .pg {
         @include top-right-bottom-left(0, 50px, 0, 50px);
         padding: 50px 0;
-        scroll-snap-type: y mandatory;
     }
 }
 
@@ -79,43 +68,5 @@
     .pg {
         padding: 25px 0;
         @include top-right-bottom-left(0, 25px, 0, 25px);
-    }
-
-    .pg-project {
-        height: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-shrink: 0;
-        padding: 5px;
-        scroll-snap-align: center;
-    }
-
-    .pg-project__right-side {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column-reverse;
-        column-gap: 25px;
-        width: 100%;
-        height: 70%;
-
-        div {
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            flex-direction: column;
-            padding: 5px;
-        }
-
-        video {
-            height: auto;
-            align-self: center;
-            width: 100%;
-        }
-    }
-
-    .pg-project__number {
-        padding: 5px;
     }
 }

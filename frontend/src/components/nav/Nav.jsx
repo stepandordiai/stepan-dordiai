@@ -3,6 +3,7 @@ import BurgerBtn from "../burgerBtn/BurgerBtn";
 import { isTouchDevice } from "../../utils/isTouchDevice";
 import portfolioData from "../../data/portfolioData";
 import pgData from "./../../data/pgData.json";
+import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Nav.scss";
 
 function Nav() {
@@ -52,6 +53,10 @@ function Nav() {
             <ul className="nav__list">
                 <li>
                     <NavLink
+                        onMouseEnter={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -62,6 +67,10 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -72,6 +81,10 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -82,6 +95,10 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -95,6 +112,10 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -105,6 +126,10 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -116,6 +141,10 @@ function Nav() {
                 </li>
                 <li>
                     <NavLink
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
                         className={({ isActive }) =>
                             isActive ? activeLink : inactiveLink
                         }
@@ -129,6 +158,10 @@ function Nav() {
                 <ul className="nav__footer-list">
                     <li>
                         <a
+                            onMouseOver={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
                             href="https://github.com/stepandordiai"
                             target="_blank"
                             title="GitHub"
@@ -138,6 +171,10 @@ function Nav() {
                     </li>
                     <li>
                         <a
+                            onMouseOver={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
                             href="https://www.linkedin.com/in/stepan-dordiai"
                             target="_blank"
                             title="LinkedIn"
@@ -147,6 +184,10 @@ function Nav() {
                     </li>
                     <li>
                         <a
+                            onMouseOver={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
                             href="https://t.me/heeeyooo"
                             target="_blank"
                             title="Telegram"

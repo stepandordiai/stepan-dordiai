@@ -9,10 +9,40 @@
     align-items: center;
 }
 
+@mixin flex-center-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flex-center-end {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 @mixin flex-between {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin flex-between-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@mixin flex-evenly-end {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+@mixin flex-end-start {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 @mixin top-right-bottom-left($top, $right, $bottom, $left) {

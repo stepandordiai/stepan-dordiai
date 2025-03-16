@@ -3,35 +3,17 @@
 .contact {
     position: fixed;
     @include top-right-bottom-left(100px, 100px, 100px, 100px);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    @include flex-between-end;
     flex-direction: column;
 }
 
 .contacts {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    @include flex-center-end;
     flex-direction: column;
-    // row-gap: 50px;
-}
-
-.mail,
-.tel {
-    @include flex-center;
-    column-gap: 5px;
-    span {
-        font-size: 1rem;
-        font-weight: 300;
-        color: var(--txt-clr);
-    }
 }
 
 .mail__link,
-.tel__link,
-.mail__copy-btn,
-.tel__copy-btn {
+.tel__link {
     font-size: 1rem;
     color: var(--txt-clr);
     font-weight: 300;
@@ -41,23 +23,12 @@
     }
 }
 
-.mail__copy-btn .dublicate,
-.tel__copy-btn .dublicate {
-    display: none;
-}
-
 .socials {
-    // @include flex-between;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    @include flex-center-end;
     flex-direction: column;
-    // row-gap: 5px;
-    // width: 50%;
 }
 
 .socials a {
-    // font-size: clamp(20px, 3vw, 24px);
     color: var(--txt-clr);
     transition: opacity 0.3s;
     &:hover {
@@ -68,12 +39,5 @@
 @media (max-width: 1000px) {
     .contact {
         @include top-right-bottom-left(50px, 50px, 50px, 50px);
-    }
-    .contacts {
-        // row-gap: 25px;
-    }
-
-    .socials {
-        // width: 100%;
     }
 }

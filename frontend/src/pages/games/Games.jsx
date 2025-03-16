@@ -2,11 +2,10 @@ import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
 import { isTouchDevice } from "../../utils/isTouchDevice";
 import { useEffect } from "react";
+import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Games.scss";
 
 const Games = () => {
-    const pageTile = "Games";
-
     useEffect(() => {
         // I use useEffect to remove scroll to see the tilt effect on touch devices
         if (!isTouchDevice()) {
@@ -90,7 +89,7 @@ const Games = () => {
         <>
             <section className="games">
                 <Helmet>
-                    <title>{pageTile}</title>
+                    <title>GAMES</title>
                 </Helmet>
                 <div
                     className="game-wrapper"
@@ -123,6 +122,11 @@ const Games = () => {
                             </div>
                         </div>
                         <NavLink
+                            onMouseEnter={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
+                            onClick={removeInteractCursor}
                             className="game-container__start-btn"
                             to="/memory-card-game"
                         >
@@ -155,23 +159,34 @@ const Games = () => {
                             >
                                 <div className="scroller__inner">
                                     <p className="game-container__title">
-                                        Space Invaders Game
+                                        Coming soon
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <NavLink
-                            className="game-container__start-btn"
-                            to="/invaders-game"
-                        >
+                        <button className="game-container__start-btn">
                             Start
-                        </NavLink>
+                        </button>
                     </div>
                 </div>
             </section>
             <div className="games-section__pagination">
-                <span onClick={scrollPag1} className="pag1 active"></span>
-                <span onClick={scrollPag2} className="pag2"></span>
+                <span
+                    onMouseEnter={interactCursor}
+                    onMouseLeave={removeInteractCursor}
+                    onMouseDown={removeInteractCursor}
+                    onMouseUp={interactCursor}
+                    onClick={scrollPag1}
+                    className="pag1 active"
+                ></span>
+                <span
+                    onMouseEnter={interactCursor}
+                    onMouseLeave={removeInteractCursor}
+                    onMouseDown={removeInteractCursor}
+                    onMouseUp={interactCursor}
+                    onClick={scrollPag2}
+                    className="pag2"
+                ></span>
             </div>
         </>
     );

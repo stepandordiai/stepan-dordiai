@@ -25,12 +25,17 @@
         @include top-right-bottom-left(0, 50px, 0, 50px);
         padding: 50px 0;
     }
+
     .skills-grid {
         grid-template-columns: repeat(7, 1fr);
     }
 }
 
 @media (max-width: 800px) {
+    .skills {
+        @include top-right-bottom-left(0, 25px, 0, 25px);
+        padding: 25px 0;
+    }
     .skills-grid {
         grid-template-columns: repeat(5, 1fr);
     }

@@ -34,7 +34,6 @@
         width: 5px;
         height: 5px;
         background: var(--semi-tp-50);
-        cursor: pointer;
         transition: all 0.3s;
     }
 }
@@ -122,6 +121,10 @@
     @include top-right-bottom-left("", 10px, 10px, "");
     color: var(--txt-clr);
     font-size: 1.5rem;
+}
+
+.game-wrapper:nth-last-child(1) .game-container__start-btn {
+    opacity: 0.5;
 }
 
 .inactive-btn {

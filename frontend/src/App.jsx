@@ -17,7 +17,6 @@ import CustomCorners from "./components/customCorners/CustomCorners";
 import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
 // import CubeBackground from "./components/cubeBackground/CubeBackground";
 import ProjectPage from "./pages/projectPage/ProjectPage";
-import InvadersGame from "./pages/invadersGame/InvadersGame";
 import "./App.scss";
 
 function App() {
@@ -51,7 +50,6 @@ function App() {
                         path="/memory-card-game"
                         element={<MemoryCardGame />}
                     />
-                    <Route path="/invaders-game" element={<InvadersGame />} />
                 </Routes>
                 <Footer />
                 {/* <CubeBackground /> */}

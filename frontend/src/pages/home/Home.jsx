@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import "./Home.scss";
 
 function Home() {
-    const pageTitle = "STEPAN DORDIAI";
-
     useEffect(() => {
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             if (
@@ -61,7 +59,7 @@ function Home() {
     return (
         <section className="home">
             <Helmet>
-                <title>{pageTitle}</title>
+                <title>STEPAN DORDIAI</title>
             </Helmet>
             <div className="scroller" data-speed="slow" data-direction="left">
                 <div className="scroller__inner">

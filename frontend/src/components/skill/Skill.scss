@@ -3,13 +3,11 @@
 .skill-container {
     @include flex-center;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    // background-color: var(--semi-tp-10);
+    aspect-ratio: 1/1;
     background: var(--semi-tp-05);
     @include glass-effect;
     opacity: 0;
     scale: 0.5;
-    cursor: pointer;
 }
 
 .skill {

@@ -3,11 +3,10 @@ import { Helmet } from "react-helmet";
 import projects from "./../../data/pgData.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
+import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Playground.scss";
 
 const Playground = () => {
-    const pageTitle = "Playground";
-
     // const [projects, setProjects] = useState([]);
 
     // useEffect(() => {
@@ -47,25 +46,22 @@ const Playground = () => {
         <>
             <section className="pg js-pg">
                 <Helmet>
-                    <title>{pageTitle}</title>
+                    <title>PLAYGROUND</title>
                 </Helmet>
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
                     // I use sort method to show pg-project in order from new to old
-                    .sort((a, b) => b.id - a.id)
                     .map(
-                        ({
-                            id,
-                            title,
-                            liveSite,
-                            githubRepo,
-                            telegramBot,
-                            telegramBotNone,
-                        }) => {
+                        (
+                            { title, liveSite, githubRepo, telegramBot },
+                            index
+                        ) => {
                             return (
-                                <div className="pg-project" key={id}>
+                                <div className="pg-project" key={index}>
                                     <p className="pg-project__number">
-                                        {id < 10 ? `00${id}` : `0${id}`}
+                                        {index + 1 < 10
+                                            ? `00${index + 1}`
+                                            : `0${index + 1}`}
                                     </p>
                                     <div className="pg-project__right-side">
                                         <div>
@@ -75,6 +71,18 @@ const Playground = () => {
                                             <ul className="pg-project__links">
                                                 <li>
                                                     <a
+                                                        onMouseEnter={
+                                                            interactCursor
+                                                        }
+                                                        onMouseLeave={
+                                                            removeInteractCursor
+                                                        }
+                                                        onMouseDown={
+                                                            removeInteractCursor
+                                                        }
+                                                        onMouseUp={
+                                                            interactCursor
+                                                        }
                                                         href={liveSite}
                                                         target="_blank"
                                                         title="Live Site"
@@ -85,6 +93,18 @@ const Playground = () => {
                                                 </li>
                                                 <li>
                                                     <a
+                                                        onMouseEnter={
+                                                            interactCursor
+                                                        }
+                                                        onMouseLeave={
+                                                            removeInteractCursor
+                                                        }
+                                                        onMouseDown={
+                                                            removeInteractCursor
+                                                        }
+                                                        onMouseUp={
+                                                            interactCursor
+                                                        }
                                                         href={githubRepo}
                                                         target="_blank"
                                                         title="GitHub Repo"
@@ -96,6 +116,18 @@ const Playground = () => {
                                                 {telegramBot && (
                                                     <li>
                                                         <a
+                                                            onMouseEnter={
+                                                                interactCursor
+                                                            }
+                                                            onMouseLeave={
+                                                                removeInteractCursor
+                                                            }
+                                                            onMouseDown={
+                                                                removeInteractCursor
+                                                            }
+                                                            onMouseUp={
+                                                                interactCursor
+                                                            }
                                                             href={telegramBot}
                                                             target="_blank"
                                                             title="Telegram Bot"
@@ -107,12 +139,12 @@ const Playground = () => {
                                                 )}
                                             </ul>
                                         </div>
-                                        <video src=""></video>
                                     </div>
                                 </div>
                             );
                         }
-                    )}
+                    )
+                    .reverse()}
             </section>
             <ScrollBtn className={".js-pg"} />
         </>

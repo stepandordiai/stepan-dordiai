@@ -1,43 +1,62 @@
 import { Helmet } from "react-helmet";
 import portfolioData from "../../data/portfolioData";
 import { useParams, NavLink } from "react-router-dom";
+import { interactCursor } from "../../utils/cursorState";
+import { removeInteractCursor } from "../../utils/cursorState";
 import "./ProjectPage.scss";
 
 const ProjectPage = () => {
     const { id } = useParams();
-    const project = portfolioData[id];
-    const {
-        title,
-        titleDesc,
-        liveSite,
-        githubRepo,
-        projectVideo,
-        projectImg,
-        videoNone,
-        imgNone,
-        liveSiteNone,
-    } = project;
 
-    const pageTitle = `Project | ${title}`;
+    const project = portfolioData.filter((project) => {
+        return project.id === id;
+    });
+
+    // const project = portfolioData[id];
+
+    const { title, titleDesc, liveSite, githubRepo, projectVideo, videoNone } =
+        project[0];
 
     return (
         <section className="project-page">
             <Helmet>
-                <title>{pageTitle}</title>
+                <title>{title}</title>
             </Helmet>
-            <NavLink className="project-page__back-btn" to="/portfolio">
+            <NavLink
+                onMouseEnter={interactCursor}
+                onMouseLeave={removeInteractCursor}
+                onMouseDown={removeInteractCursor}
+                onMouseUp={interactCursor}
+                onClick={removeInteractCursor}
+                className="project-page__back-btn"
+                to="/portfolio"
+            >
                 Back
             </NavLink>
             <div className="project-page__details">
                 <div className="project-page__links">
                     {liveSite && (
-                        <a href={liveSite} target="_blank">
+                        <a
+                            onMouseOver={interactCursor}
+                            onMouseLeave={removeInteractCursor}
+                            onMouseDown={removeInteractCursor}
+                            onMouseUp={interactCursor}
+                            href={liveSite}
+                            target="_blank"
+                        >
                             Live Site{" "}
                             <i className="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     )}
 
-                    <a href={githubRepo} target="_blank">
+                    <a
+                        onMouseOver={interactCursor}
+                        onMouseLeave={removeInteractCursor}
+                        onMouseDown={removeInteractCursor}
+                        onMouseUp={interactCursor}
+                        href={githubRepo}
+                        target="_blank"
+                    >
                         GitHub Repo <i className="fa-brands fa-github"></i>
                     </a>
                 </div>
@@ -57,12 +76,6 @@ const ProjectPage = () => {
                 <source src={projectVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            {/* <img
-                className={`project-page__img ${imgNone}`}
-                src={projectImg}
-                alt={title}
-                loading="lazy"
-            /> */}
         </section>
     );
 };
