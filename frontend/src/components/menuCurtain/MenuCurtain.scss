@@ -1,6 +1,6 @@
 @use "./../../mixins" as *;
 
-.nav {
+.menu-curtain {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -10,7 +10,7 @@
     padding-left: 50px;
     @include glass-effect;
     background: var(--bg-semi-tp-50);
-    transition: transform 0.5s ease, background-color 0.3s;
+    transition: transform 0.6s ease, background-color 0.3s;
     animation: revealNav 1s forwards;
 }
 
@@ -21,16 +21,16 @@
 }
 
 /* Works only on mouse devices */
-.nav--hover {
+.menu-curtain--hover {
     transform: translateX(calc(100% - 50px));
 }
 
 /* Works only on touch devices */
-.nav--active {
+.menu-curtain--active {
     transform: translateX(calc(100% - 25px));
 }
 
-.nav__header {
+.menu-curtain__header {
     position: absolute;
     top: 50px;
     left: 50px;
@@ -38,27 +38,32 @@
     text-align: center;
 }
 
-.nav__header-logo {
+.menu-curtain__header-logo {
     font-size: clamp(12px, 3vw, 18px);
-    font-weight: 300;
+    font-weight: 600;
     color: var(--txt-clr);
+    transition: all 300ms;
 }
 
-.nav__list {
+.nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 .nav__link {
     display: flex;
     align-items: center;
     column-gap: 5px;
-    margin: 5px 0;
     background: var(--txt-clr);
     width: 0;
+    font-weight: 600;
     @include bg-clr-txt-effect;
-    transition: all 0.5s;
+    transition: width 0.6s ease, color 0.3s;
+
     span {
         background: var(--semi-tp-50);
         @include bg-clr-txt-effect;
@@ -78,34 +83,27 @@
     font-family: "Silkscreen", sans-serif;
 }
 
-.nav__footer {
+.menu-curtain__footer {
     position: absolute;
     bottom: 50px;
     left: 50px;
     right: 50px;
-}
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 
-.nav__footer-list {
-    @include flex-center;
-    column-gap: 25px;
-}
-
-.nav__footer-list {
     a {
-        color: var(--semi-tp-50);
-        font-size: 20px;
-        transition: all 150ms;
-    }
-}
-
-.nav__footer-list {
-    a:hover {
         color: var(--txt-clr);
+        transition: all 300ms;
+
+        &:hover {
+            color: var(--semi-tp-50);
+        }
     }
 }
 
 @media (max-width: 1000px) {
-    .nav {
+    .menu-curtain {
         width: 50%;
         left: -50%;
         padding-left: 25px;
@@ -117,17 +115,17 @@
         }
     }
 
-    .nav--hover {
+    .menu-curtain--hover {
         transform: translateX(calc(100% - 25px));
     }
 
-    .nav__header {
+    .menu-curtain__header {
         top: 25px;
         left: 25px;
         right: 25px;
     }
 
-    .nav__footer {
+    .menu-curtain__footer {
         bottom: 25px;
         left: 25px;
         right: 25px;

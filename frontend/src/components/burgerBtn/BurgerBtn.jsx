@@ -10,24 +10,28 @@ function BurgerBtn() {
     useEffect(() => {
         if (burgerBtn) {
             refBurger.current.classList.add("burger-btn--active");
-            document.querySelector(".nav").classList.add("nav--active");
+            document
+                .querySelector(".menu-curtain")
+                .classList.add("menu-curtain--active");
         } else {
             refBurger.current.classList.remove("burger-btn--active");
-            document.querySelector(".nav").classList.remove("nav--active");
+            document
+                .querySelector(".menu-curtain")
+                .classList.remove("menu-curtain--active");
         }
     }, [burgerBtn]);
 
-    useEffect(() => {
-        if (!isTouchDevice()) {
-            document
-                .querySelector(".burger-btn__container")
-                .classList.add("burger-btn__container--inactive");
-        } else {
-            document
-                .querySelector(".burger-btn__container")
-                .classList.remove("burger-btn__container--inactive");
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (!isTouchDevice()) {
+    //         document
+    //             .querySelector(".burger-btn__container")
+    //             .classList.add("burger-btn__container--inactive");
+    //     } else {
+    //         document
+    //             .querySelector(".burger-btn__container")
+    //             .classList.remove("burger-btn__container--inactive");
+    //     }
+    // }, []);
 
     const toggleBurgerBtn = () => {
         if (!isTouchDevice()) {

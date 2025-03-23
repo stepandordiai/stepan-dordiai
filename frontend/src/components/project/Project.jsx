@@ -54,7 +54,7 @@ function Project({
             </p>
             <div className="right-side">
                 <div>
-                    <h3 className="project__title">{title}</h3>
+                    <p className="project__title">{title}</p>
                     {production && (
                         <p className="project__production">{production}</p>
                     )}

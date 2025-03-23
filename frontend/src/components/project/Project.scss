@@ -16,6 +16,7 @@
 
 .project__number {
     font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
     color: var(--txt-clr);
     padding-left: 20px;
     transition: all 0.3s;
@@ -48,6 +49,7 @@
 
 .project__title {
     font-size: clamp(1.5rem, 6vw, 2rem);
+    font-weight: 600;
     color: var(--txt-clr);
     transition: all 0.3s;
 }
@@ -55,6 +57,7 @@
 .project__production {
     color: var(--semi-tp-50);
     font-size: clamp(12px, 2vw, 14px);
+    font-weight: 300;
     transition: all 300ms;
 }
 

@@ -8,7 +8,7 @@ import Portfolio from "./pages/portfolio/Portfolio";
 import Contact from "./pages/contact/Contact";
 import Playground from "./pages/playground/Playground";
 import Games from "./pages/games/Games";
-import Nav from "./components/nav/Nav";
+import MenuCurtain from "./components/menuCurtain/MenuCurtain";
 import DarkMode from "./components/darkMode/DarkMode";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -35,7 +35,7 @@ function App() {
                 <CustomCursor />
                 <CustomCorners />
                 <Header />
-                <Nav />
+                <MenuCurtain />
                 <DarkMode />
                 <Routes>
                     <Route path="/" element={<Home />} />
