@@ -1,15 +1,9 @@
 @use "./../../mixins" as *;
 
-.none {
-    display: none;
-}
-
 .project-page {
     position: fixed;
     @include top-right-bottom-left(100px, 100px, 100px, 100px);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex-end-center;
     opacity: 0;
     animation: revealProjectPage 1s forwards;
 }
@@ -25,7 +19,7 @@
     top: 0;
     left: 0;
     color: var(--txt-clr);
-    transition: opacity 150ms;
+    transition: all 300ms;
 
     &:hover {
         opacity: 0.5;
@@ -36,9 +30,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flex-center-start;
     flex-direction: column;
     row-gap: 25px;
 }
@@ -46,12 +38,11 @@
 .project-page__links {
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 5px;
 
     a {
-        font-weight: 300;
         color: var(--txt-clr);
-        transition: opacity 150ms;
+        transition: all 300ms;
 
         &:hover {
             opacity: 0.5;
@@ -61,30 +52,37 @@
 
 .project-page__title-desc {
     color: var(--semi-tp-50);
-    font-weight: 300;
+    margin-bottom: 5px;
 }
 
 .project-page__title {
     color: var(--txt-clr);
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300;
 }
 
-.project-page__video,
-.project-page__img {
+.project-page__video {
     width: clamp(450px, 45vw, 50%);
     border: 5px solid var(--semi-tp-10);
 }
 
 @media (max-width: 1000px) {
     .project-page {
-        @include top-right-bottom-left(50px, 50px, 50px, 50px);
+        @include top-right-bottom-left(25px, 25px, 25px, 25px);
+    }
+
+    .project-page__back-btn {
+        top: 25px;
+        left: 25px;
+    }
+
+    .project-page__details {
+        left: 25px;
+        bottom: 25px;
     }
 }
 
-@media (max-width: 550px) {
-    .project-page__video,
-    .project-page__img {
+@media (max-width: 500px) {
+    .project-page__video {
         width: 100%;
     }
 }

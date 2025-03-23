@@ -12,71 +12,69 @@ const ProjectPage = () => {
         return project.id === id;
     });
 
-    // const project = portfolioData[id];
-
-    const { title, titleDesc, liveSite, githubRepo, projectVideo, videoNone } =
-        project[0];
+    const { title, titleDesc, liveSite, githubRepo, projectVideo } = project[0];
 
     return (
-        <section className="project-page">
+        <>
             <Helmet>
                 <title>{title}</title>
             </Helmet>
-            <NavLink
-                onMouseEnter={interactCursor}
-                onMouseLeave={removeInteractCursor}
-                onMouseDown={removeInteractCursor}
-                onMouseUp={interactCursor}
-                onClick={removeInteractCursor}
-                className="project-page__back-btn"
-                to="/portfolio"
-            >
-                Back
-            </NavLink>
-            <div className="project-page__details">
-                <div className="project-page__links">
-                    {liveSite && (
+            <section className="project-page">
+                <NavLink
+                    onMouseEnter={interactCursor}
+                    onMouseLeave={removeInteractCursor}
+                    onMouseDown={removeInteractCursor}
+                    onMouseUp={interactCursor}
+                    onClick={removeInteractCursor}
+                    className="project-page__back-btn"
+                    to="/portfolio"
+                >
+                    Back
+                </NavLink>
+                <div className="project-page__details">
+                    <div className="project-page__links">
+                        {liveSite && (
+                            <a
+                                onMouseOver={interactCursor}
+                                onMouseLeave={removeInteractCursor}
+                                onMouseDown={removeInteractCursor}
+                                onMouseUp={interactCursor}
+                                href={liveSite}
+                                target="_blank"
+                            >
+                                Live Site
+                            </a>
+                        )}
                         <a
                             onMouseOver={interactCursor}
                             onMouseLeave={removeInteractCursor}
                             onMouseDown={removeInteractCursor}
                             onMouseUp={interactCursor}
-                            href={liveSite}
+                            href={githubRepo}
                             target="_blank"
                         >
-                            Live Site{" "}
-                            <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                            GitHub Repo
                         </a>
-                    )}
-
-                    <a
-                        onMouseOver={interactCursor}
-                        onMouseLeave={removeInteractCursor}
-                        onMouseDown={removeInteractCursor}
-                        onMouseUp={interactCursor}
-                        href={githubRepo}
-                        target="_blank"
+                    </div>
+                    <div>
+                        <p className="project-page__title-desc">{titleDesc}</p>
+                        <p className="project-page__title">{title}</p>
+                    </div>
+                </div>
+                {projectVideo && (
+                    <video
+                        className={"project-page__video"}
+                        autoPlay={true}
+                        loop={true}
+                        playsInline={true}
+                        muted={true}
                     >
-                        GitHub Repo <i className="fa-brands fa-github"></i>
-                    </a>
-                </div>
-                <div>
-                    <p className="project-page__title-desc">{titleDesc}</p>
-                    <p className="project-page__title">{title}</p>
-                </div>
-            </div>
-            {/* If there is a video tag, the img tag will not be displayed and vice versa */}
-            <video
-                className={`project-page__video ${videoNone}`}
-                autoPlay={true}
-                loop={true}
-                playsInline={true}
-                muted={true}
-            >
-                <source src={projectVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </section>
+                        <source src={projectVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
+            </section>
+        </>
     );
 };
 

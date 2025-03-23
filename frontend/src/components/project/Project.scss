@@ -6,12 +6,19 @@
     @include flex-between;
     flex-shrink: 0;
     background: var(--semi-tp-05);
-    padding: 5px;
+    padding: 0 5px;
     transition: background-color 0.3s;
 
     &:hover {
         background: var(--semi-tp-10);
     }
+}
+
+.project__number {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--txt-clr);
+    padding-left: 20px;
+    transition: all 0.3s;
 }
 
 .right-side {
@@ -22,12 +29,12 @@
         height: 100%;
         @include flex-evenly-end;
         flex-direction: column;
+        row-gap: 5px;
     }
 }
 
 .project__video {
     height: 100px;
-    pointer-events: none;
 }
 
 .project__link {
@@ -36,22 +43,18 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 100;
 }
 
-.project__number,
 .project__title {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 300;
+    font-size: clamp(1.5rem, 6vw, 2rem);
     color: var(--txt-clr);
-    pointer-events: none;
     transition: all 0.3s;
 }
 
 .project__production {
     color: var(--semi-tp-50);
-    font-weight: 300;
     font-size: clamp(12px, 2vw, 14px);
-    pointer-events: none;
     transition: all 300ms;
 }
 
@@ -62,8 +65,11 @@
         flex-direction: column;
         align-items: flex-start;
         flex-shrink: 0;
-        padding: 25px;
         scroll-snap-align: center;
+    }
+
+    .project__number {
+        padding: 25px 0 0 20px;
     }
 
     .right-side {
@@ -74,15 +80,12 @@
         height: 70%;
 
         div {
-            height: 100%;
             @include flex-end-start;
-            flex-direction: column;
-            padding: 5px;
+            padding: 0 0 25px 20px;
         }
 
         video {
             height: auto;
-            align-self: center;
             width: 100%;
         }
     }
