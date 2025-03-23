@@ -87,10 +87,10 @@ const Games = () => {
 
     return (
         <>
+            <Helmet>
+                <title>GAMES</title>
+            </Helmet>
             <section className="games">
-                <Helmet>
-                    <title>GAMES</title>
-                </Helmet>
                 <div
                     className="game-wrapper"
                     onMouseMove={() =>

@@ -18,6 +18,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    font-weight: 300;
     color: var(--txt-clr);
     transition: all 300ms;
 
@@ -42,6 +43,7 @@
 
     a {
         color: var(--txt-clr);
+        font-weight: 300;
         transition: all 300ms;
 
         &:hover {
@@ -53,11 +55,13 @@
 .project-page__title-desc {
     color: var(--semi-tp-50);
     margin-bottom: 5px;
+    font-weight: 300;
 }
 
 .project-page__title {
     color: var(--txt-clr);
     font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
 }
 
 .project-page__video {
