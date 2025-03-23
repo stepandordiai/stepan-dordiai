@@ -4,14 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import "./Project.scss";
 
-function Project({
-    id,
-    title,
-    production,
-    index,
-    projectVideo,
-    projectVideoPoster,
-}) {
+function Project({ id, title, index, projectVideo, projectVideoPoster }) {
     AnimateElements(".project", "revealProject 1s forwards");
 
     useEffect(() => {
@@ -55,9 +48,6 @@ function Project({
             <div className="right-side">
                 <div>
                     <p className="project__title">{title}</p>
-                    {production && (
-                        <p className="project__production">{production}</p>
-                    )}
                 </div>
                 <video
                     className="project__video js-project__video"

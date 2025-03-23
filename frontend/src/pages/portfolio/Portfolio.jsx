@@ -7,18 +7,17 @@ import "./Portfolio.scss";
 function Portfolio() {
     return (
         <>
+            <Helmet>
+                <title>PORTFOLIO</title>
+            </Helmet>
             <section className="portfolio js-portfolio">
-                <Helmet>
-                    <title>PORTFOLIO</title>
-                </Helmet>
                 {portfolioData
                     .map((project, index) => {
                         return (
                             <Project
                                 key={project.id}
-                                title={project.title}
-                                production={project.production}
                                 id={project.id}
+                                title={project.title}
                                 index={index}
                                 projectVideo={project.projectVideo}
                                 projectVideoPoster={project.projectVideoPoster}

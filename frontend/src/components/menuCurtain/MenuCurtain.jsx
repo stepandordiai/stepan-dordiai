@@ -36,15 +36,15 @@ function Nav() {
 
     // Hide menu curtain on nav link click
     useEffect(() => {
-        if (!isTouchDevice()) {
-            return;
-        } else {
-            document.querySelectorAll("js-nav__link").forEach((link) => {
+        if (isTouchDevice()) {
+            document.querySelectorAll(".js-nav__link").forEach((link) => {
                 link.addEventListener("click", () => {
-                    refBurger.current.classList.remove("burger-btn--active");
                     document
                         .querySelector(".menu-curtain")
                         .classList.remove("menu-curtain--active");
+                    document
+                        .querySelector(".burger-btn")
+                        .classList.remove("burger-btn--active");
                 });
             });
         }
@@ -54,12 +54,14 @@ function Nav() {
     const inactiveLink = "nav__link js-nav__link";
 
     // Hide nav menu on page resize (when touch device rotates)
-    // addEventListener("resize", () => {
-    //     document.querySelector(".nav").classList.remove("nav--active");
-    //     document
-    //         .querySelector(".burger-btn")
-    //         .classList.remove("burger-btn--active");
-    // });
+    addEventListener("resize", () => {
+        document
+            .querySelector(".menu-curtain")
+            .classList.remove("menu-curtain--active");
+        document
+            .querySelector(".burger-btn")
+            .classList.remove("burger-btn--active");
+    });
 
     return (
         <div
