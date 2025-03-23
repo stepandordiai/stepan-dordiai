@@ -8,12 +8,12 @@ function Contact() {
     AnimateElements(".text-line", "revealTextLine 1s forwards");
 
     return (
-        <section className="contact">
+        <>
             <Helmet>
                 <title>CONTACT</title>
             </Helmet>
-            <ul className="contacts">
-                <li>
+            <section className="contact">
+                <div className="contact-list">
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -21,15 +21,12 @@ function Contact() {
                                 onMouseLeave={removeInteractCursor}
                                 onMouseDown={removeInteractCursor}
                                 onMouseUp={interactCursor}
-                                className="mail__link js-mail__link"
                                 href="mailto:stepandordiai@gmail.com"
                             >
                                 stepandordiai@gmail.com
                             </a>
                         </div>
                     </div>
-                </li>
-                <li>
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -38,16 +35,27 @@ function Contact() {
                                 onMouseDown={removeInteractCursor}
                                 onMouseUp={interactCursor}
                                 href="tel:+420722001016"
-                                className="tel__link js-tel__link"
                             >
                                 +420 722 001 016
                             </a>
                         </div>
                     </div>
-                </li>
-            </ul>
-            <ul className="socials">
-                <li>
+                    <div className="text-line-container">
+                        <div className="text-line">
+                            <a
+                                onMouseEnter={interactCursor}
+                                onMouseLeave={removeInteractCursor}
+                                onMouseDown={removeInteractCursor}
+                                onMouseUp={interactCursor}
+                                href="tel:+380689852978"
+                                className="contacts__tel"
+                            >
+                                +38 068 985 29 78
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="contact-list">
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -62,8 +70,6 @@ function Contact() {
                             </a>
                         </div>
                     </div>
-                </li>
-                <li>
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -78,8 +84,6 @@ function Contact() {
                             </a>
                         </div>
                     </div>
-                </li>
-                <li>
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -94,8 +98,6 @@ function Contact() {
                             </a>
                         </div>
                     </div>
-                </li>
-                <li>
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -110,8 +112,6 @@ function Contact() {
                             </a>
                         </div>
                     </div>
-                </li>
-                <li>
                     <div className="text-line-container">
                         <div className="text-line">
                             <a
@@ -126,9 +126,9 @@ function Contact() {
                             </a>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </section>
+                </div>
+            </section>
+        </>
     );
 }
 

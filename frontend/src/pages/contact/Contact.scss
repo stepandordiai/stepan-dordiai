@@ -7,32 +7,18 @@
     flex-direction: column;
 }
 
-.contacts {
+.contact-list {
     @include flex-center-end;
     flex-direction: column;
-}
+    row-gap: 5px;
 
-.mail__link,
-.tel__link {
-    font-size: 1rem;
-    color: var(--txt-clr);
-    font-weight: 300;
-    transition: opacity 0.3s;
-    &:hover {
-        opacity: 0.5;
-    }
-}
+    a {
+        color: var(--txt-clr);
+        transition: all 0.3s;
 
-.socials {
-    @include flex-center-end;
-    flex-direction: column;
-}
-
-.socials a {
-    color: var(--txt-clr);
-    transition: opacity 0.3s;
-    &:hover {
-        opacity: 0.5;
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 
