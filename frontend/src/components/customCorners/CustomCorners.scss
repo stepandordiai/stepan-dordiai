@@ -11,6 +11,7 @@
     pointer-events: none;
     opacity: 0;
     animation: revealCorner 1s forwards;
+    transition: all 0.3s;
 }
 
 .corner-top-right {
@@ -24,6 +25,7 @@
     pointer-events: none;
     opacity: 0;
     animation: revealCorner 1s forwards;
+    transition: all 0.3s;
 }
 
 .corner-bottom-right {
@@ -37,6 +39,7 @@
     pointer-events: none;
     opacity: 0;
     animation: revealCorner 1s forwards;
+    transition: all 0.3s;
 }
 
 .corner-bottom-left {
@@ -50,6 +53,7 @@
     pointer-events: none;
     opacity: 0;
     animation: revealCorner 1s forwards;
+    transition: all 0.3s;
 }
 
 @keyframes revealCorner {

@@ -8,6 +8,7 @@
     color: var(--txt-clr);
     font-size: clamp(12px, 4vw, 30px);
     font-weight: 300;
+    transition: color 0.3s;
 }
 
 @media (max-width: 1000px) {

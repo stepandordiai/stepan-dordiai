@@ -6,6 +6,7 @@
     color: var(--txt-clr);
     opacity: 0;
     animation: revealUpBtn 1s forwards;
+    transition: color 0.3s;
 }
 
 @keyframes revealUpBtn {
@@ -23,6 +24,7 @@
     color: var(--txt-clr);
     opacity: 0;
     animation: revealDownBtn 1s forwards;
+    transition: color 0.3s;
 }
 
 @keyframes revealDownBtn {

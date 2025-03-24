@@ -25,6 +25,7 @@
     font-size: clamp(12px, 1.5vw, 16px);
     font-weight: 300;
     color: var(--semi-tp-50);
+    transition: color 0.3s;
 }
 
 @media (max-width: 1000px) {

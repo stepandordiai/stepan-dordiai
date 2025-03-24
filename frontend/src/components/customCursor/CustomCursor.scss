@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     background: var(--bg-semi-tp-50);
-    border: 2.5px solid var(--txt-clr);
+    outline: 2.5px solid var(--txt-clr);
     @include glass-effect;
     width: 10px;
     aspect-ratio: 1 / 1;
@@ -32,7 +32,8 @@
         transform-origin: 0px 75px;
         opacity: 0;
         color: var(--txt-clr);
-        font-weight: 300;
+        font-weight: 400;
+        transition: color 0.3s;
     }
 }
 
