@@ -13,10 +13,10 @@
     @include glass-effect;
     background: var(--bg-semi-tp-50);
     transition: background-color 0.3s;
-    animation: revealDarkMode 1s forwards;
+    animation: animateDarkMode 1s forwards;
 }
 
-@keyframes revealDarkMode {
+@keyframes animateDarkMode {
     to {
         right: 0;
     }
@@ -25,7 +25,8 @@
 .dark-mode__btn {
     color: var(--txt-clr);
     font-size: clamp(12px, 2vw, 16px);
-    transition: opacity 0.3s;
+    font-weight: 300;
+    transition: all 0.3s;
 
     &:hover {
         opacity: 0.5;

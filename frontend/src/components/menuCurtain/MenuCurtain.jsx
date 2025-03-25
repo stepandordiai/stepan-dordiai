@@ -4,7 +4,6 @@ import { isTouchDevice } from "../../utils/isTouchDevice";
 import portfolioData from "../../data/portfolioData";
 import pgData from "../../data/pgData.json";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
-import { useEffect } from "react";
 import "./MenuCurtain.scss";
 
 function Nav() {
@@ -33,22 +32,6 @@ function Nav() {
             return;
         }
     }
-
-    // Hide menu curtain on nav link click
-    useEffect(() => {
-        if (isTouchDevice()) {
-            document.querySelectorAll(".js-nav__link").forEach((link) => {
-                link.addEventListener("click", () => {
-                    document
-                        .querySelector(".menu-curtain")
-                        .classList.remove("menu-curtain--active");
-                    document
-                        .querySelector(".burger-btn")
-                        .classList.remove("burger-btn--active");
-                });
-            });
-        }
-    }, []);
 
     const activeLink = "nav__link nav__link--active js-nav__link";
     const inactiveLink = "nav__link js-nav__link";

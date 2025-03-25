@@ -9,7 +9,7 @@ const Resume = () => {
             onMouseLeave={removeInteractCursor}
             onMouseDown={removeInteractCursor}
             onMouseUp={interactCursor}
-            className="resume-link"
+            className="resume__link"
             href={resume}
             target="_blank"
         >

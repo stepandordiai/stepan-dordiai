@@ -37,9 +37,7 @@ function BurgerBtn() {
         if (!isTouchDevice()) {
             return;
         } else {
-            setBurgerBtn((currentState) => {
-                return currentState === false ? true : false;
-            });
+            setBurgerBtn(!burgerBtn);
         }
     };
 
