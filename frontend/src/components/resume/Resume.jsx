@@ -1,4 +1,4 @@
-import resume from "../../pdf/stepan-dordiai-cv-v2.2.1.pdf";
+import resume from "../../pdf/stepan-dordiai-cv-v3.pdf";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Resume.scss";
 
