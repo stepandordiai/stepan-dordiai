@@ -1,25 +1,20 @@
-import yagodaKarpatVideo from "./videos/yagoda-karpat.mp4";
-import tastyBurgerVideo from "./videos/tasty-burger.mp4";
-import cloudVideo from "./videos/cloud.mp4";
-import stepanDordiaiVideo from "./videos/stepan-dordiai.mp4";
-import penguinVideo from "./videos/penguin.mp4";
+import stepanDordiaiVideo from "./videos/stepan-dordiai-video.mp4";
+import cloudVideo from "./videos/cloud-video.mp4";
+import yagodaKarpatVideo from "./videos/yagoda-karpat-video.mp4";
+import bourekVideo from "./videos/bourek-video.mp4";
+import prozubikVideo from "./videos/prozubik-video.mp4";
+import neresenVideo from "./videos/neresen-video.mp4";
+import fveStavbyVideo from "./videos/fve-stavby-video.mp4";
 
+import stepanDordiaiPoster from "./images/stepan-dordiai-poster.png";
+import cloudPoster from "./images/cloud-poster.png";
 import yagodaKarpatPoster from "./images/yagoda-karpat-poster.png";
-import tastyBurgerPoster from "./images/tasty-burger_Moment.jpg";
-import cloudPoster from "./images/cloud_Moment.jpg";
-import stepanDordiaiPoster from "./images/stepan-dordiai_Moment.jpg";
-import penguinPoster from "./images/penguin_Moment.jpg";
+import bourekPoster from "./images/bourek-poster.png";
+import prozubikPoster from "./images/prozubik-poster.png";
+import neresenPoster from "./images/neresen-poster.png";
+import fveStavbyPoster from "./images/fve-stavby-poster.png";
 
 const portfolioData = [
-    {
-        id: "penguin",
-        title: "penguin",
-        titleDesc: "Portfolio website",
-        liveSite: "https://penguin-project.netlify.app/",
-        githubRepo: "https://github.com/stepandordiai/penguin",
-        projectVideo: penguinVideo,
-        projectVideoPoster: penguinPoster,
-    },
     {
         id: "stepan-dordiai",
         title: "STEPAN DORDIAI",
@@ -38,15 +33,6 @@ const portfolioData = [
         projectVideoPoster: cloudPoster,
     },
     {
-        id: "tasty-burger",
-        title: "Tasty Burger",
-        titleDesc: "Special website",
-        liveSite: "https://stepandordiai.github.io/tasty-burger/",
-        githubRepo: "https://github.com/stepandordiai/tasty-burger",
-        projectVideo: tastyBurgerVideo,
-        projectVideoPoster: tastyBurgerPoster,
-    },
-    {
         id: "yagoda-karpat",
         title: "Yagoda Karpat",
         titleDesc: "Business website",
@@ -54,6 +40,38 @@ const portfolioData = [
         githubRepo: "https://github.com/stepandordiai/yagoda-karpat",
         projectVideo: yagodaKarpatVideo,
         projectVideoPoster: yagodaKarpatPoster,
+    },
+    {
+        id: "bourek",
+        title: "Bourek",
+        titleDesc: "Service website",
+        liveSite: "https://bourek.cz/",
+        projectVideo: bourekVideo,
+        projectVideoPoster: bourekPoster,
+    },
+    {
+        id: "prozubik",
+        title: "Prozubik",
+        titleDesc: "Service website",
+        liveSite: "https://prozubik.cz/",
+        projectVideo: prozubikVideo,
+        projectVideoPoster: prozubikPoster,
+    },
+    {
+        id: "neresen",
+        title: "Neresen",
+        titleDesc: "Business website",
+        liveSite: "https://neresen.cz/",
+        projectVideo: neresenVideo,
+        projectVideoPoster: neresenPoster,
+    },
+    {
+        id: "fve-stavby",
+        title: "FVE STAVBY",
+        titleDesc: "Business website",
+        liveSite: "https://fvestavby.cz/",
+        projectVideo: fveStavbyVideo,
+        projectVideoPoster: fveStavbyPoster,
     },
 ];
 

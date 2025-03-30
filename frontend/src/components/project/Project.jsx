@@ -21,7 +21,7 @@ function Project({ id, title, index, projectVideo, projectVideoPoster }) {
 
             project.addEventListener("mouseleave", () => {
                 projectVideos[index].pause();
-                projectVideos[index].currentTime = 0;
+                // projectVideos[index].currentTime = 0;
             });
 
             // Touch listener

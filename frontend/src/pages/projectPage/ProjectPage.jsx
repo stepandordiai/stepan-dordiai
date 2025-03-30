@@ -45,16 +45,18 @@ const ProjectPage = () => {
                                 Live Site
                             </a>
                         )}
-                        <a
-                            onMouseOver={interactCursor}
-                            onMouseLeave={removeInteractCursor}
-                            onMouseDown={removeInteractCursor}
-                            onMouseUp={interactCursor}
-                            href={githubRepo}
-                            target="_blank"
-                        >
-                            GitHub Repo
-                        </a>
+                        {githubRepo && (
+                            <a
+                                onMouseOver={interactCursor}
+                                onMouseLeave={removeInteractCursor}
+                                onMouseDown={removeInteractCursor}
+                                onMouseUp={interactCursor}
+                                href={githubRepo}
+                                target="_blank"
+                            >
+                                GitHub Repo
+                            </a>
+                        )}
                     </div>
                     <div>
                         <p className="project-page__title-desc">{titleDesc}</p>
