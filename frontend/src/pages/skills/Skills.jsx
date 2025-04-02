@@ -7,10 +7,10 @@ import "./Skills.scss";
 function Skills() {
     return (
         <>
+            <Helmet>
+                <title>SKILLS | STEPAN DORDIAI</title>
+            </Helmet>
             <section className="skills js-skills">
-                <Helmet>
-                    <title>SKILLS</title>
-                </Helmet>
                 <div className="skills-grid">
                     {skillsData.map((skill) => {
                         return (

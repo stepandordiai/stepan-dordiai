@@ -17,7 +17,7 @@ const ProjectPage = () => {
     return (
         <>
             <Helmet>
-                <title>{title}</title>
+                <title>{title} | STEPAN DORDIAI</title>
             </Helmet>
             <section className="project-page">
                 <NavLink

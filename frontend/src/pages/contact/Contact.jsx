@@ -10,7 +10,7 @@ function Contact() {
     return (
         <>
             <Helmet>
-                <title>CONTACT</title>
+                <title>CONTACT | STEPAN DORDIAI</title>
             </Helmet>
             <section className="contact">
                 <div className="contact-list">

@@ -57,18 +57,24 @@ function Home() {
     }
 
     return (
-        <section className="home">
+        <>
             <Helmet>
-                <title>STEPAN DORDIAI</title>
+                <title>FRONT-END DEVELOPER | STEPAN DORDIAI</title>
             </Helmet>
-            <div className="scroller" data-speed="slow" data-direction="left">
-                <div className="scroller__inner">
-                    <h1 className="home__title js-home__title">
-                        STEPAN DORDIAI FRONT-END DEVELOPER
-                    </h1>
+            <section className="home">
+                <div
+                    className="scroller"
+                    data-speed="slow"
+                    data-direction="left"
+                >
+                    <div className="scroller__inner">
+                        <h1 className="home__title js-home__title">
+                            STEPAN DORDIAI FRONT-END DEVELOPER
+                        </h1>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 }
 

@@ -44,10 +44,10 @@ const Playground = () => {
 
     return (
         <>
+            <Helmet>
+                <title>PLAYGROUND | STEPAN DORDIAI</title>
+            </Helmet>
             <section className="pg js-pg">
-                <Helmet>
-                    <title>PLAYGROUND</title>
-                </Helmet>
                 {projects
                     // MongoDB shuffle my json objects so i use sort() method to sort objects by id
                     // I use sort method to show pg-project in order from new to old

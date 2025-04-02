@@ -8,7 +8,7 @@ function Portfolio() {
     return (
         <>
             <Helmet>
-                <title>PORTFOLIO</title>
+                <title>PORTFOLIO | STEPAN DORDIAI</title>
             </Helmet>
             <section className="portfolio js-portfolio">
                 {portfolioData

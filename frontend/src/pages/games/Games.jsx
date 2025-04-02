@@ -88,7 +88,7 @@ const Games = () => {
     return (
         <>
             <Helmet>
-                <title>GAMES</title>
+                <title>GAMES | STEPAN DORDIAI</title>
             </Helmet>
             <section className="games">
                 <div

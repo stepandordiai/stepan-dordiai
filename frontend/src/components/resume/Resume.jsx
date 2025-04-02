@@ -1,5 +1,5 @@
-import resume from "../../pdf/stepan-dordiai-cv-v3.pdf";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
+import resume from "/pdf/stepan-dordiai-cv-v3.pdf";
 import "./Resume.scss";
 
 const Resume = () => {

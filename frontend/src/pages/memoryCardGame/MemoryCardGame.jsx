@@ -2,14 +2,14 @@ import { Helmet } from "react-helmet";
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
-import img1 from "./images/css3.svg";
-import img2 from "./images/html5.svg";
-import img3 from "./images/figma.svg";
-import img4 from "./images/js.svg";
-import img5 from "./images/node.svg";
-import img6 from "./images/git.svg";
-import img7 from "./images/sass.svg";
-import img8 from "./images/react.svg";
+import img1 from "/gameImages/css3.svg";
+import img2 from "/gameImages/html5.svg";
+import img3 from "/gameImages/figma.svg";
+import img4 from "/gameImages/js.svg";
+import img5 from "/gameImages/node.svg";
+import img6 from "/gameImages/git.svg";
+import img7 from "/gameImages/sass.svg";
+import img8 from "/gameImages/react.svg";
 import "./MemoryCardGame.scss";
 
 const MemoryCardGame = () => {
@@ -254,10 +254,10 @@ const MemoryCardGame = () => {
     });
     return (
         <>
+            <Helmet>
+                <title>MEMORY CARD GAME | STEPAN DORDIAI</title>
+            </Helmet>
             <section className="game-1-section">
-                <Helmet>
-                    <title>MEMORY CARD GAME</title>
-                </Helmet>
                 <NavLink
                     onMouseEnter={interactCursor}
                     onMouseLeave={removeInteractCursor}

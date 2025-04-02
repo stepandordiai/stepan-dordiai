@@ -9,7 +9,7 @@ function About() {
     return (
         <>
             <Helmet>
-                <title>ABOUT</title>
+                <title>ABOUT | STEPAN DORDIAI</title>
             </Helmet>
             <section className="about">
                 {`Self-taught Web developer with more than 2 years of diverse experience in designing and building responsive web pages and applications. Constantly seeking for new challenges and opportunities that will expand my skill set`
