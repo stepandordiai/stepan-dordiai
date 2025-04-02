@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
+import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
+import { NavLink } from "react-router-dom";
 import "./Home.scss";
 
 function Home() {
@@ -62,8 +64,19 @@ function Home() {
                 <title>FRONT-END DEVELOPER | STEPAN DORDIAI</title>
             </Helmet>
             <section className="home">
+                <NavLink
+                    to={"/contact"}
+                    onMouseEnter={interactCursor}
+                    onMouseLeave={removeInteractCursor}
+                    onMouseDown={removeInteractCursor}
+                    onMouseUp={interactCursor}
+                    className="work-btn"
+                >
+                    <div className="pin"></div>
+                    <span>Available for work</span>
+                </NavLink>
                 <div
-                    className="scroller"
+                    className="home__scroller scroller"
                     data-speed="slow"
                     data-direction="left"
                 >

@@ -3,14 +3,78 @@
 
 .home {
     position: fixed;
-    @include top-right-bottom-left("", "", 100px, "");
+    @include top-right-bottom-left(100px, "", 100px, "");
     width: 100%;
+}
+
+.work-btn {
+    position: absolute;
+    right: 100px;
+    background: var(--semi-tp-05);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background: var(--semi-tp-10);
+    }
+
+    span {
+        color: var(--txt-clr);
+    }
+}
+
+.pin {
+    position: relative;
+    width: 10px;
+    aspect-ratio: 1/1;
+    background: rgba(110, 197, 49);
+    border-radius: 5px;
+}
+
+.pin::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+    aspect-ratio: 1/1;
+    background: inherit;
+    border-radius: inherit;
+    animation: animatePin 3s infinite;
+}
+
+.pin::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+    aspect-ratio: 1/1;
+    background: inherit;
+    border-radius: inherit;
+    animation: animatePin 3s 0.5s infinite;
+}
+
+@keyframes animatePin {
+    to {
+        opacity: 0;
+        scale: 3;
+    }
+}
+
+.home__scroller {
+    position: absolute;
+    bottom: 0;
 }
 
 .home__title {
     font: {
-        size: clamp(72px, 8vw, 96px);
-        weight: 400;
+        // size: clamp(72px, 8vw, 96px);
+        size: 10vw;
+        weight: 500;
     }
 
     color: var(--txt-clr);
@@ -31,6 +95,17 @@
 
 @media (max-width: 1000px) {
     .home {
-        @include top-right-bottom-left("", "", 50px, "");
+        @include top-right-bottom-left(50px, "", 50px, "");
+    }
+
+    .work-btn {
+        position: absolute;
+        right: 50px;
+    }
+
+    .home__title {
+        font: {
+            size: 14vw;
+        }
     }
 }
