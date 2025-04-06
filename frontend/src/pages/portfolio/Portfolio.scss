@@ -8,14 +8,6 @@
     row-gap: 25px;
     padding: 100px 0;
     overflow-y: scroll;
-    opacity: 0;
-    animation: revealPortfolio 1s forwards;
-}
-
-@keyframes revealPortfolio {
-    to {
-        opacity: 1;
-    }
 }
 
 @media (max-width: 1000px) {

@@ -1,7 +1,6 @@
 import AnimateElements from "../../utils/AnimateElements";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
 import "./Project.scss";
 
 function Project({ id, title, index, projectImg }) {
@@ -10,7 +9,7 @@ function Project({ id, title, index, projectImg }) {
     return (
         <div
             className="project js-project"
-            onMouseEnter={() => makeCursorActive(title)}
+            onMouseEnter={() => makeCursorActive(title, id)}
             onMouseLeave={makeCursorNormal}
         >
             <NavLink
@@ -22,9 +21,7 @@ function Project({ id, title, index, projectImg }) {
                 {index + 1 < 10 ? `0${index + 1}` : index + 1}
             </p>
             <div className="right-side">
-                <div>
-                    <p className="project__title">{title}</p>
-                </div>
+                <p className="project__title">{title}</p>
                 <img className="project__img" src={projectImg} alt={title} />
             </div>
         </div>

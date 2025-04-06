@@ -8,10 +8,26 @@
     background: var(--semi-tp-05);
     padding: 0 5px;
     transition: background-color 0.3s;
+    opacity: 0;
 
     &:hover {
         background: var(--semi-tp-10);
     }
+}
+
+@keyframes revealProject {
+    to {
+        opacity: 1;
+    }
+}
+
+.project__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .project__number {
@@ -24,26 +40,6 @@
 .right-side {
     @include flex-center;
     column-gap: 25px;
-
-    div {
-        height: 100%;
-        @include flex-evenly-end;
-        flex-direction: column;
-        row-gap: 5px;
-    }
-}
-
-.project__img {
-    height: 100px;
-}
-
-.project__link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
 }
 
 .project__title {
@@ -52,11 +48,8 @@
     transition: all 0.3s;
 }
 
-.project__production {
-    color: var(--semi-tp-50);
-    font-size: clamp(12px, 2vw, 14px);
-    font-weight: 300;
-    transition: all 300ms;
+.project__img {
+    height: 100px;
 }
 
 @media (max-width: 800px) {
@@ -64,26 +57,26 @@
         position: relative;
         height: 100%;
         flex-direction: column;
-        align-items: flex-start;
         flex-shrink: 0;
         scroll-snap-align: center;
     }
 
     .project__number {
-        padding: 25px 0 0 20px;
+        padding: 25px 0 25px 20px;
+        align-self: flex-start;
     }
 
     .right-side {
-        @include flex-center-start;
+        display: flex;
+        justify-content: space-between;
         flex-direction: column-reverse;
         column-gap: 25px;
-        width: 100%;
-        height: 70%;
+        height: 100%;
+    }
 
-        div {
-            @include flex-end-start;
-            padding: 0 0 25px 20px;
-        }
+    .project__title {
+        align-self: flex-start;
+        padding: 0 0 25px 20px;
     }
 
     .project__img {
