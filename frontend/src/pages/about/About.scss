@@ -4,10 +4,8 @@
     transform: translateY(-50%);
     right: 100px;
     left: 100px;
-    text-align: justify;
+    text-align: center;
     color: var(--txt-clr);
-    font-size: clamp(12px, 4vw, 30px);
-    font-weight: 300;
     transition: color 0.3s;
 }
 
