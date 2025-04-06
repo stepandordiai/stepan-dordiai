@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet";
 import projects from "./../../data/pgData.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
-import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
+import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
+// import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Playground.scss";
 
 const Playground = () => {
@@ -57,7 +58,17 @@ const Playground = () => {
                             index
                         ) => {
                             return (
-                                <div className="pg-project" key={index}>
+                                <a
+                                    onMouseEnter={() =>
+                                        makeCursorActive(title, liveSite)
+                                    }
+                                    onMouseLeave={makeCursorNormal}
+                                    className="pg-project"
+                                    href={liveSite}
+                                    target="_blank"
+                                    key={index}
+                                >
+                                    {/* <a href={liveSite}></a> */}
                                     <p className="pg-project__number">
                                         {index + 1 < 10
                                             ? `00${index + 1}`
@@ -69,7 +80,7 @@ const Playground = () => {
                                                 {title}
                                             </p>
                                             <ul className="pg-project__links">
-                                                <li>
+                                                {/* <li>
                                                     <a
                                                         onMouseEnter={
                                                             interactCursor
@@ -89,8 +100,8 @@ const Playground = () => {
                                                         Live{" "}
                                                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                                     </a>
-                                                </li>
-                                                <li>
+                                                </li> */}
+                                                {/* <li>
                                                     <a
                                                         onMouseEnter={
                                                             interactCursor
@@ -110,8 +121,8 @@ const Playground = () => {
                                                         GitHub{" "}
                                                         <i className="fa-brands fa-github"></i>
                                                     </a>
-                                                </li>
-                                                {telegramBot && (
+                                                </li> */}
+                                                {/* {telegramBot && (
                                                     <li>
                                                         <a
                                                             onMouseEnter={
@@ -133,11 +144,11 @@ const Playground = () => {
                                                             <i className="fa-brands fa-telegram"></i>
                                                         </a>
                                                     </li>
-                                                )}
+                                                )} */}
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             );
                         }
                     )

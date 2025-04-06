@@ -4,7 +4,7 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: var(--bg-clr);
+    // background-color: var(--bg-clr);
     overflow: hidden;
     color: var(--txt-clr);
     transition: background-color 0.3s;
@@ -22,6 +22,6 @@ body {
     cursor: none;
 }
 
-button {
-    cursor: none;
-}
+// button {
+//     cursor: none;
+// }

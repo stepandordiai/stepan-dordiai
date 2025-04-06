@@ -20,6 +20,8 @@ const CustomCursor = () => {
         }
     });
 
+    // Hide cursor when mouse goes out of web page area
+
     addEventListener("mouseout", () => {
         if (!isTouchDevice()) {
             document.querySelector("#custom-cursor").style.display = "none";
@@ -40,6 +42,9 @@ const CustomCursor = () => {
         <div id="custom-cursor">
             <div className="text">
                 <p></p>
+            </div>
+            <div className="custom-cursor__link">
+                <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
         </div>
     );

@@ -30,6 +30,7 @@
         position: absolute;
         left: 50%;
         transform-origin: 0px 75px;
+        pointer-events: none;
         opacity: 0;
         color: var(--txt-clr);
         font-weight: 400;
@@ -55,4 +56,20 @@
 
 .cursor--interact {
     width: 20px !important;
+}
+
+.custom-cursor__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0s;
+}
+
+.custom-cursor__link--active {
+    opacity: 1;
+    transition: 0.5s;
 }
