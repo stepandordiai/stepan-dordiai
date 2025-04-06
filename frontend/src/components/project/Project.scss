@@ -33,7 +33,7 @@
     }
 }
 
-.project__video {
+.project__img {
     height: 100px;
 }
 
@@ -84,10 +84,10 @@
             @include flex-end-start;
             padding: 0 0 25px 20px;
         }
+    }
 
-        video {
-            height: auto;
-            width: 100%;
-        }
+    .project__img {
+        height: auto;
+        width: 100%;
     }
 }

@@ -19,8 +19,7 @@ function Portfolio() {
                                 id={project.id}
                                 title={project.title}
                                 index={index}
-                                projectVideo={project.projectVideo}
-                                projectVideoPoster={project.projectVideoPoster}
+                                projectImg={project.projectImg}
                             />
                         );
                     })

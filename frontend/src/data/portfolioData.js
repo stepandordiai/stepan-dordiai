@@ -6,13 +6,13 @@ import prozubikVideo from "/videos/prozubik-video.mp4";
 import neresenVideo from "/videos/neresen-video.mp4";
 import fveStavbyVideo from "/videos/fve-stavby-video.mp4";
 
-import stepanDordiaiPoster from "/images/stepan-dordiai-poster.png";
-import cloudPoster from "/images/cloud-poster.png";
-import yagodaKarpatPoster from "/images/yagoda-karpat-poster.png";
-import bourekPoster from "/images/bourek-poster.png";
-import prozubikPoster from "/images/prozubik-poster.png";
-import neresenPoster from "/images/neresen-poster.png";
-import fveStavbyPoster from "/images/fve-stavby-poster.png";
+import stepanDordiaiImg from "/images/stepan-dordiai.png";
+import cloudImg from "/images/cloud.png";
+import yagodaKarpatImg from "/images/yagoda-karpat.png";
+import bourekImg from "/images/bourek.png";
+import prozubikImg from "/images/prozubik.png";
+import neresenImg from "/images/neresen.png";
+import fveStavbyImg from "/images/fve-stavby.png";
 
 const portfolioData = [
     {
@@ -21,7 +21,7 @@ const portfolioData = [
         titleDesc: "Portfolio website",
         githubRepo: "https://github.com/stepandordiai/stepan-dordiai",
         projectVideo: stepanDordiaiVideo,
-        projectVideoPoster: stepanDordiaiPoster,
+        projectImg: stepanDordiaiImg,
     },
     {
         id: "cloud",
@@ -30,7 +30,7 @@ const portfolioData = [
         liveSite: "https://cloud-project.netlify.app/",
         githubRepo: "https://github.com/stepandordiai/cloud",
         projectVideo: cloudVideo,
-        projectVideoPoster: cloudPoster,
+        projectImg: cloudImg,
     },
     {
         id: "yagoda-karpat",
@@ -39,7 +39,7 @@ const portfolioData = [
         liveSite: "https://yagodakarpat.com/",
         githubRepo: "https://github.com/stepandordiai/yagoda-karpat",
         projectVideo: yagodaKarpatVideo,
-        projectVideoPoster: yagodaKarpatPoster,
+        projectImg: yagodaKarpatImg,
     },
     {
         id: "bourek",
@@ -47,7 +47,7 @@ const portfolioData = [
         titleDesc: "Service website",
         liveSite: "https://bourek.cz/",
         projectVideo: bourekVideo,
-        projectVideoPoster: bourekPoster,
+        projectImg: bourekImg,
     },
     {
         id: "prozubik",
@@ -55,7 +55,7 @@ const portfolioData = [
         titleDesc: "Service website",
         liveSite: "https://prozubik.cz/",
         projectVideo: prozubikVideo,
-        projectVideoPoster: prozubikPoster,
+        projectImg: prozubikImg,
     },
     {
         id: "neresen",
@@ -63,7 +63,7 @@ const portfolioData = [
         titleDesc: "Business website",
         liveSite: "https://neresen.cz/",
         projectVideo: neresenVideo,
-        projectVideoPoster: neresenPoster,
+        projectImg: neresenImg,
     },
     {
         id: "fve-stavby",
@@ -71,7 +71,7 @@ const portfolioData = [
         titleDesc: "Business website",
         liveSite: "https://fvestavby.cz/",
         projectVideo: fveStavbyVideo,
-        projectVideoPoster: fveStavbyPoster,
+        projectImg: fveStavbyImg,
     },
 ];
 
