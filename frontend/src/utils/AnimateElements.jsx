@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 // FIXME: Is it okay to use these names (className, animation) for parameters?
-function AnimateElements(className, animation, time = 100, projects) {
+function AnimateElements(className, animation, time = 100) {
     const revealElements = () => {
         document.querySelectorAll(className).forEach((element, index) => {
             // FIXME: setTimeout or setInterval?
@@ -23,7 +23,7 @@ function AnimateElements(className, animation, time = 100, projects) {
             revealElements();
         }
         // I use this dependency to start animation after the data r loaded
-    }, [projects]);
+    }, []);
 
     return <></>;
 }

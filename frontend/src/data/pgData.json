@@ -2,90 +2,71 @@
     {
         "id": 1,
         "title": "Heart Clicker",
-        "liveSite": "https://heart-clicker-db68c.web.app/",
-        "githubRepo": "https://github.com/stepandordiai/heart-clicker",
-        "telegramBot": "https://t.me/heart_clicker_bot"
+        "liveSite": "https://heart-clicker-db68c.web.app/"
     },
     {
         "id": 2,
         "title": "Bed Adventures (18+)",
-        "liveSite": "https://stepandordiai.github.io/bed-adventures/",
-        "githubRepo": "https://github.com/stepandordiai/bed-adventures"
+        "liveSite": "https://stepandordiai.github.io/bed-adventures/"
     },
     {
         "id": 3,
         "title": "Rock Paper Scissors",
-        "liveSite": "https://stepandordiai.github.io/rock-paper-scissors/",
-        "githubRepo": "https://github.com/stepandordiai/rock-paper-scissors",
-        "telegramBot": "https://t.me/kcor_repap_srossics_bot"
+        "liveSite": "https://stepandordiai.github.io/rock-paper-scissors/"
     },
     {
         "id": 4,
         "title": "To Do List",
-        "liveSite": "https://stepandordiai.github.io/to-do-list/",
-        "githubRepo": "https://github.com/stepandordiai/to-do-list",
-        "telegramBot": "https://t.me/done_list_bot"
+        "liveSite": "https://stepandordiai.github.io/to-do-list/"
     },
     {
         "id": 5,
         "title": "countdown",
-        "liveSite": "https://stepandordiai.github.io/countdown/",
-        "githubRepo": "https://github.com/stepandordiai/countdown"
+        "liveSite": "https://stepandordiai.github.io/countdown/"
     },
     {
         "id": 6,
         "title": "tiermaker",
-        "liveSite": "https://stepandordiai.github.io/drag-n-drop-tier-list/",
-        "githubRepo": "https://github.com/stepandordiai/drag-n-drop-tier-list"
+        "liveSite": "https://stepandordiai.github.io/drag-n-drop-tier-list/"
     },
     {
         "id": 7,
         "title": "gallery",
-        "liveSite": "https://stepandordiai.github.io/gallery/",
-        "githubRepo": "https://github.com/stepandordiai/gallery"
+        "liveSite": "https://stepandordiai.github.io/gallery/"
     },
     {
         "id": 8,
         "title": "Calculator",
-        "liveSite": "https://stepandordiai.github.io/calculator/",
-        "githubRepo": "https://github.com/stepandordiai/calculator"
+        "liveSite": "https://stepandordiai.github.io/calculator/"
     },
     {
         "id": 9,
         "title": "Image comparison",
-        "liveSite": "https://stepandordiai.github.io/img-comparison/",
-        "githubRepo": "https://github.com/stepandordiai/img-comparison"
+        "liveSite": "https://stepandordiai.github.io/img-comparison/"
     },
     {
         "id": 10,
         "title": "Currency converter",
-        "liveSite": "https://stepandordiai.github.io/currency-converter/",
-        "githubRepo": "https://github.com/stepandordiai/currency-converter"
+        "liveSite": "https://stepandordiai.github.io/currency-converter/"
     },
     {
         "id": 11,
         "title": "Spin the Wheel!",
-        "liveSite": "https://stepandordiai.github.io/spin-the-wheel/",
-        "githubRepo": "https://github.com/stepandordiai/spin-the-wheel",
-        "telegramBot": "https://t.me/spinthe_wheel_bot"
+        "liveSite": "https://stepandordiai.github.io/spin-the-wheel/"
     },
     {
         "id": 12,
         "title": "Goals List",
-        "liveSite": "https://goalslist-pg-project.netlify.app/",
-        "githubRepo": "https://github.com/stepandordiai/goals-list",
-        "telegramBot": "https://t.me/goals_list_bot"
+        "liveSite": "https://goalslist-pg-project.netlify.app/"
     },
     {
         "id": 13,
         "title": "QRCG",
-        "liveSite": "https://qrcg-pg-project.netlify.app/",
-        "githubRepo": "https://github.com/stepandordiai/qrcg"
+        "liveSite": "https://qrcg-pg-project.netlify.app/"
     },
     {
         "id": 14,
         "title": "Days Together",
-        "liveSite": "https://stepandordiai.github.io/days-together/",
-        "githubRepo": "https://github.com/stepandordiai/days-together"
+        "liveSite": "https://stepandordiai.github.io/days-together/"
     }
 ]

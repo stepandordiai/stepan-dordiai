@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 // import axios from "axios";
-import projects from "./../../data/pgData.json";
+import pgData from "./../../data/pgData.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
@@ -36,12 +36,7 @@ const Playground = () => {
     //         });
     // }, []);
 
-    AnimateElements(
-        ".pg-project",
-        "revealPgProject 1s forwards",
-        100,
-        projects
-    );
+    AnimateElements(".pg-project", "revealPgProject 1s forwards");
 
     return (
         <>
@@ -49,109 +44,28 @@ const Playground = () => {
                 <title>PLAYGROUND | STEPAN DORDIAI</title>
             </Helmet>
             <section className="pg js-pg">
-                {projects
-                    // MongoDB shuffle my json objects so i use sort() method to sort objects by id
-                    // I use sort method to show pg-project in order from new to old
-                    .map(
-                        (
-                            { title, liveSite, githubRepo, telegramBot },
-                            index
-                        ) => {
-                            return (
-                                <a
-                                    onMouseEnter={() =>
-                                        makeCursorActive(title, liveSite)
-                                    }
-                                    onMouseLeave={makeCursorNormal}
-                                    className="pg-project"
-                                    href={liveSite}
-                                    target="_blank"
-                                    key={index}
-                                >
-                                    {/* <a href={liveSite}></a> */}
-                                    <p className="pg-project__number">
-                                        {index + 1 < 10
-                                            ? `00${index + 1}`
-                                            : `0${index + 1}`}
-                                    </p>
-                                    <div className="pg-project__right-side">
-                                        <div>
-                                            <p className="pg-project__title">
-                                                {title}
-                                            </p>
-                                            <ul className="pg-project__links">
-                                                {/* <li>
-                                                    <a
-                                                        onMouseEnter={
-                                                            interactCursor
-                                                        }
-                                                        onMouseLeave={
-                                                            removeInteractCursor
-                                                        }
-                                                        onMouseDown={
-                                                            removeInteractCursor
-                                                        }
-                                                        onMouseUp={
-                                                            interactCursor
-                                                        }
-                                                        href={liveSite}
-                                                        target="_blank"
-                                                    >
-                                                        Live{" "}
-                                                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                                                    </a>
-                                                </li> */}
-                                                {/* <li>
-                                                    <a
-                                                        onMouseEnter={
-                                                            interactCursor
-                                                        }
-                                                        onMouseLeave={
-                                                            removeInteractCursor
-                                                        }
-                                                        onMouseDown={
-                                                            removeInteractCursor
-                                                        }
-                                                        onMouseUp={
-                                                            interactCursor
-                                                        }
-                                                        href={githubRepo}
-                                                        target="_blank"
-                                                    >
-                                                        GitHub{" "}
-                                                        <i className="fa-brands fa-github"></i>
-                                                    </a>
-                                                </li> */}
-                                                {/* {telegramBot && (
-                                                    <li>
-                                                        <a
-                                                            onMouseEnter={
-                                                                interactCursor
-                                                            }
-                                                            onMouseLeave={
-                                                                removeInteractCursor
-                                                            }
-                                                            onMouseDown={
-                                                                removeInteractCursor
-                                                            }
-                                                            onMouseUp={
-                                                                interactCursor
-                                                            }
-                                                            href={telegramBot}
-                                                            target="_blank"
-                                                        >
-                                                            Telegram{" "}
-                                                            <i className="fa-brands fa-telegram"></i>
-                                                        </a>
-                                                    </li>
-                                                )} */}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            );
-                        }
-                    )
+                {pgData
+                    .map(({ title, liveSite }, index) => {
+                        return (
+                            <a
+                                onMouseEnter={() =>
+                                    makeCursorActive(title, liveSite)
+                                }
+                                onMouseLeave={makeCursorNormal}
+                                className="pg-project"
+                                href={liveSite}
+                                target="_blank"
+                                key={index}
+                            >
+                                <p className="pg-project__number">
+                                    {index + 1 < 10
+                                        ? `00${index + 1}`
+                                        : `0${index + 1}`}
+                                </p>
+                                <p className="pg-project__title">{title}</p>
+                            </a>
+                        );
+                    })
                     .reverse()}
             </section>
             <ScrollBtn className={".js-pg"} />
