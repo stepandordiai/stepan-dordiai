@@ -70,9 +70,9 @@ function Home() {
                     onMouseLeave={removeInteractCursor}
                     onMouseDown={removeInteractCursor}
                     onMouseUp={interactCursor}
-                    className="work-btn"
+                    className="home__work-link"
                 >
-                    <div className="pin"></div>
+                    <div className="work-link__dot"></div>
                     <span>Available for work</span>
                 </NavLink>
                 <div
