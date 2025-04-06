@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "../burgerBtn/BurgerBtn";
 import { isTouchDevice } from "../../utils/isTouchDevice";
-import portfolioData from "../../data/portfolioData";
+import portfolioData from "../../data/portfolioData.json";
 import pgData from "../../data/pgData.json";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./MenuCurtain.scss";

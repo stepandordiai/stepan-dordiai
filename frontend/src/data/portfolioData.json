@@ -1,0 +1,60 @@
+[
+    {
+        "id": "stepan-dordiai",
+        "title": "STEPAN DORDIAI",
+        "titleDesc": "Portfolio website",
+        "githubRepo": "https://github.com/stepandordiai/stepan-dordiai",
+        "projectVideo": "/videos/stepan-dordiai-video.mp4",
+        "projectImg": "/images/stepan-dordiai.png"
+    },
+    {
+        "id": "cloud",
+        "title": "cloud.",
+        "titleDesc": "Weather website",
+        "liveSite": "https://cloud-project.netlify.app/",
+        "githubRepo": "https://github.com/stepandordiai/cloud",
+        "projectVideo": "/videos/cloud-video.mp4",
+        "projectImg": "/images/cloud.png"
+    },
+    {
+        "id": "yagoda-karpat",
+        "title": "Yagoda Karpat",
+        "titleDesc": "Business website",
+        "liveSite": "https://yagodakarpat.com/",
+        "githubRepo": "https://github.com/stepandordiai/yagoda-karpat",
+        "projectVideo": "/videos/yagoda-karpat-video.mp4",
+        "projectImg": "/images/yagoda-karpat.png"
+    },
+    {
+        "id": "bourek",
+        "title": "Bourek",
+        "titleDesc": "Service website",
+        "liveSite": "https://bourek.cz/",
+        "projectVideo": "/videos/bourek-video.mp4",
+        "projectImg": "/images/bourek.png"
+    },
+    {
+        "id": "prozubik",
+        "title": "Prozubik",
+        "titleDesc": "Service website",
+        "liveSite": "https://prozubik.cz/",
+        "projectVideo": "/videos/prozubik-video.mp4",
+        "projectImg": "/images/prozubik.png"
+    },
+    {
+        "id": "neresen",
+        "title": "Neresen",
+        "titleDesc": "Business website",
+        "liveSite": "https://neresen.cz/",
+        "projectVideo": "/videos/neresen-video.mp4",
+        "projectImg": "/images/neresen.png"
+    },
+    {
+        "id": "fve-stavby",
+        "title": "FVE STAVBY",
+        "titleDesc": "Business website",
+        "liveSite": "https://fvestavby.cz/",
+        "projectVideo": "/videos/fve-stavby-video.mp4",
+        "projectImg": "/images/fve-stavby.png"
+    }
+]

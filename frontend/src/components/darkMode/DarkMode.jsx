@@ -9,7 +9,7 @@ import Resume from "../resume/Resume";
 import "./DarkMode.scss";
 
 function DarkMode() {
-    const [darkMode, setDarkMode] = useLocalStorage("darkMode", "dark");
+    const [darkMode, setDarkMode] = useLocalStorage("darkMode", "light");
 
     const refBtn = useRef(null);
 
@@ -94,7 +94,7 @@ function DarkMode() {
                 }
                 onMouseLeave={makeCursorNormal}
             >
-                LIGHT
+                DARK
             </button>
         </div>
     );

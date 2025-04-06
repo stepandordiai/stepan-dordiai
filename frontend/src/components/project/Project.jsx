@@ -22,7 +22,12 @@ function Project({ id, title, index, projectImg }) {
             </p>
             <div className="right-side">
                 <p className="project__title">{title}</p>
-                <img className="project__img" src={projectImg} alt={title} />
+                <img
+                    className="project__img"
+                    src={projectImg}
+                    alt={title}
+                    loading="lazy"
+                />
             </div>
         </div>
     );

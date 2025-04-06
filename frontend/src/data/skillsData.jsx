@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import tsIcon from "/images/ts-icon.svg";
 import mongodbIcon from "/images/mongodb-icon.svg";
+import nextIcon from "/images/nextjs-svgrepo-com.svg";
 
 // I'm using uuid external library for unique id
 
@@ -74,6 +75,11 @@ const skillsData = [
         id: uuidv4(),
         name: "Node.js",
         icon: [<i className="fa-brands fa-node"></i>],
+    },
+    {
+        id: uuidv4(),
+        name: "Next.js",
+        icon: [<img className="img-icon" src={nextIcon} alt="Next.js" />],
     },
 ];
 
