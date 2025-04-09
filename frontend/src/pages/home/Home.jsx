@@ -82,7 +82,7 @@ function Home() {
                 >
                     <div className="scroller__inner">
                         <h1 className="home__title js-home__title">
-                            STEPAN DORDIAI FRONT-END DEVELOPER
+                            STEPAN DORDIAI PORTFOLIO FRONT-END DEVELOPER |
                         </h1>
                     </div>
                 </div>

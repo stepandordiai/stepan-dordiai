@@ -11,6 +11,7 @@
     position: absolute;
     right: 100px;
     background: var(--semi-tp-05);
+    font-weight: 300;
     padding: 10px;
     @include flex-center;
     column-gap: 10px;
@@ -40,7 +41,6 @@
     width: 10px;
     aspect-ratio: 1/1;
     background: rgba(110, 197, 49);
-    border-radius: 5px;
 }
 
 .work-link__dot::before,
@@ -51,7 +51,6 @@
     width: inherit;
     aspect-ratio: 1/1;
     background: inherit;
-    border-radius: inherit;
     animation: animateDot 3s infinite;
 }
 
@@ -74,7 +73,7 @@
 .home__title {
     font: {
         size: 10vw;
-        weight: 400;
+        weight: 300;
     }
 
     color: var(--txt-clr);

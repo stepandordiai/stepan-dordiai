@@ -34,6 +34,7 @@
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--txt-clr);
     padding-left: 20px;
+    font-weight: 300;
     transition: all 0.3s;
 }
 
@@ -45,6 +46,7 @@
 .project__title {
     font-size: clamp(1.5rem, 6vw, 2rem);
     color: var(--txt-clr);
+    font-weight: 300;
     transition: all 0.3s;
 }
 

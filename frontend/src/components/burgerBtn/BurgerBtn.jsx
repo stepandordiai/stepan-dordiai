@@ -21,18 +21,6 @@ function BurgerBtn() {
         }
     }, [burgerBtn]);
 
-    // useEffect(() => {
-    //     if (!isTouchDevice()) {
-    //         document
-    //             .querySelector(".burger-btn__container")
-    //             .classList.add("burger-btn__container--inactive");
-    //     } else {
-    //         document
-    //             .querySelector(".burger-btn__container")
-    //             .classList.remove("burger-btn__container--inactive");
-    //     }
-    // }, []);
-
     const toggleBurgerBtn = () => {
         if (!isTouchDevice()) {
             return;

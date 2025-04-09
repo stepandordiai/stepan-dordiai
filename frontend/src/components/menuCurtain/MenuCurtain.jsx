@@ -7,6 +7,9 @@ import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./MenuCurtain.scss";
 
 function Nav() {
+    const activeLink = "nav__link nav__link--active js-nav__link";
+    const inactiveLink = "nav__link js-nav__link";
+
     function showNavMenu() {
         if (!isTouchDevice()) {
             document
@@ -33,9 +36,6 @@ function Nav() {
         }
     }
 
-    const activeLink = "nav__link nav__link--active js-nav__link";
-    const inactiveLink = "nav__link js-nav__link";
-
     // Hide nav menu on page resize (when touch device rotates)
     addEventListener("resize", () => {
         document
@@ -46,6 +46,17 @@ function Nav() {
             .classList.remove("burger-btn--active");
     });
 
+    document.querySelectorAll(".js-nav__link").forEach((link) => {
+        link.addEventListener("click", () => {
+            document
+                .querySelector(".menu-curtain")
+                .classList.remove("menu-curtain--active");
+            document
+                .querySelector(".burger-btn")
+                .classList.remove("burger-btn--active");
+        });
+    });
+
     return (
         <div
             className="menu-curtain"
@@ -54,7 +65,9 @@ function Nav() {
         >
             <BurgerBtn />
             <div className="menu-curtain__header">
-                <h1 className="menu-curtain__header-logo">STEPAN DORDIAI</h1>
+                <h1 className="menu-curtain__header-logo">
+                    STEPAN DORDIAI <span>Portfolio</span>
+                </h1>
             </div>
             <nav className="nav">
                 <NavLink
