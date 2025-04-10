@@ -4,6 +4,7 @@ import { isTouchDevice } from "../../utils/isTouchDevice";
 import portfolioData from "../../data/portfolioData.json";
 import pgData from "../../data/pgData.json";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
+import { useEffect } from "react";
 import "./MenuCurtain.scss";
 
 function Nav() {
@@ -16,7 +17,7 @@ function Nav() {
                 .querySelector(".menu-curtain")
                 .classList.add("menu-curtain--hover");
             document
-                .querySelector(".js-burger-btn")
+                .querySelector(".burger-btn")
                 .classList.add("burger-btn--active");
         } else {
             return;
@@ -29,7 +30,7 @@ function Nav() {
                 .querySelector(".menu-curtain")
                 .classList.remove("menu-curtain--hover");
             document
-                .querySelector(".js-burger-btn")
+                .querySelector(".burger-btn")
                 .classList.remove("burger-btn--active");
         } else {
             return;
@@ -46,21 +47,27 @@ function Nav() {
             .classList.remove("burger-btn--active");
     });
 
-    document.querySelectorAll(".js-nav__link").forEach((link) => {
-        link.addEventListener("click", () => {
-            document
-                .querySelector(".menu-curtain")
-                .classList.remove("menu-curtain--active");
-            document
-                .querySelector(".burger-btn")
-                .classList.remove("burger-btn--active");
+    useEffect(() => {
+        document.querySelectorAll(".js-nav__link").forEach((link) => {
+            link.addEventListener("click", () => {
+                if (!isTouchDevice()) {
+                    return;
+                } else {
+                    document
+                        .querySelector(".menu-curtain")
+                        .classList.remove("menu-curtain--active");
+                    document
+                        .querySelector(".burger-btn")
+                        .classList.remove("burger-btn--active");
+                }
+            });
         });
-    });
+    }, []);
 
     return (
         <div
             className="menu-curtain"
-            onMouseOver={showNavMenu}
+            onMouseEnter={showNavMenu}
             onMouseLeave={hideNavMenu}
         >
             <BurgerBtn />
