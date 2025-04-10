@@ -1,0 +1,86 @@
+@use "./../../mixins" as *;
+
+.project {
+    position: relative;
+    height: 110px;
+    @include flex-between;
+    flex-shrink: 0;
+    background: var(--semi-tp-05);
+    padding: 0 5px;
+    transition: background-color 0.3s;
+    opacity: 0;
+
+    &:hover {
+        background: var(--semi-tp-10);
+    }
+}
+
+@keyframes revealProject {
+    to {
+        opacity: 1;
+    }
+}
+
+.project__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.project__number {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--txt-clr);
+    padding-left: 20px;
+    transition: all 0.3s;
+}
+
+.right-side {
+    @include flex-center;
+    column-gap: 25px;
+}
+
+.project__title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    color: var(--txt-clr);
+    transition: all 0.3s;
+}
+
+.project__img {
+    height: 100px;
+}
+
+@media (max-width: 800px) {
+    .project {
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+
+    .project__number {
+        padding: 25px 0 25px 20px;
+        align-self: flex-start;
+    }
+
+    .right-side {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        column-gap: 25px;
+        height: 100%;
+    }
+
+    .project__title {
+        align-self: flex-start;
+        padding: 0 0 25px 20px;
+    }
+
+    .project__img {
+        height: auto;
+        width: 100%;
+    }
+}

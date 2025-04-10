@@ -1,0 +1,90 @@
+@use "./../../mixins" as *;
+
+.project-page {
+    position: fixed;
+    @include top-right-bottom-left(100px, 100px, 100px, 100px);
+    @include flex-end-center;
+    opacity: 0;
+    animation: revealProjectPage 1s forwards;
+}
+
+@keyframes revealProjectPage {
+    to {
+        opacity: 1;
+    }
+}
+
+.project-page__back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--txt-clr);
+    transition: all 300ms;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.project-page__details {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include flex-center-start;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.project-page__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    a {
+        color: var(--txt-clr);
+        transition: all 300ms;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.project-page__title-desc {
+    color: var(--semi-tp-50);
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.project-page__title {
+    color: var(--txt-clr);
+    font-size: clamp(2rem, 4vw, 3rem);
+    transition: color 0.3s;
+}
+
+.project-page__video {
+    width: clamp(450px, 45vw, 50%);
+    border: 5px solid var(--semi-tp-10);
+}
+
+@media (max-width: 1000px) {
+    .project-page {
+        @include top-right-bottom-left(25px, 25px, 25px, 25px);
+    }
+
+    .project-page__back-btn {
+        top: 25px;
+        left: 25px;
+    }
+
+    .project-page__details {
+        left: 25px;
+        bottom: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-page__video {
+        width: 100%;
+    }
+}

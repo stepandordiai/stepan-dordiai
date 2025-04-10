@@ -1,0 +1,42 @@
+@use "./../../mixins" as *;
+
+.dark-mode {
+    position: fixed;
+    top: 50px;
+    right: -50px;
+    bottom: 50px;
+    z-index: 1;
+    width: 50px;
+    @include flex-between;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    @include glass-effect;
+    background: var(--bg-semi-tp-50);
+    transition: background-color 0.3s;
+    animation: animateDarkMode 1s forwards;
+}
+
+@keyframes animateDarkMode {
+    to {
+        right: 0;
+    }
+}
+
+.dark-mode__btn {
+    color: var(--txt-clr);
+    font-size: clamp(12px, 2vw, 16px);
+    transition: all 0.3s;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 1000px) {
+    .dark-mode {
+        top: 25px;
+        right: -25px;
+        bottom: 25px;
+        width: 25px;
+    }
+}

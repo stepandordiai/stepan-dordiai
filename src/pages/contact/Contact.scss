@@ -1,0 +1,29 @@
+@use "./../../mixins" as *;
+
+.contact {
+    position: fixed;
+    @include top-right-bottom-left(100px, 100px, 100px, 100px);
+    @include flex-between-end;
+    flex-direction: column;
+}
+
+.contact-list {
+    @include flex-center-end;
+    flex-direction: column;
+    row-gap: 5px;
+
+    a {
+        color: var(--txt-clr);
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .contact {
+        @include top-right-bottom-left(50px, 50px, 50px, 50px);
+    }
+}
