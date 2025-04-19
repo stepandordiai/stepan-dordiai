@@ -1,14 +1,14 @@
 .text-line-container {
-    overflow: hidden;
-    display: inline-block;
+	overflow: hidden;
+	display: inline-block;
 }
 
 .text-line {
-    transform: translateY(100%);
+	transform: translateY(100%);
 }
 
 @keyframes revealTextLine {
-    to {
-        transform: translateY(0);
-    }
+	to {
+		transform: translateY(0);
+	}
 }
