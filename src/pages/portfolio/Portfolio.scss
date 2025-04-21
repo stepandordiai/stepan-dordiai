@@ -1,26 +1,26 @@
 @use "./../../mixins" as *;
 
 .portfolio {
-    position: fixed;
-    @include top-right-bottom-left(0, 100px, 0, 100px);
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-    padding: 100px 0;
-    overflow-y: scroll;
+	position: fixed;
+	@include top-right-bottom-left(0, 100px, 0, 100px);
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+	padding: 100px 0;
+	overflow-y: scroll;
 }
 
 @media (max-width: 1000px) {
-    .portfolio {
-        padding: 50px 0;
-        @include top-right-bottom-left(0, 50px, 0, 50px);
-        scroll-snap-type: y mandatory;
-    }
+	.portfolio {
+		padding: 50px 0;
+		@include top-right-bottom-left(0, 50px, 0, 50px);
+		scroll-snap-type: y mandatory;
+	}
 }
 
 @media (max-width: 800px) {
-    .portfolio {
-        padding: 25px 0;
-        @include top-right-bottom-left(0, 25px, 0, 25px);
-    }
+	.portfolio {
+		padding: 35px 0;
+		@include top-right-bottom-left(0, 35px, 0, 35px);
+	}
 }

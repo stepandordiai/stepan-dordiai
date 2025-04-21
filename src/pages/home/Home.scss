@@ -2,108 +2,109 @@
 @use "./../../global/InfiniteScroller.scss";
 
 .home {
-    position: fixed;
-    @include top-right-bottom-left(100px, "", 100px, "");
-    width: 100%;
+	position: fixed;
+	@include top-right-bottom-left(100px, "", 100px, "");
+	width: 100%;
 }
 
 .home__work-link {
-    position: absolute;
-    right: 100px;
-    background: var(--semi-tp-05);
-    padding: 10px;
-    @include flex-center;
-    column-gap: 10px;
-    overflow: hidden;
-    opacity: 0;
-    transition: background-color 0.3s;
-    animation: revealWorkLink 1s forwards;
+	position: absolute;
+	right: 100px;
+	background: var(--semi-tp-05);
+	padding: 10px;
+	@include flex-center;
+	column-gap: 10px;
+	overflow: hidden;
+	border: 1px solid var(--semi-tp-10);
+	opacity: 0;
+	transition: background-color 0.3s;
+	animation: revealWorkLink 1s forwards;
 
-    &:hover {
-        background: var(--semi-tp-10);
-    }
+	&:hover {
+		background: var(--semi-tp-10);
+	}
 
-    span {
-        color: var(--txt-clr);
-        transition: color 0.3s;
-    }
+	span {
+		color: var(--txt-clr);
+		transition: color 0.3s;
+	}
 }
 
 @keyframes revealWorkLink {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 .work-link__dot {
-    position: relative;
-    width: 10px;
-    aspect-ratio: 1/1;
-    background: rgba(110, 197, 49);
+	position: relative;
+	width: 10px;
+	aspect-ratio: 1/1;
+	background: rgba(110, 197, 49);
 }
 
 .work-link__dot::before,
 .work-link__dot::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: inherit;
-    aspect-ratio: 1/1;
-    background: inherit;
-    animation: animateDot 3s infinite;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: inherit;
+	aspect-ratio: 1/1;
+	background: inherit;
+	animation: animateDot 3s infinite;
 }
 
 .work-link__dot::after {
-    animation: animateDot 3s 0.5s infinite;
+	animation: animateDot 3s 0.5s infinite;
 }
 
 @keyframes animateDot {
-    to {
-        opacity: 0;
-        scale: 3;
-    }
+	to {
+		opacity: 0;
+		scale: 3;
+	}
 }
 
 .home__scroller {
-    position: absolute;
-    bottom: 0;
+	position: absolute;
+	bottom: 0;
 }
 
 .home__title {
-    font: {
-        size: 10vw;
-        weight: 400;
-    }
+	font: {
+		size: 10vw;
+		weight: 400;
+	}
 
-    color: var(--txt-clr);
-    pointer-events: none;
-    -webkit-user-select: none;
-    user-select: none;
+	color: var(--txt-clr);
+	pointer-events: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .home__title span {
-    opacity: 0;
+	opacity: 0;
 }
 
 @keyframes revealChar {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 1000px) {
-    .home {
-        @include top-right-bottom-left(50px, "", 50px, "");
-    }
+	.home {
+		@include top-right-bottom-left(50px, "", 50px, "");
+	}
 
-    .home__work-link {
-        position: absolute;
-        right: 50px;
-    }
+	.home__work-link {
+		position: absolute;
+		right: 50px;
+	}
 
-    .home__title {
-        font: {
-            size: 14vw;
-        }
-    }
+	.home__title {
+		font: {
+			size: 14vw;
+		}
+	}
 }

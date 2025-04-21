@@ -1,89 +1,89 @@
 @use "./../../mixins" as *;
 
 .corner-top-left {
-    position: fixed;
-    @include top-right-bottom-left(50px, "", "", 50px);
-    z-index: 1;
-    width: 0;
-    aspect-ratio: 1 / 1;
-    border-top: 5px solid var(--txt-clr);
-    border-left: 5px solid var(--txt-clr);
-    pointer-events: none;
-    opacity: 0;
-    animation: revealCorner 1s forwards;
-    transition: all 0.3s;
+	position: fixed;
+	@include top-right-bottom-left(50px, "", "", 50px);
+	z-index: 1;
+	width: 0;
+	aspect-ratio: 1 / 1;
+	border-top: 5px solid var(--txt-clr);
+	border-left: 5px solid var(--txt-clr);
+	pointer-events: none;
+	opacity: 0;
+	animation: revealCorner 1s forwards;
+	transition: all 0.3s;
 }
 
 .corner-top-right {
-    position: fixed;
-    @include top-right-bottom-left(50px, 50px, "", "");
-    z-index: 1;
-    width: 0;
-    aspect-ratio: 1 / 1;
-    border-top: 5px solid var(--txt-clr);
-    border-right: 5px solid var(--txt-clr);
-    pointer-events: none;
-    opacity: 0;
-    animation: revealCorner 1s forwards;
-    transition: all 0.3s;
+	position: fixed;
+	@include top-right-bottom-left(50px, 50px, "", "");
+	z-index: 1;
+	width: 0;
+	aspect-ratio: 1 / 1;
+	border-top: 5px solid var(--txt-clr);
+	border-right: 5px solid var(--txt-clr);
+	pointer-events: none;
+	opacity: 0;
+	animation: revealCorner 1s forwards;
+	transition: all 0.3s;
 }
 
 .corner-bottom-right {
-    position: fixed;
-    @include top-right-bottom-left("", 50px, 50px, "");
-    z-index: 1;
-    width: 0;
-    aspect-ratio: 1 / 1;
-    border-bottom: 5px solid var(--txt-clr);
-    border-right: 5px solid var(--txt-clr);
-    pointer-events: none;
-    opacity: 0;
-    animation: revealCorner 1s forwards;
-    transition: all 0.3s;
+	position: fixed;
+	@include top-right-bottom-left("", 50px, 50px, "");
+	z-index: 1;
+	width: 0;
+	aspect-ratio: 1 / 1;
+	border-bottom: 5px solid var(--txt-clr);
+	border-right: 5px solid var(--txt-clr);
+	pointer-events: none;
+	opacity: 0;
+	animation: revealCorner 1s forwards;
+	transition: all 0.3s;
 }
 
 .corner-bottom-left {
-    position: fixed;
-    @include top-right-bottom-left("", "", 50px, 50px);
-    z-index: 1;
-    width: 0;
-    aspect-ratio: 1 / 1;
-    border-bottom: 5px solid var(--txt-clr);
-    border-left: 5px solid var(--txt-clr);
-    pointer-events: none;
-    opacity: 0;
-    animation: revealCorner 1s forwards;
-    transition: all 0.3s;
+	position: fixed;
+	@include top-right-bottom-left("", "", 50px, 50px);
+	z-index: 1;
+	width: 0;
+	aspect-ratio: 1 / 1;
+	border-bottom: 5px solid var(--txt-clr);
+	border-left: 5px solid var(--txt-clr);
+	pointer-events: none;
+	opacity: 0;
+	animation: revealCorner 1s forwards;
+	transition: all 0.3s;
 }
 
 @keyframes revealCorner {
-    to {
-        width: 100px;
-        opacity: 1;
-    }
+	to {
+		width: 100px;
+		opacity: 1;
+	}
 }
 
 @media (max-width: 1000px) {
-    .corner-top-left {
-        @include top-right-bottom-left(25px, "", "", 25px);
-    }
+	.corner-top-left {
+		@include top-right-bottom-left(25px, "", "", 25px);
+	}
 
-    .corner-top-right {
-        @include top-right-bottom-left(25px, 25px, "", "");
-    }
+	.corner-top-right {
+		@include top-right-bottom-left(25px, 25px, "", "");
+	}
 
-    .corner-bottom-right {
-        @include top-right-bottom-left("", 25px, 25px, "");
-    }
+	.corner-bottom-right {
+		@include top-right-bottom-left("", 25px, 25px, "");
+	}
 
-    .corner-bottom-left {
-        @include top-right-bottom-left("", "", 25px, 25px);
-    }
+	.corner-bottom-left {
+		@include top-right-bottom-left("", "", 25px, 25px);
+	}
 
-    @keyframes revealCorner {
-        to {
-            width: 50px;
-            opacity: 1;
-        }
-    }
+	@keyframes revealCorner {
+		to {
+			width: 50px;
+			opacity: 1;
+		}
+	}
 }

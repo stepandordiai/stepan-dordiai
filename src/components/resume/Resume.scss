@@ -1,9 +1,9 @@
 .resume__link {
-    color: var(--txt-clr);
-    font-size: clamp(12px, 2vw, 16px);
-    transition: all 0.3s;
+	color: var(--txt-clr);
+	font-size: clamp(0.8rem, 2vw, 1rem);
+	transition: all 0.3s;
 
-    &:hover {
-        opacity: 0.5;
-    }
+	&:hover {
+		opacity: 0.5;
+	}
 }

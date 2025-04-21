@@ -1,37 +1,37 @@
 @use "./../../mixins" as *;
 
 .footer {
-    position: fixed;
-    right: 50px;
-    bottom: -50px;
-    left: 50px;
-    z-index: 1;
-    @include flex-between;
-    height: 50px;
-    @include glass-effect;
-    background: var(--bg-semi-tp-50);
-    transition: background-color 0.3s;
-    animation: revealFooter 1s forwards;
+	position: fixed;
+	right: 50px;
+	bottom: -50px;
+	left: 50px;
+	z-index: 1;
+	@include flex-between;
+	height: 50px;
+	@include glass-effect;
+	background: var(--bg-semi-tp-50);
+	transition: background-color 0.3s;
+	animation: revealFooter 1s forwards;
 }
 
 @keyframes revealFooter {
-    to {
-        bottom: 0;
-    }
+	to {
+		bottom: 0;
+	}
 }
 
 .copyright,
 .privacy {
-    font-size: clamp(12px, 1.5vw, 16px);
-    color: var(--semi-tp-50);
-    transition: color 0.3s;
+	font-size: clamp(0.8rem, 2vw, 1rem);
+	color: var(--semi-tp-50);
+	transition: color 0.3s;
 }
 
 @media (max-width: 1000px) {
-    .footer {
-        right: 25px;
-        bottom: -25px;
-        left: 25px;
-        height: 25px;
-    }
+	.footer {
+		right: 25px;
+		bottom: -25px;
+		left: 25px;
+		height: 25px;
+	}
 }
