@@ -1,39 +1,38 @@
 /* Infinite scroller */
 .scroller__inner {
-    flex-wrap: wrap;
-    display: flex;
-    gap: 1rem;
+	flex-wrap: nowrap;
+	width: max-content;
+	display: flex;
+	gap: 1rem;
 }
 
 .scroller[data-animated="true"] {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .scroller[data-animated="true"] .scroller__inner {
-    width: max-content;
-    flex-wrap: nowrap;
-    animation: scroll var(--_animation-duration, 8s)
-        var(--_animation-direction, forwards) linear infinite;
+	animation: scroll var(--_animation-duration, 8s)
+		var(--_animation-direction, forwards) linear infinite;
 }
 
 .scroller[data-direction="right"] {
-    --_animation-direction: reverse;
+	--_animation-direction: reverse;
 }
 
 .scroller[data-direction="left"] {
-    --_animation-direction: forwards;
+	--_animation-direction: forwards;
 }
 
 .scroller[data-speed="slow"] {
-    --_animation-duration: 16s;
+	--_animation-duration: 16s;
 }
 
 .scroller[data-speed="fast"] {
-    --_animation-duration: 5s;
+	--_animation-duration: 5s;
 }
 
 @keyframes scroll {
-    to {
-        transform: translate(calc(-50% - 0.5rem));
-    }
+	to {
+		transform: translate(calc(-50% - 0.5rem));
+	}
 }
