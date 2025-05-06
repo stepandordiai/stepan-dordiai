@@ -4,11 +4,12 @@
 	@include flex-center;
 	width: 100%;
 	aspect-ratio: 1/1;
-	background: var(--semi-tp-05);
 	@include glass-effect;
 	border: 1px solid var(--semi-tp-10);
+	border-radius: 10px;
 	opacity: 0;
 	scale: 0.5;
+	transition: border 0.3s;
 }
 
 .skill {
@@ -20,6 +21,7 @@
 .text-icon {
 	font-size: clamp(1.5em, 4vw, 2.5em);
 	color: var(--txt-clr);
+	transition: color 0.3s;
 }
 
 .img-icon {

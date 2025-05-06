@@ -3,20 +3,41 @@
 .skills {
 	position: absolute;
 	@include top-right-bottom-left(0, 100px, 0, 100px);
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
 	padding: 100px 0;
 	overflow-y: scroll;
 }
 
 .skills-grid {
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(10, 1fr);
 	gap: 5px;
+}
+
+.skills__title {
+	font-size: 1.5rem;
+	opacity: 0;
+	animation: revealSkillsTitle 1s forwards;
+}
+
+@keyframes revealSkillsTitle {
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes revealSkillContainer {
 	to {
 		opacity: 1;
 		scale: 1;
+	}
+}
+
+@media (max-width: 1300px) {
+	.skills-grid {
+		grid-template-columns: repeat(8, 1fr);
 	}
 }
 

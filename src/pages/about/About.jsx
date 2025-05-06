@@ -12,8 +12,8 @@ function About() {
 			<Helmet>
 				<title>ABOUT | STEPAN DORDIAI</title>
 			</Helmet>
-			<section className="about">
-				{`Self-taught Web developer with more than 2 years of diverse experience in designing and building responsive web pages and applications. Constantly seeking for new challenges and opportunities that will expand my skill set`
+			<div className="about">
+				{`Self-taught Web Developer with more than 2 years of diverse experience in designing and building responsive web pages and applications. Constantly seeking for new challenges and opportunities that will expand my skill set`
 					.split(" ")
 					.map((word, index) => {
 						return (
@@ -23,7 +23,7 @@ function About() {
 							</React.Fragment>
 						);
 					})}
-			</section>
+			</div>
 		</>
 	);
 }

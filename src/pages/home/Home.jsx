@@ -64,7 +64,7 @@ function Home() {
 			<Helmet>
 				<title>FRONT-END DEVELOPER | STEPAN DORDIAI</title>
 			</Helmet>
-			<section className="home">
+			<div className="home">
 				<NavLink
 					to={"/contact"}
 					onMouseEnter={interactCursor}
@@ -87,7 +87,7 @@ function Home() {
 						</h1>
 					</div>
 				</div>
-			</section>
+			</div>
 		</>
 	);
 }

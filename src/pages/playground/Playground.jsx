@@ -13,7 +13,7 @@ const Playground = () => {
 			<Helmet>
 				<title>PLAYGROUND | STEPAN DORDIAI</title>
 			</Helmet>
-			<section className="pg js-pg">
+			<div className="pg js-pg">
 				{pgData
 					.map(({ title, liveSite }, index) => {
 						return (
@@ -35,7 +35,7 @@ const Playground = () => {
 						);
 					})
 					.reverse()}
-			</section>
+			</div>
 			<ScrollBtn className={".js-pg"} />
 		</>
 	);
