@@ -3,6 +3,7 @@
 .project {
 	position: relative;
 	@include flex-between;
+	height: 120px;
 	flex-shrink: 0;
 	padding: 10px;
 	border: 1px solid var(--semi-tp-10);
@@ -35,25 +36,33 @@
 
 .project__number {
 	color: var(--txt-clr);
+	font-weight: 300;
 	align-self: flex-end;
 	transition: color 0.3s;
 }
 
-.right-side {
-	@include flex-center;
+.project__right-side {
+	height: 100%;
+	display: flex;
 	column-gap: 25px;
 }
 
+.project__info-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
 .project__title {
-	font-size: clamp(1rem, 2vw, 2rem);
-	justify-self: flex-end;
+	font-size: clamp(1.25rem, 2vw, 2rem);
 	color: var(--txt-clr);
 	transition: color 0.3s;
 }
 
 .project__date {
-	justify-self: flex-end;
 	color: var(--txt-clr);
+	font-weight: 300;
 	transition: color 0.3s;
 }
 
@@ -66,27 +75,21 @@
 	.project {
 		flex-direction: column-reverse;
 		flex-shrink: 0;
+		height: auto;
 	}
 
 	.project__number {
 		align-self: flex-start;
 	}
 
-	.right-side {
-		width: 100%;
-		justify-content: flex-end;
+	.project__right-side {
 		align-items: flex-start;
 		flex-direction: column-reverse;
 		row-gap: 10px;
-		height: 100%;
 	}
 
-	.project__title {
-		justify-self: flex-start;
-	}
-
-	.project__date {
-		justify-self: flex-start;
+	.project__info-container {
+		align-items: flex-start;
 	}
 
 	.project__img {
