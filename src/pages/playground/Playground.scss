@@ -21,9 +21,15 @@
 	flex-shrink: 0;
 	padding: 10px;
 	border: 1px solid var(--semi-tp-10);
+	background: var(--semi-tp-05);
 	border-radius: 10px;
 	opacity: 0;
 	transform: translateY(25px);
+	transition: border 0.3s, background-color 0.3s;
+
+	&:hover {
+		background: var(--semi-tp-10);
+	}
 }
 
 @keyframes revealPgProject {

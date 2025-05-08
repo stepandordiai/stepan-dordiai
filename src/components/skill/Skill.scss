@@ -6,10 +6,15 @@
 	aspect-ratio: 1/1;
 	@include glass-effect;
 	border: 1px solid var(--semi-tp-10);
+	background: var(--semi-tp-05);
 	border-radius: 10px;
 	opacity: 0;
 	scale: 0.5;
-	transition: border 0.3s;
+	transition: border 0.3s, background-color 0.3s;
+
+	&:hover {
+		background: var(--semi-tp-10);
+	}
 }
 
 .skill {
