@@ -16,9 +16,10 @@ function Portfolio() {
 						return (
 							<Project
 								key={project.id}
+								index={index}
 								id={project.id}
 								title={project.title}
-								index={index}
+								date={project.date}
 								projectImg={project.projectImg}
 							/>
 						);

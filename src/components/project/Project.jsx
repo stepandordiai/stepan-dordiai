@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Project.scss";
 
-function Project({ id, title, index, projectImg }) {
+function Project({ id, title, date, index, projectImg }) {
 	AnimateElements(".project", "revealProject 1s forwards");
 
 	return (
@@ -23,7 +23,10 @@ function Project({ id, title, index, projectImg }) {
 				{index + 1 < 10 ? `0${index + 1}` : index + 1}
 			</p>
 			<div className="right-side">
-				<p className="project__title">{title}</p>
+				<div>
+					<p className="project__title">{title}</p>
+					<p className="project__date">{date}</p>
+				</div>
 				<img
 					className="project__img"
 					src={projectImg}

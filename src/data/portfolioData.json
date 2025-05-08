@@ -1,15 +1,8 @@
 [
 	{
-		"id": "stepan-dordiai",
-		"title": "STEPAN DORDIAI",
-		"titleDesc": "Portfolio website",
-		"githubRepo": "https://github.com/stepandordiai/stepan-dordiai",
-		"projectVideo": "/videos/stepan-dordiai-video.mp4",
-		"projectImg": "/screenshots/stepan-dordiai-screenshot.png"
-	},
-	{
 		"id": "cloud",
 		"title": "cloud.",
+		"date": "September | 2024",
 		"titleDesc": "Weather website",
 		"liveSite": "https://cloud-project.netlify.app/",
 		"githubRepo": "https://github.com/stepandordiai/cloud",
@@ -17,8 +10,18 @@
 		"projectImg": "/screenshots/cloud.png"
 	},
 	{
+		"id": "stepan-dordiai",
+		"title": "STEPAN DORDIAI",
+		"date": "October | 2024",
+		"titleDesc": "Portfolio website",
+		"githubRepo": "https://github.com/stepandordiai/stepan-dordiai",
+		"projectVideo": "/videos/stepan-dordiai-video.mp4",
+		"projectImg": "/screenshots/stepan-dordiai-screenshot.png"
+	},
+	{
 		"id": "yagoda-karpat",
 		"title": "Yagoda Karpat",
+		"date": "January | 2025",
 		"titleDesc": "Business website",
 		"liveSite": "https://yagodakarpat.com/",
 		"githubRepo": "https://github.com/stepandordiai/yagoda-karpat",
@@ -28,6 +31,7 @@
 	{
 		"id": "bourek",
 		"title": "Bourek",
+		"date": "January | 2025",
 		"titleDesc": "Service website",
 		"liveSite": "https://bourek.cz/",
 		"projectVideo": "/videos/bourek-video.mp4",
@@ -36,6 +40,7 @@
 	{
 		"id": "prozubik",
 		"title": "Prozubik",
+		"date": "January | 2025",
 		"titleDesc": "Service website",
 		"liveSite": "https://prozubik.cz/",
 		"projectVideo": "/videos/prozubik-video.mp4",
@@ -44,6 +49,7 @@
 	{
 		"id": "neresen",
 		"title": "Neresen",
+		"date": "February | 2025",
 		"titleDesc": "Business website",
 		"liveSite": "https://neresen.cz/",
 		"projectVideo": "/videos/neresen-video.mp4",
@@ -52,6 +58,7 @@
 	{
 		"id": "fve-stavby",
 		"title": "FVE STAVBY",
+		"date": "March | 2025",
 		"titleDesc": "Business website",
 		"liveSite": "https://fvestavby.cz/",
 		"projectVideo": "/videos/fve-stavby-video.mp4",
