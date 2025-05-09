@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import tsIcon from "/images/ts-icon.svg";
 import mongodbIcon from "/images/mongodb-icon.svg";
-import nextIcon from "/images/nextjs-svgrepo-com.svg";
+import nextIcon from "/images/next.svg";
 
 // I'm using uuid external library for unique id
 
@@ -71,13 +71,13 @@ const skillsData = [
 		id: uuidv4(),
 		name: "TypeScript",
 		type: "backend",
-		icon: [<img className="img-icon" src={tsIcon} alt="TypeScript" />],
+		icon: [<img className="img-icon" src={tsIcon} alt="" />],
 	},
 	{
 		id: uuidv4(),
 		name: "Mongo DB",
 		type: "backend",
-		icon: [<img className="img-icon" src={mongodbIcon} alt="Mongo DB" />],
+		icon: [<img className="img-icon" src={mongodbIcon} alt="" />],
 	},
 	{
 		id: uuidv4(),
@@ -95,7 +95,7 @@ const skillsData = [
 		id: uuidv4(),
 		name: "Next.js",
 		type: "frontend",
-		icon: [<img className="img-icon" src={nextIcon} alt="Next.js" />],
+		icon: [<img className="img-icon" src={nextIcon} alt="" />],
 	},
 ];
 
