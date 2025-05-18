@@ -14,12 +14,13 @@
         "react-dom": "^18.2.0",
         "react-helmet": "^6.1.0",
         "react-router-dom": "^6.24.1",
+        "typescript": "^5.8.3",
         "use-local-storage": "^3.0.0",
         "uuid": "^11.0.3"
     },
     "devDependencies": {
-        "@types/react": "^18.2.66",
-        "@types/react-dom": "^18.2.22",
+        "@types/react": "^18.3.21",
+        "@types/react-dom": "^18.3.7",
         "@vitejs/plugin-react": "^4.2.1",
         "eslint": "^8.57.0",
         "eslint-plugin-react": "^7.34.1",
