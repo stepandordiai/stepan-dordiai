@@ -11,63 +11,61 @@ function Nav() {
 	const activeLink = "nav__link nav__link--active js-nav__link";
 	const inactiveLink = "nav__link js-nav__link";
 
-	function showNavMenu() {
-		if (!isTouchDevice()) {
-			document
-				.querySelector(".menu-curtain")
-				.classList.add("menu-curtain--hover");
-			document.querySelector(".burger-btn").classList.add("burger-btn--active");
-		} else {
-			return;
-		}
-	}
-
-	function hideNavMenu() {
-		if (!isTouchDevice()) {
-			document
-				.querySelector(".menu-curtain")
-				.classList.remove("menu-curtain--hover");
-			document
-				.querySelector(".burger-btn")
-				.classList.remove("burger-btn--active");
-		} else {
-			return;
-		}
-	}
-
-	// Hide nav menu on page resize (when touch device rotates)
-	addEventListener("resize", () => {
-		document
-			.querySelector(".menu-curtain")
-			.classList.remove("menu-curtain--active");
-		document
-			.querySelector(".burger-btn")
-			.classList.remove("burger-btn--active");
-	});
-
 	useEffect(() => {
-		document.querySelectorAll(".js-nav__link").forEach((link) => {
-			link.addEventListener("click", () => {
-				if (!isTouchDevice()) {
-					return;
-				} else {
-					document
-						.querySelector(".menu-curtain")
-						.classList.remove("menu-curtain--active");
-					document
-						.querySelector(".burger-btn")
-						.classList.remove("burger-btn--active");
-				}
-			});
+		const menuCurtain = document.querySelector(
+			".menu-curtain"
+		) as HTMLDivElement | null;
+		const burgerBtn = document.querySelector(
+			".burger-btn"
+		) as HTMLDivElement | null;
+
+		function showNavMenu() {
+			if (isTouchDevice() || !menuCurtain || !burgerBtn) return;
+
+			menuCurtain.classList.add("menu-curtain--hover");
+			burgerBtn.classList.add("burger-btn--active");
+		}
+
+		function hideNavMenu() {
+			if (isTouchDevice() || !menuCurtain || !burgerBtn) return;
+
+			menuCurtain?.classList.remove("menu-curtain--hover");
+			burgerBtn?.classList.remove("burger-btn--active");
+		}
+
+		function hideMenuCurtain() {
+			if (!isTouchDevice() || !menuCurtain || !burgerBtn) return;
+
+			menuCurtain?.classList.remove("menu-curtain--active");
+			burgerBtn?.classList.remove("burger-btn--active");
+		}
+
+		menuCurtain?.addEventListener("mouseenter", showNavMenu);
+		menuCurtain?.addEventListener("mouseleave", hideNavMenu);
+
+		const navLinks = document.querySelectorAll(".js-nav__link");
+
+		navLinks.forEach((link) => {
+			link.addEventListener("click", hideMenuCurtain);
 		});
+
+		// Hide nav menu on window resize (when touch device rotates)
+		window.addEventListener("resize", hideMenuCurtain);
+
+		return () => {
+			menuCurtain?.removeEventListener("mouseenter", showNavMenu);
+			menuCurtain?.removeEventListener("mouseleave", hideNavMenu);
+
+			navLinks.forEach((link) => {
+				link.removeEventListener("click", hideMenuCurtain);
+			});
+
+			window.removeEventListener("resize", hideMenuCurtain);
+		};
 	}, []);
 
 	return (
-		<div
-			className="menu-curtain"
-			onMouseEnter={showNavMenu}
-			onMouseLeave={hideNavMenu}
-		>
+		<div className="menu-curtain">
 			<BurgerBtn />
 			<div className="menu-curtain__header">
 				<h1 className="menu-curtain__header-logo">
