@@ -1,15 +1,5 @@
 [
 	{
-		"id": "cloud",
-		"title": "cloud.",
-		"date": "September | 2024",
-		"titleDesc": "Weather website",
-		"liveSite": "https://cloud-project.netlify.app/",
-		"githubRepo": "https://github.com/stepandordiai/cloud",
-		"projectVideo": "/videos/cloud-video.mp4",
-		"projectImg": "/screenshots/cloud.png"
-	},
-	{
 		"id": "stepan-dordiai",
 		"title": "STEPAN DORDIAI",
 		"date": "October | 2024",
@@ -25,7 +15,7 @@
 		"titleDesc": "Business website",
 		"liveSite": "https://yagodakarpat.com/",
 		"projectVideo": "/videos/yagoda-karpat-video.mp4",
-		"projectImg": "/screenshots/yagoda-karpat-screenshot.png"
+		"projectImg": "/screenshots/yagoda-karpat-screenshot-v3.png"
 	},
 	{
 		"id": "bourek",
@@ -37,22 +27,13 @@
 		"projectImg": "/screenshots/bourek-screenshot.png"
 	},
 	{
-		"id": "prozubik",
-		"title": "Prozubik",
-		"date": "January | 2025",
-		"titleDesc": "Service website",
-		"liveSite": "https://prozubik.cz/",
-		"projectVideo": "/videos/prozubik-video.mp4",
-		"projectImg": "/screenshots/prozubik.png"
-	},
-	{
 		"id": "neresen",
 		"title": "Neresen",
 		"date": "February | 2025",
 		"titleDesc": "Business website",
 		"liveSite": "https://neresen.cz/",
 		"projectVideo": "/videos/neresen-video.mp4",
-		"projectImg": "/screenshots/neresen-screenshot.png"
+		"projectImg": "/screenshots/neresen-screenshot-v3.png"
 	},
 	{
 		"id": "fve-stavby",
@@ -61,6 +42,14 @@
 		"titleDesc": "Business website",
 		"liveSite": "https://fvestavby.cz/",
 		"projectVideo": "/videos/fve-stavby-video.mp4",
-		"projectImg": "/screenshots/fve-stavby-screenshot.png"
+		"projectImg": "/screenshots/fve-stavby-screenshot-v3.png"
+	},
+	{
+		"id": "flovas",
+		"title": "Flovas",
+		"date": "April | 2025",
+		"titleDesc": "Agency website",
+		"liveSite": "https://flovas.netlify.app/",
+		"projectImg": "/screenshots/flovas-screenshot-v2.png"
 	}
 ]
