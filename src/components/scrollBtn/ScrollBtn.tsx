@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import "./ScrollBtn.scss";
 
-const ScrollBtn = ({ className }: HTMLDivElement) => {
+type ScrollBtnProps = {
+	className: string;
+};
+
+const ScrollBtn = ({ className }: ScrollBtnProps) => {
 	useEffect(() => {
 		const element = document.querySelector(className) as HTMLDivElement | null;
 

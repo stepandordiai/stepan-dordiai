@@ -1,2 +1,3 @@
 update all with tsx (learning)
 update video for each project
+update memory card game with hearts images colors etc
