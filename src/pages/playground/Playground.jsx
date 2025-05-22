@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import pgData from "./../../data/pgData.json";
+import pgData from "./../../data/pg-data.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
