@@ -162,7 +162,7 @@ function Nav() {
 					onMouseLeave={removeInteractCursor}
 					onMouseDown={removeInteractCursor}
 					onMouseUp={interactCursor}
-					href="https://www.linkedin.com/in/stepan-dordiai"
+					href="https://www.linkedin.com/in/stepandordiai"
 					target="_blank"
 				>
 					<i className="fa-brands fa-linkedin"></i>

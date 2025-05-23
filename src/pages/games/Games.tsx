@@ -7,20 +7,27 @@ import "./Games.scss";
 
 const Games = () => {
 	useEffect(() => {
+		const games = document.querySelector(".games") as HTMLDivElement | null;
+
 		// I use useEffect to remove scroll to see the tilt effect on touch devices
-		if (!isTouchDevice()) {
-			document.querySelector(".games").style.overflowY = "scroll";
-		} else {
-			document.querySelector(".games").style.overflowY = "hidden";
+		if (games) {
+			if (!isTouchDevice()) {
+				games.style.overflowY = "scroll";
+			} else {
+				games.style.overflowY = "hidden";
+			}
 		}
 
-		document.querySelector(".games").addEventListener("scroll", () => {
-			if (document.querySelector(".games").scrollTop >= 100) {
-				document.querySelector(".pag1").classList.remove("active");
-				document.querySelector(".pag2").classList.add("active");
+		games?.addEventListener("scroll", () => {
+			const pag1 = document.querySelector(".pag1");
+			const pag2 = document.querySelector(".pag2");
+
+			if (games.scrollTop >= 100) {
+				pag1?.classList.remove("active");
+				pag2?.classList.add("active");
 			} else {
-				document.querySelector(".pag1").classList.add("active");
-				document.querySelector(".pag2").classList.remove("active");
+				pag1?.classList.add("active");
+				pag2?.classList.remove("active");
 			}
 		});
 
@@ -29,41 +36,65 @@ const Games = () => {
 		}
 	}, []);
 
-	function addAnimation() {
+	function addAnimation(): void {
 		const scrollers = document.querySelectorAll(".scroller");
 
 		scrollers.forEach((scroller) => {
-			scroller.setAttribute("data-animated", true);
+			scroller.setAttribute("data-animated", "true");
 
-			const scrollerInner = scroller.querySelector(".scroller__inner");
+			const scrollerInner = scroller.querySelector(
+				".scroller__inner"
+			) as HTMLDivElement | null;
+
+			if (!scrollerInner) return;
+
 			const scrollerContent = Array.from(scrollerInner.children);
 
 			scrollerContent.forEach((item) => {
-				const duplicatedItem = item.cloneNode(true);
-				duplicatedItem.setAttribute("aria-hidden", true);
-				scrollerInner.appendChild(duplicatedItem);
+				const duplicatedItem = item.cloneNode(true) as HTMLElement;
+				duplicatedItem.setAttribute("aria-hidden", "true");
+				scrollerInner?.appendChild(duplicatedItem);
 			});
 		});
 	}
 
-	function scrollPag1() {
-		document.querySelector(".games").scrollTop = 0;
+	function scrollPag1(): void {
+		const games = document.querySelector(".games") as HTMLDivElement | null;
+
+		if (!games) return;
+		games.scrollTop = 0;
 	}
 
-	function scrollPag2() {
-		document.querySelector(".games").scrollTop = 500;
+	function scrollPag2(): void {
+		const games = document.querySelector(".games") as HTMLDivElement | null;
+
+		if (!games) return;
+		games.scrollTop = 500;
 	}
 
-	//FIXME: className as a property?
-	function addTiltEffect(event, className) {
-		const rect = document.querySelector(className).getBoundingClientRect();
+	function addTiltEffect(
+		event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
+		className: string
+	): void {
+		const element = document.querySelector(className) as HTMLDivElement | null;
+
+		if (!element) return;
+
+		const rect = element.getBoundingClientRect();
+
+		const nativeEvent = event.nativeEvent;
+		const isTouch = "touches" in nativeEvent;
 
 		const offsetX =
-			(!isTouchDevice() ? event.clientX : event.touches[0].pageX) -
+			(isTouch
+				? (nativeEvent as TouchEvent).touches[0].pageX
+				: (nativeEvent as MouseEvent).clientX) -
 			rect.left -
 			rect.width / 2;
 		const offsetY =
-			(!isTouchDevice() ? event.clientY : event.touches[0].pageY) -
+			(isTouch
+				? (nativeEvent as TouchEvent).touches[0].pageY
+				: (nativeEvent as MouseEvent).clientY) -
 			rect.top -
 			rect.height / 2;
 
@@ -72,17 +103,16 @@ const Games = () => {
 		const tiltX = (offsetY / rect.height) * -DEG;
 		const tiltY = (offsetX / rect.width) * DEG;
 
-		document
-			.querySelector(className)
-			.style.setProperty("--tiltX", `${tiltX}deg`);
-		document
-			.querySelector(className)
-			.style.setProperty("--tiltY", `${tiltY}deg`);
+		element.style.setProperty("--tiltX", `${tiltX}deg`);
+		element.style.setProperty("--tiltY", `${tiltY}deg`);
 	}
 
-	function removeTiltEffect(className) {
-		document.querySelector(className).style.setProperty("--tiltX", `0deg`);
-		document.querySelector(className).style.setProperty("--tiltY", `0deg`);
+	function removeTiltEffect(className: string): void {
+		const element = document.querySelector(className) as HTMLDivElement | null;
+		if (element) {
+			element.style.setProperty("--tiltX", `0deg`);
+			element.style.setProperty("--tiltY", `0deg`);
+		}
 	}
 
 	return (
@@ -93,9 +123,9 @@ const Games = () => {
 			<div className="games">
 				<div
 					className="game-wrapper"
-					onMouseMove={() => addTiltEffect(event, ".js-game-one-container")}
+					onMouseMove={(e) => addTiltEffect(e, ".js-game-one-container")}
 					onMouseLeave={() => removeTiltEffect(".js-game-one-container")}
-					onTouchMove={() => addTiltEffect(event, ".js-game-one-container")}
+					onTouchMove={(e) => addTiltEffect(e, ".js-game-one-container")}
 					onTouchEnd={() => removeTiltEffect(".js-game-one-container")}
 				>
 					<div className="game-container js-game-one-container">
@@ -122,9 +152,9 @@ const Games = () => {
 				</div>
 				<div
 					className="game-wrapper"
-					onMouseMove={() => addTiltEffect(event, ".js-game-two-container")}
+					onMouseMove={(e) => addTiltEffect(e, ".js-game-two-container")}
 					onMouseLeave={() => removeTiltEffect(".js-game-two-container")}
-					onTouchMove={() => addTiltEffect(event, ".js-game-two-container")}
+					onTouchMove={(e) => addTiltEffect(e, ".js-game-two-container")}
 					onTouchEnd={() => removeTiltEffect(".js-game-two-container")}
 				>
 					<div className="game-container js-game-two-container">

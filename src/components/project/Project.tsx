@@ -3,7 +3,17 @@ import { NavLink } from "react-router-dom";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Project.scss";
 
-function Project({ id, title, date, index, projectImg }) {
+type ProjectProps = {
+	project: {
+		id: string;
+		title: string;
+		date: string;
+		projectImg: string;
+	};
+	index: number;
+};
+
+function Project({ project, index }: ProjectProps) {
 	AnimateElements(".project", "revealProject 1s forwards");
 
 	return (
@@ -17,20 +27,20 @@ function Project({ id, title, date, index, projectImg }) {
 			<NavLink
 				onClick={removeInteractCursor}
 				className="project__link"
-				to={`/project-page/${id}`}
+				to={`/project-page/${project.id}`}
 			></NavLink>
 			<p className="project__number">
 				{index + 1 < 10 ? `0${index + 1}` : index + 1}
 			</p>
 			<div className="project__right-side">
 				<div className="project__info-container">
-					<p className="project__title">{title}</p>
-					<p className="project__date">{date}</p>
+					<p className="project__title">{project.title}</p>
+					<p className="project__date">{project.date}</p>
 				</div>
 				<img
 					className="project__img"
-					src={projectImg}
-					alt={title}
+					src={project.projectImg}
+					alt={project.title}
 					loading="lazy"
 				/>
 			</div>

@@ -11,20 +11,9 @@ function Portfolio() {
 				<title>PORTFOLIO | STEPAN DORDIAI</title>
 			</Helmet>
 			<div className="portfolio js-portfolio">
-				{portfolioData
-					.map((project, index) => {
-						return (
-							<Project
-								key={project.id}
-								index={index}
-								id={project.id}
-								title={project.title}
-								date={project.date}
-								projectImg={project.projectImg}
-							/>
-						);
-					})
-					.reverse()}
+				{[...portfolioData].reverse().map((project, index) => {
+					return <Project key={project.id} project={project} index={index} />;
+				})}
 			</div>
 			<ScrollBtn className={".js-portfolio"} />
 		</>

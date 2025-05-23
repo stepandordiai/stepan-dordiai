@@ -41,9 +41,15 @@ export function showText() {
 }
 
 export function interactCursor() {
+	const customCursor = document.querySelector(
+		"#custom-cursor"
+	) as HTMLDivElement | null;
 	customCursor?.classList.add("cursor--interact");
 }
 
 export function removeInteractCursor() {
+	const customCursor = document.querySelector(
+		"#custom-cursor"
+	) as HTMLDivElement | null;
 	customCursor?.classList.remove("cursor--interact");
 }
