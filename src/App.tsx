@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./components/loading/Loading";
+import CustomCursor from "./components/customCursor/CustomCursor";
+import CustomCorners from "./components/customCorners/CustomCorners";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Skills from "./pages/skills/Skills";
@@ -12,8 +14,6 @@ import MenuCurtain from "./components/menuCurtain/MenuCurtain";
 import DarkMode from "./components/darkMode/DarkMode";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
-import CustomCursor from "./components/customCursor/CustomCursor";
-import CustomCorners from "./components/customCorners/CustomCorners";
 import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
 // import CubeBackground from "./components/cubeBackground/CubeBackground";
 import ProjectPage from "./pages/projectPage/ProjectPage";
