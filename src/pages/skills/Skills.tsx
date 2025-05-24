@@ -17,9 +17,7 @@ function Skills() {
 						.filter((skill) => skill.type === "frontend")
 						.reverse()
 						.map((skill) => {
-							return (
-								<Skill key={skill.id} icon={skill.icon} name={skill.name} />
-							);
+							return <Skill key={skill.id} skill={skill} />;
 						})}
 				</div>
 				<p className="skills__title">Back-end</p>
@@ -28,9 +26,7 @@ function Skills() {
 						.filter((skill) => skill.type === "backend")
 						.reverse()
 						.map((skill) => {
-							return (
-								<Skill key={skill.id} icon={skill.icon} name={skill.name} />
-							);
+							return <Skill key={skill.id} skill={skill} />;
 						})}
 				</div>
 				<p className="skills__title">Design</p>
@@ -39,9 +35,7 @@ function Skills() {
 						.filter((skill) => skill.type === "design")
 						.reverse()
 						.map((skill) => {
-							return (
-								<Skill key={skill.id} icon={skill.icon} name={skill.name} />
-							);
+							return <Skill key={skill.id} skill={skill} />;
 						})}
 				</div>
 				<p className="skills__title">Other</p>
@@ -50,9 +44,7 @@ function Skills() {
 						.filter((skill) => skill.type === "other")
 						.reverse()
 						.map((skill) => {
-							return (
-								<Skill key={skill.id} icon={skill.icon} name={skill.name} />
-							);
+							return <Skill key={skill.id} skill={skill} />;
 						})}
 				</div>
 			</div>
