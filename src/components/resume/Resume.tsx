@@ -1,5 +1,5 @@
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
-import resume from "/pdf/stepan-dordiai-cv-v5.pdf";
+import resumeFile from "/pdf/stepan-dordiai-cv-v5.pdf";
 import "./Resume.scss";
 
 const Resume = () => {
@@ -10,7 +10,7 @@ const Resume = () => {
 			onMouseDown={removeInteractCursor}
 			onMouseUp={interactCursor}
 			className="resume__link"
-			href={resume}
+			href={resumeFile}
 			target="_blank"
 		>
 			RESUME
