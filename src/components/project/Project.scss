@@ -2,7 +2,7 @@
 
 .project {
 	position: relative;
-	@include flex-between;
+	@include flex-between-center;
 	height: 120px;
 	flex-shrink: 0;
 	padding: 10px;

@@ -1,215 +1,181 @@
 @use "./../../mixins" as *;
 
 .game-1-section {
-    position: fixed;
-    top: 100px;
-    right: 100px;
-    bottom: 100px;
-    left: 100px;
-    font-family: "Silkscreen", sans-serif;
-    @include flex-between;
-    flex-direction: column;
-    opacity: 0;
-    animation: reveal 1s forwards;
+	position: fixed;
+	top: 100px;
+	right: 100px;
+	bottom: 100px;
+	left: 100px;
+	font-family: "Silkscreen", sans-serif;
+	@include flex-evenly-center;
+	flex-direction: column;
+	opacity: 0;
+	animation: reveal 1s forwards;
 }
 
 .game-one__back-btn {
-    align-self: flex-start;
-    color: var(--txt-clr);
-    transition: opacity 150ms;
+	align-self: flex-start;
+	color: var(--txt-clr);
+	transition: opacity 150ms;
 
-    &:hover {
-        opacity: 0.5;
-    }
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 .game-one__title-result {
-    color: var(--txt-clr);
-    font-size: 1.5rem;
+	color: var(--txt-clr);
+	font-size: 1.5rem;
 }
 
 .game-one__lives {
-    color: var(--txt-clr);
+	color: var(--txt-clr);
 }
 
 .cards-grid {
-    display: grid;
-    grid-template: repeat(4, 5rem) / repeat(4, 5rem);
-    gap: 10px;
-    perspective: 800px;
+	display: grid;
+	grid-template: repeat(4, 5rem) / repeat(4, 5rem);
+	gap: 10px;
+	perspective: 800px;
 }
 
 .card {
-    position: relative;
-    @include flex-center;
-    transform-style: preserve-3d;
-    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    background: #fff;
+	position: relative;
+	@include flex-center;
+	transform-style: preserve-3d;
+	border: 1px solid var(--semi-tp-25);
+	background: var(--semi-tp-05);
+	border-radius: 10px;
+	transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+		background-color 0.3s, border 0.3s;
+
+	&:hover {
+		background: var(--semi-tp-10);
+	}
 }
 
 .face {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    pointer-events: none;
-    transform: rotateY(-180deg);
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	pointer-events: none;
+	transform: rotateY(-180deg);
+	backface-visibility: hidden;
 }
 
 .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    backface-visibility: hidden;
-    pointer-events: none;
-}
-
-.card-top-left-corner {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    border-top: 5px solid black;
-    border-left: 5px solid black;
-}
-
-.card-top-right-corner {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-}
-
-.card-bottom-right-corner {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
-}
-
-.card-bottom-left-corner {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    border-bottom: 5px solid black;
-    border-left: 5px solid black;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	pointer-events: none;
 }
 
 .toggle-card {
-    transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .inactive {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 .game-one__btn-container {
-    width: 100%;
-    @include flex-between;
-    margin-top: 25px;
+	width: 100%;
+	@include flex-between-center;
+	margin-top: 25px;
 }
 
 .game-one__btn {
-    position: relative;
-    color: var(--txt-clr);
-    padding: 10px 20px;
+	position: relative;
+	color: var(--txt-clr);
+	padding: 10px 20px;
 }
 
 .game-one__btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    border-top: 2.5px solid var(--txt-clr);
-    border-left: 2.5px solid var(--txt-clr);
-    transition: width 0.3s, height 0.3s;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 50%;
+	border-top: 2.5px solid var(--txt-clr);
+	border-left: 2.5px solid var(--txt-clr);
+	transition: width 0.3s, height 0.3s;
 }
 
 .game-one__btn::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    height: 50%;
-    border-right: 2.5px solid var(--txt-clr);
-    border-bottom: 2.5px solid var(--txt-clr);
-    transition: width 0.3s, height 0.3s;
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 50%;
+	border-right: 2.5px solid var(--txt-clr);
+	border-bottom: 2.5px solid var(--txt-clr);
+	transition: width 0.3s, height 0.3s;
 }
 
 .game-one__btn:hover::before,
 .game-one__btn:hover::after {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .game-one__btn--inactive {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 .none {
-    display: none !important;
+	display: none !important;
 }
 
 .rotate-container {
-    position: absolute;
-    top: 100px;
-    right: 100px;
-    bottom: 100px;
-    left: 100px;
-    @include flex-center;
-    flex-direction: column;
-    row-gap: 10px;
-    opacity: 0;
-    z-index: 1;
-    animation: reveal 1s forwards;
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	bottom: 100px;
+	left: 100px;
+	@include flex-center;
+	flex-direction: column;
+	row-gap: 10px;
+	opacity: 0;
+	z-index: 1;
+	animation: reveal 1s forwards;
 }
 
 @keyframes reveal {
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 .rotate-font-img {
-    font-size: 72px;
-    color: var(--txt-clr);
+	font-size: 72px;
+	color: var(--txt-clr);
 }
 
 .rotate-title {
-    color: var(--txt-clr);
-    font-weight: 300;
-    text-align: center;
+	color: var(--txt-clr);
+	font-weight: 300;
+	text-align: center;
 }
 
 @media (max-width: 1000px) {
-    .game-1-section {
-        top: 50px;
-        right: 50px;
-        bottom: 50px;
-        left: 50px;
-    }
+	.game-1-section {
+		top: 50px;
+		right: 50px;
+		bottom: 50px;
+		left: 50px;
+	}
 
-    .cards-grid {
-        grid-template: repeat(4, 4rem) / repeat(4, 4rem);
-    }
+	.cards-grid {
+		grid-template: repeat(4, 4rem) / repeat(4, 4rem);
+	}
 
-    .rotate-container {
-        top: 50px;
-        right: 50px;
-        bottom: 50px;
-        left: 50px;
-    }
+	.rotate-container {
+		top: 50px;
+		right: 50px;
+		bottom: 50px;
+		left: 50px;
+	}
 }

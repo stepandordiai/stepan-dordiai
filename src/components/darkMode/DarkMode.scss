@@ -7,7 +7,7 @@
 	bottom: 50px;
 	z-index: 1;
 	width: 50px;
-	@include flex-between;
+	@include flex-between-center;
 	writing-mode: vertical-lr;
 	text-orientation: upright;
 	@include glass-effect;

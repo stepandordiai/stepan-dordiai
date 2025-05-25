@@ -1,24 +1,28 @@
-const customCursor = document.querySelector(
-	"#custom-cursor"
-) as HTMLDivElement | null;
-const text = document.querySelector(".text p") as HTMLParagraphElement | null;
-
-export function makeCursorActive(title: string) {
+export function makeCursorActive(title: string): void {
+	const customCursor = document.querySelector(
+		"#custom-cursor"
+	) as HTMLDivElement | null;
 	customCursor?.classList.add("cursor--active");
-	if (text) {
-		text.textContent = title;
-	}
+	const text = document.querySelector(".text p") as HTMLParagraphElement | null;
+
+	if (!text) return;
+	text.textContent = title;
 	showText();
 }
 
-export function makeCursorNormal() {
+export function makeCursorNormal(): void {
+	const text = document.querySelector(".text p") as HTMLParagraphElement | null;
+	const customCursor = document.querySelector(
+		"#custom-cursor"
+	) as HTMLDivElement | null;
 	customCursor?.classList.remove("cursor--active");
 	if (text) {
 		text.textContent = "";
 	}
 }
 
-export function showText() {
+export function showText(): void {
+	const text = document.querySelector(".text p") as HTMLParagraphElement | null;
 	let textHTML = "";
 	text?.innerHTML.split("").forEach((char, i) => {
 		textHTML += `<span style="transform:rotate(${
@@ -26,12 +30,13 @@ export function showText() {
 		}deg) translateX(-50%)">${char}</span>`;
 	});
 
-	if (text) {
-		text.innerHTML = textHTML;
-	}
+	if (!text) return;
+	text.innerHTML = textHTML;
 	const chars = document.querySelectorAll(
 		".text span"
 	) as NodeListOf<HTMLSpanElement>;
+
+	if (!chars) return;
 
 	chars.forEach((char, index) => {
 		setTimeout(() => {
@@ -40,14 +45,14 @@ export function showText() {
 	});
 }
 
-export function interactCursor() {
+export function interactCursor(): void {
 	const customCursor = document.querySelector(
 		"#custom-cursor"
 	) as HTMLDivElement | null;
 	customCursor?.classList.add("cursor--interact");
 }
 
-export function removeInteractCursor() {
+export function removeInteractCursor(): void {
 	const customCursor = document.querySelector(
 		"#custom-cursor"
 	) as HTMLDivElement | null;

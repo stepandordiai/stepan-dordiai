@@ -5,7 +5,7 @@ import "./Skill.scss";
 type SkillProps = {
 	skill: {
 		icon: React.ReactNode;
-		name: any;
+		name: string;
 	};
 };
 
@@ -13,7 +13,7 @@ function Skill({ skill }: SkillProps) {
 	AnimateElements(".skill-container", "revealSkillContainer 1s forwards");
 	return (
 		<div
-			onMouseEnter={() => makeCursorActive(skill.name)}
+			onMouseEnter={() => makeCursorActive("assda")}
 			onMouseLeave={makeCursorNormal}
 			className="skill-container"
 		>

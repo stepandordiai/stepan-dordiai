@@ -6,7 +6,7 @@
 	bottom: -50px;
 	left: 50px;
 	z-index: 1;
-	@include flex-between;
+	@include flex-between-center;
 	height: 50px;
 	@include glass-effect;
 	background: var(--bg-semi-tp-50);

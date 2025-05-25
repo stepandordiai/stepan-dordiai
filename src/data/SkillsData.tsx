@@ -2,11 +2,18 @@ import { v4 as uuidv4 } from "uuid";
 import tsIcon from "/images/ts-icon.svg";
 import mongodbIcon from "/images/mongodb-icon.svg";
 import nextIcon from "/images/next.svg";
+import { ReactNode } from "react";
 
 // I'm using uuid external library for unique id
-
 const SkillsData = () => {
-	const skillsData = [
+	interface SkillsData {
+		id: string;
+		name: string;
+		type: string;
+		icon: ReactNode;
+	}
+
+	const skillsData: SkillsData[] = [
 		{
 			id: uuidv4(),
 			name: "Python",

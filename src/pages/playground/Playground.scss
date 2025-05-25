@@ -17,7 +17,7 @@
 .pg-project {
 	min-height: 100px;
 	width: 100%;
-	@include flex-between;
+	@include flex-between-center;
 	flex-shrink: 0;
 	padding: 10px;
 	border: 1px solid var(--semi-tp-10);
