@@ -1,12 +1,10 @@
 import { Helmet } from "react-helmet";
-import SkillsData from "../../data/SkillsData";
+import { skillsData } from "../../data/SkillsData";
 import Skill from "../../components/skill/Skill";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Skills.scss";
 
 function Skills() {
-	const skillsData = SkillsData();
-
 	return (
 		<>
 			<Helmet>
