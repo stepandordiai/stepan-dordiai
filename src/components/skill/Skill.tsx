@@ -2,12 +2,12 @@ import { makeCursorActive, makeCursorNormal } from "../../utils/cursorState";
 import AnimateElements from "../../utils/AnimateElements";
 import "./Skill.scss";
 
-type SkillProps = {
+interface SkillProps {
 	skill: {
-		icon: React.ReactNode;
+		icon: React.ReactNode[];
 		name: string;
 	};
-};
+}
 
 function Skill({ skill }: SkillProps) {
 	AnimateElements(".skill-container", "revealSkillContainer 1s forwards");
@@ -17,7 +17,11 @@ function Skill({ skill }: SkillProps) {
 			onMouseLeave={makeCursorNormal}
 			className="skill-container"
 		>
-			<div className="skill">{skill.icon}</div>
+			{skill.icon.map((skillIcon, index) => (
+				<div key={index} className="skill">
+					{skillIcon}
+				</div>
+			))}
 		</div>
 	);
 }

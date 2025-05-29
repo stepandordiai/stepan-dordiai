@@ -15,7 +15,6 @@ import DarkMode from "./components/darkMode/DarkMode";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
-// import CubeBackground from "./components/cubeBackground/CubeBackground";
 import ProjectPage from "./pages/projectPage/ProjectPage";
 import "./App.scss";
 
@@ -52,7 +51,6 @@ function App() {
 					<Route path="/memory-card-game" element={<MemoryCardGame />} />
 				</Routes>
 				<Footer />
-				{/* <CubeBackground /> */}
 			</div>
 		</Router>
 	);
