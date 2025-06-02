@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .project {
 	position: relative;
@@ -48,9 +48,7 @@
 }
 
 .project__info-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+	@include flex-between-end;
 	flex-direction: column;
 }
 

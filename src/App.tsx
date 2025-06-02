@@ -16,7 +16,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import MemoryCardGame from "./pages/memoryCardGame/MemoryCardGame";
 import ProjectPage from "./pages/projectPage/ProjectPage";
-import "./App.scss";
+import "./scss/App.scss";
 
 function App() {
 	useEffect(() => {

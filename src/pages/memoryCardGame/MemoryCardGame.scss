@@ -1,4 +1,4 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .game-1-section {
 	position: fixed;
@@ -55,12 +55,16 @@
 }
 
 .face {
+	display: grid;
+	place-content: center;
+	font-size: 1.5rem;
 	position: absolute;
 	width: 50%;
 	height: 50%;
 	pointer-events: none;
 	transform: rotateY(-180deg);
 	backface-visibility: hidden;
+	transition: color 0.3s;
 }
 
 .back {

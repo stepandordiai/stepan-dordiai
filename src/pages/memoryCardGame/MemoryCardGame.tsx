@@ -2,14 +2,6 @@ import { Helmet } from "react-helmet";
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
-import img1 from "/gameImages/css3.svg";
-import img2 from "/gameImages/html5.svg";
-import img3 from "/gameImages/figma.svg";
-import img4 from "/gameImages/js.svg";
-import img5 from "/gameImages/node.svg";
-import img6 from "/gameImages/git.svg";
-import img7 from "/gameImages/sass.svg";
-import img8 from "/gameImages/react.svg";
 import "./MemoryCardGame.scss";
 
 const MemoryCardGame = () => {
@@ -65,67 +57,67 @@ const MemoryCardGame = () => {
 
 	const cardData: CardData[] = [
 		{
-			imgSrc: img1,
-			name: "css",
-		},
-		{
-			imgSrc: img2,
-			name: "html",
-		},
-		{
-			imgSrc: img3,
-			name: "figma",
-		},
-		{
-			imgSrc: img4,
-			name: "js",
-		},
-		{
-			imgSrc: img5,
-			name: "node",
-		},
-		{
-			imgSrc: img6,
-			name: "git",
-		},
-		{
-			imgSrc: img7,
+			imgSrc: "fa-brands fa-sass",
 			name: "sass",
 		},
 		{
-			imgSrc: img8,
+			imgSrc: "fa-brands fa-node",
+			name: "node",
+		},
+		{
+			imgSrc: "fa-brands fa-github",
+			name: "github",
+		},
+		{
+			imgSrc: "fa-brands fa-square-js",
+			name: "js",
+		},
+		{
+			imgSrc: "fa-brands fa-css3-alt",
+			name: "css",
+		},
+		{
+			imgSrc: "fa-brands fa-html5",
+			name: "html",
+		},
+		{
+			imgSrc: "fa-brands fa-python",
+			name: "python",
+		},
+		{
+			imgSrc: "fa-brands fa-react",
 			name: "react",
 		},
 		{
-			imgSrc: img1,
-			name: "css",
-		},
-		{
-			imgSrc: img2,
-			name: "html",
-		},
-		{
-			imgSrc: img3,
-			name: "figma",
-		},
-		{
-			imgSrc: img4,
-			name: "js",
-		},
-		{
-			imgSrc: img5,
-			name: "node",
-		},
-		{
-			imgSrc: img6,
-			name: "git",
-		},
-		{
-			imgSrc: img7,
+			imgSrc: "fa-brands fa-sass",
 			name: "sass",
 		},
 		{
-			imgSrc: img8,
+			imgSrc: "fa-brands fa-node",
+			name: "node",
+		},
+		{
+			imgSrc: "fa-brands fa-github",
+			name: "github",
+		},
+		{
+			imgSrc: "fa-brands fa-square-js",
+			name: "js",
+		},
+		{
+			imgSrc: "fa-brands fa-css3-alt",
+			name: "css",
+		},
+		{
+			imgSrc: "fa-brands fa-html5",
+			name: "html",
+		},
+		{
+			imgSrc: "fa-brands fa-python",
+			name: "python",
+		},
+		{
+			imgSrc: "fa-brands fa-react",
 			name: "react",
 		},
 	];
@@ -137,8 +129,9 @@ const MemoryCardGame = () => {
 	function cardGenerator(): void {
 		cardData.forEach((item) => {
 			const card = document.createElement("div");
-			const face = document.createElement("img");
+			const face = document.createElement("div");
 			const back = document.createElement("div");
+			const icon = document.createElement("i");
 
 			card.classList = "card";
 			face.classList = "face";
@@ -147,8 +140,10 @@ const MemoryCardGame = () => {
 			section.current?.appendChild(card);
 			card.appendChild(face);
 			card.appendChild(back);
+			face.appendChild(icon);
 
-			face.src = item.imgSrc;
+			// face.src = item.imgSrc;
+			icon.className = item.imgSrc;
 			card.setAttribute("name", item.name);
 
 			card.addEventListener("click", (event) => {

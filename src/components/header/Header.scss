@@ -1,21 +1,21 @@
-@use "./../../mixins" as *;
+@use "./../../scss/mixins" as *;
 
 .header {
-    position: fixed;
-    top: 0;
-    right: 50px;
-    left: 50px;
-    z-index: 1;
-    height: 50px;
-    background: var(--bg-semi-tp-50);
-    @include glass-effect;
-    transition: background-color 0.3s;
+	position: fixed;
+	top: 0;
+	right: 50px;
+	left: 50px;
+	z-index: 1;
+	height: 50px;
+	background: var(--bg-semi-tp-50);
+	@include glass-effect;
+	transition: background-color 0.3s;
 }
 
 @media (max-width: 1000px) {
-    .header {
-        right: 25px;
-        left: 25px;
-        height: 25px;
-    }
+	.header {
+		right: 25px;
+		left: 25px;
+		height: 25px;
+	}
 }
