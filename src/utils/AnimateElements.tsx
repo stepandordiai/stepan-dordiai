@@ -9,7 +9,7 @@ function AnimateElements(
 	const revealElements = () => {
 		const elements = document.querySelectorAll(
 			className
-		) as NodeListOf<HTMLElement> | null;
+		) as NodeListOf<HTMLDivElement>;
 
 		elements?.forEach((element, index) => {
 			// FIXME: setTimeout or setInterval?

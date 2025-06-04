@@ -1,6 +1,6 @@
 @use "./../../scss/mixins" as *;
 
-.skill-container {
+.skill {
 	@include flex-center;
 	width: 100%;
 	aspect-ratio: 1/1;
@@ -15,20 +15,15 @@
 	&:hover {
 		background: var(--semi-tp-10);
 	}
+
+	img {
+		width: 50%;
+	}
 }
 
-.skill {
-	display: grid;
-	place-items: center;
-}
-
-.skill i,
-.text-icon {
-	font-size: clamp(1.5em, 4vw, 2.5em);
-	color: var(--txt-clr);
-	transition: color 0.3s;
-}
-
-.img-icon {
-	width: 35%;
+@keyframes revealSkill {
+	to {
+		opacity: 1;
+		scale: 1;
+	}
 }

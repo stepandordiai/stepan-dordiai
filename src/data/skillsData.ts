@@ -1,14 +1,10 @@
 import { v4 as uuidv4 } from "uuid";
-import tsIcon from "/images/ts-icon.svg";
-import mongodbIcon from "/images/mongodb-icon.svg";
-import nextIcon from "/images/next.svg";
-import { ReactNode } from "react";
 
 interface SkillsData {
 	id: string;
 	name: string;
 	type: string;
-	icon: ReactNode;
+	icon: string;
 }
 
 // I'm using uuid external library for unique id
@@ -17,91 +13,90 @@ export const skillsData: SkillsData[] = [
 		id: uuidv4(),
 		name: "Python",
 		type: "backend",
-		icon: <i className="fa-brands fa-python"></i>,
+		icon: "/skill-icons/python.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "HTML",
 		type: "frontend",
-		icon: <i className="fa-brands fa-html5"></i>,
+		icon: "/skill-icons/html.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "CSS",
 		type: "frontend",
-
-		icon: <i className="fa-brands fa-css3-alt"></i>,
+		icon: "/skill-icons/css.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "JavaScript",
 		type: "backend",
-		icon: <i className="fa-brands fa-square-js"></i>,
+		icon: "/skill-icons/java-script.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "Git",
 		type: "other",
-		icon: <i className="fa-brands fa-git-alt"></i>,
+		icon: "/skill-icons/git.svg",
 	},
 	{
 		id: uuidv4(),
-		name: "Github",
+		name: "GitHub",
 		type: "other",
-		icon: <i className="fa-brands fa-github"></i>,
+		icon: "/skill-icons/git-hub.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "SASS",
 		type: "frontend",
-		icon: <i className="fa-brands fa-sass"></i>,
+		icon: "/skill-icons/sass.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "Figma",
 		type: "design",
-		icon: <i className="fa-brands fa-figma"></i>,
+		icon: "/skill-icons/figma.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "React.js",
 		type: "frontend",
-		icon: <i className="fa-brands fa-react"></i>,
+		icon: "/skill-icons/react.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "Bootstrap",
 		type: "frontend",
-		icon: <i className="fa-brands fa-bootstrap"></i>,
+		icon: "/skill-icons/bootstrap.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "TypeScript",
 		type: "backend",
-		icon: <img className="img-icon" src={tsIcon} alt="" />,
+		icon: "/skill-icons/type-script.svg",
 	},
 	{
 		id: uuidv4(),
-		name: "Mongo DB",
+		name: "MongoDB",
 		type: "database",
-		icon: <img className="img-icon" src={mongodbIcon} alt="" />,
+		icon: "/skill-icons/mongodb.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "Express.js",
 		type: "backend",
-		icon: <p className="text-icon">ex</p>,
+		icon: "/skill-icons/express-js.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "Node.js",
 		type: "backend",
-		icon: <i className="fa-brands fa-node"></i>,
+		icon: "/skill-icons/node-js.svg",
 	},
 	{
 		id: uuidv4(),
 		name: "Next.js",
 		type: "frontend",
-		icon: <img className="img-icon" src={nextIcon} alt="" />,
+		icon: "/skill-icons/next-js.svg",
 	},
 ];

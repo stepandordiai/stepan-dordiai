@@ -28,13 +28,6 @@
 	}
 }
 
-@keyframes revealSkillContainer {
-	to {
-		opacity: 1;
-		scale: 1;
-	}
-}
-
 @media (max-width: 1300px) {
 	.skills-grid {
 		grid-template-columns: repeat(8, 1fr);
