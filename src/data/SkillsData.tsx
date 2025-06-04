@@ -83,7 +83,7 @@ export const skillsData: SkillsData[] = [
 	{
 		id: uuidv4(),
 		name: "Mongo DB",
-		type: "backend",
+		type: "database",
 		icon: <img className="img-icon" src={mongodbIcon} alt="" />,
 	},
 	{

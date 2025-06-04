@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { skillsData } from "../../data/SkillsData";
+import { skillsData } from "../../data/skillsData";
 import Skill from "../../components/skill/Skill";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Skills.scss";
@@ -24,6 +24,15 @@ function Skills() {
 				<div className="skills-grid">
 					{skillsData
 						.filter((skill) => skill.type === "backend")
+						.reverse()
+						.map((skill) => {
+							return <Skill key={skill.id} skill={skill} />;
+						})}
+				</div>
+				<p className="skills__title">Database</p>
+				<div className="skills-grid">
+					{skillsData
+						.filter((skill) => skill.type === "database")
 						.reverse()
 						.map((skill) => {
 							return <Skill key={skill.id} skill={skill} />;
