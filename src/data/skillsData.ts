@@ -8,7 +8,7 @@ interface SkillsData {
 }
 
 // I'm using uuid external library for unique id
-export const skillsData: SkillsData[] = [
+const skillsData: SkillsData[] = [
 	{
 		id: uuidv4(),
 		name: "Python",
@@ -100,3 +100,5 @@ export const skillsData: SkillsData[] = [
 		icon: "/skill-icons/next-js.svg",
 	},
 ];
+
+export default skillsData;
