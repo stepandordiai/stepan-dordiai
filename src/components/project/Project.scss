@@ -5,16 +5,14 @@
 	@include flex-between-center;
 	height: 120px;
 	flex-shrink: 0;
-	padding: 10px;
-	border: 1px solid var(--semi-tp-10);
-	background: var(--semi-tp-05);
-	border-radius: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--semi-tp-10);
 	opacity: 0;
 	transform: translateY(25px);
-	transition: border 0.3s, background-color 0.3s;
+	transition: border 0.3s;
 
 	&:hover {
-		background: var(--semi-tp-10);
+		border-bottom: 1px solid var(--txt-clr);
 	}
 }
 
@@ -66,7 +64,6 @@
 
 .project__img {
 	height: 100px;
-	border-radius: 5px;
 }
 
 @media (max-width: 800px) {

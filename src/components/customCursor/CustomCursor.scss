@@ -7,15 +7,14 @@
 	display: none;
 	justify-content: center;
 	align-items: center;
-	background: var(--bg-semi-tp-50);
-	outline: 2.5px solid var(--txt-clr);
-	@include glass-effect;
-	width: 10px;
+	background: var(--txt-clr);
+	outline: 1px solid var(--txt-clr);
+	width: 15px;
 	aspect-ratio: 1 / 1;
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
 	pointer-events: none;
-	transition: width 0.3s, height 0.3s, background-color 0.3s, outline 0.3s;
+	transition: width 0.3s, height 0.3s, background-color 0.3s;
 }
 
 .text {
@@ -51,8 +50,10 @@
 
 .cursor--active {
 	width: 150px !important;
+	background: var(--bg-semi-tp-50) !important;
 }
 
 .cursor--interact {
-	width: 20px !important;
+	width: 50px !important;
+	background: var(--bg-semi-tp-50) !important;
 }

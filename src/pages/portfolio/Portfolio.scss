@@ -5,7 +5,6 @@
 	@include top-right-bottom-left(0, 100px, 0, 100px);
 	display: flex;
 	flex-direction: column;
-	row-gap: 25px;
 	padding: 100px 0;
 	overflow-y: scroll;
 }

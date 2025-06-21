@@ -10,7 +10,6 @@
 	padding: 100px 0;
 	display: flex;
 	flex-direction: column;
-	row-gap: 25px;
 	overflow-y: scroll;
 }
 
@@ -19,16 +18,14 @@
 	width: 100%;
 	@include flex-between-center;
 	flex-shrink: 0;
-	padding: 10px;
-	border: 1px solid var(--semi-tp-10);
-	background: var(--semi-tp-05);
-	border-radius: 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--semi-tp-10);
 	opacity: 0;
 	transform: translateY(25px);
-	transition: border 0.3s, background-color 0.3s;
+	transition: border 0.3s;
 
 	&:hover {
-		background: var(--semi-tp-10);
+		border-bottom: 1px solid var(--txt-clr);
 	}
 }
 
