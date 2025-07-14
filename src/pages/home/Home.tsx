@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import { NavLink } from "react-router-dom";

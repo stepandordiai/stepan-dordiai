@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import skillsData from "../../assets/data/skillsData";
 import Skill from "../../components/skill/Skill";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";

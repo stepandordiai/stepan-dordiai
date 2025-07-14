@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import React from "react";
 import AnimateElements from "../../utils/AnimateElements";
 import TextLine from "../../components/textLine/TextLine";

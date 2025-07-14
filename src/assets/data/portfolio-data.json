@@ -15,7 +15,7 @@
 		"titleDesc": "Business website",
 		"liveSite": "https://yagodakarpat.com/",
 		"projectVideo": "/videos/yagoda-karpat-video.mp4",
-		"projectImg": "/screenshots/yagoda-karpat-ss-v5.png"
+		"projectImg": "/screenshots/yagoda-karpat-ss-v6-c.png"
 	},
 	{
 		"id": "bourek",
@@ -24,7 +24,7 @@
 		"titleDesc": "Service website",
 		"liveSite": "https://bourek.cz/",
 		"projectVideo": "/videos/bourek-video.mp4",
-		"projectImg": "/screenshots/bourek-ss-v4.png"
+		"projectImg": "/screenshots/bourek-ss-v4-c.png"
 	},
 	{
 		"id": "neresen",
@@ -33,7 +33,7 @@
 		"titleDesc": "Business website",
 		"liveSite": "https://neresen.cz/",
 		"projectVideo": "/videos/neresen-video.mp4",
-		"projectImg": "/screenshots/neresen-ss-v4.png"
+		"projectImg": "/screenshots/neresen-ss-v5-c.png"
 	},
 	{
 		"id": "fve-stavby",
@@ -51,6 +51,6 @@
 		"titleDesc": "Agency website",
 		"liveSite": "https://flovas.netlify.app/",
 		"projectVideo": "/videos/flovas-video.mp4",
-		"projectImg": "/screenshots/flovas-ss-v3.png"
+		"projectImg": "/screenshots/flovas-ss-v4-c.png"
 	}
 ]

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import pgData from "../../assets/data/pg-data.json";
 import AnimateElements from "../../utils/AnimateElements";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";

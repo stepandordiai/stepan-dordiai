@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import portfolioData from "../../assets/data/portfolio-data.json";
 import { useParams, NavLink } from "react-router-dom";
 import { interactCursor } from "../../utils/cursorState";
