@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import portfolioData from "../../data/portfolio-data.json";
+import portfolioData from "../../assets/data/portfolio-data.json";
 import Project from "../../components/project/Project";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
 import "./Portfolio.scss";

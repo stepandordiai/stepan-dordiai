@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import portfolioData from "../../data/portfolio-data.json";
+import portfolioData from "../../assets/data/portfolio-data.json";
 import { useParams, NavLink } from "react-router-dom";
 import { interactCursor } from "../../utils/cursorState";
 import { removeInteractCursor } from "../../utils/cursorState";
