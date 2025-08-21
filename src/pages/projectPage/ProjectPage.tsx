@@ -12,7 +12,7 @@ const ProjectPage = () => {
 		return project.id === id;
 	});
 
-	const { title, titleDesc, liveSite, githubRepo, projectVideo } = project[0];
+	const { title, titleDesc, liveSite, projectVideo, projectImg } = project[0];
 
 	return (
 		<>
@@ -45,7 +45,7 @@ const ProjectPage = () => {
 								Live Site
 							</a>
 						)}
-						{githubRepo && (
+						{/* {githubRepo && (
 							<a
 								onMouseOver={interactCursor}
 								onMouseLeave={removeInteractCursor}
@@ -56,16 +56,16 @@ const ProjectPage = () => {
 							>
 								GitHub Repo
 							</a>
-						)}
+						)} */}
 					</div>
 					<div>
 						<p className="project-page__title-desc">{titleDesc}</p>
 						<p className="project-page__title">{title}</p>
 					</div>
 				</div>
-				{projectVideo && (
+				{projectVideo ? (
 					<video
-						className={"project-page__video"}
+						className="project-page__video"
 						autoPlay={true}
 						loop={true}
 						playsInline={true}
@@ -74,6 +74,8 @@ const ProjectPage = () => {
 						<source src={projectVideo} type="video/mp4" />
 						Your browser does not support the video tag.
 					</video>
+				) : (
+					<img className="project-page__img" src={projectImg} alt={title} />
 				)}
 			</div>
 		</>

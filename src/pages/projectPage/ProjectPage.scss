@@ -62,7 +62,8 @@
 	transition: color 0.3s;
 }
 
-.project-page__video {
+.project-page__video,
+.project-page__img {
 	width: clamp(450px, 45vw, 50%);
 	border: 5px solid var(--semi-tp-10);
 }
@@ -84,7 +85,8 @@
 }
 
 @media (max-width: 500px) {
-	.project-page__video {
+	.project-page__video,
+	.project-page__img {
 		width: 100%;
 	}
 }
