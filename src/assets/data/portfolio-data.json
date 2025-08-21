@@ -1,14 +1,5 @@
 [
 	{
-		"id": "stepan-dordiai",
-		"title": "STEPAN DORDIAI",
-		"date": "October | 2024",
-		"titleDesc": "Portfolio website",
-		"githubRepo": "https://github.com/stepandordiai/stepan-dordiai",
-		"projectVideo": "/videos/stepan-dordiai-video.mp4",
-		"projectImg": "/screenshots/stepan-dordiai-ss-v3.png"
-	},
-	{
 		"id": "yagoda-karpat",
 		"title": "Yagoda Karpat",
 		"date": "January | 2025",
@@ -18,22 +9,12 @@
 		"projectImg": "/screenshots/yagoda-karpat-ss-v6-c.png"
 	},
 	{
-		"id": "bourek",
-		"title": "Bourek",
-		"date": "January | 2025",
-		"titleDesc": "Service website",
-		"liveSite": "https://bourek.cz/",
-		"projectVideo": "/videos/bourek-video.mp4",
-		"projectImg": "/screenshots/bourek-ss-v4-c.png"
-	},
-	{
-		"id": "neresen",
-		"title": "Neresen",
-		"date": "February | 2025",
-		"titleDesc": "Business website",
-		"liveSite": "https://neresen.cz/",
-		"projectVideo": "/videos/neresen-video.mp4",
-		"projectImg": "/screenshots/neresen-ss-v5-c.png"
+		"id": "heeeyooo-studio",
+		"title": "heeeyooo studio",
+		"date": "April | 2025",
+		"titleDesc": "Studio website",
+		"liveSite": "https://heeeyooo.studio/",
+		"projectImg": "/screenshots/01-c.png"
 	},
 	{
 		"id": "fve-stavby",
@@ -52,5 +33,21 @@
 		"liveSite": "https://flovas.cz/",
 		"projectVideo": "/videos/flovas-video.mp4",
 		"projectImg": "/screenshots/flovas-ss-v4-c.png"
+	},
+	{
+		"id": "shelfy",
+		"title": "Shelfy",
+		"date": "June | 2025",
+		"titleDesc": "E-commerce website",
+		"liveSite": "https://shelfy-project.netlify.app/",
+		"projectImg": "/screenshots/shelfy-ss-v2-c.png"
+	},
+	{
+		"id": "yolk",
+		"title": "Yolk",
+		"date": "July | 2025",
+		"titleDesc": "Restaurant website",
+		"liveSite": "https://yolk-project.netlify.app/",
+		"projectImg": "/screenshots/yolk-ss-v1-c.png"
 	}
 ]
