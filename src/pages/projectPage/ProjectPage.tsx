@@ -8,11 +8,32 @@ import "./ProjectPage.scss";
 const ProjectPage = () => {
 	const { id } = useParams();
 
-	const project = portfolioData.filter((project) => {
-		return project.id === id;
-	});
+	const project = portfolioData.find((project) => project.id == id);
 
-	const { title, titleDesc, liveSite, projectVideo, projectImg } = project[0];
+	// TODO:
+	if (!project) {
+		// Handle the case where no project is found
+		throw new Error(`Project with id ${id} not found`);
+		// Or return early, or show a message, depending on your use case
+	}
+
+	type ProjectType = {
+		title: string;
+		desc: string;
+		titleDesc: string;
+		liveSite: string;
+		projectVideo?: string;
+		projectImg: string;
+	};
+
+	const {
+		title,
+		desc,
+		titleDesc,
+		liveSite,
+		projectVideo,
+		projectImg,
+	}: ProjectType = project;
 
 	return (
 		<>
@@ -31,38 +52,6 @@ const ProjectPage = () => {
 				>
 					Back
 				</NavLink>
-				<div className="project-page__details">
-					<div className="project-page__links">
-						{liveSite && (
-							<a
-								onMouseOver={interactCursor}
-								onMouseLeave={removeInteractCursor}
-								onMouseDown={removeInteractCursor}
-								onMouseUp={interactCursor}
-								href={liveSite}
-								target="_blank"
-							>
-								Live Site
-							</a>
-						)}
-						{/* {githubRepo && (
-							<a
-								onMouseOver={interactCursor}
-								onMouseLeave={removeInteractCursor}
-								onMouseDown={removeInteractCursor}
-								onMouseUp={interactCursor}
-								href={githubRepo}
-								target="_blank"
-							>
-								GitHub Repo
-							</a>
-						)} */}
-					</div>
-					<div>
-						<p className="project-page__title-desc">{titleDesc}</p>
-						<p className="project-page__title">{title}</p>
-					</div>
-				</div>
 				{projectVideo ? (
 					<video
 						className="project-page__video"
@@ -77,6 +66,31 @@ const ProjectPage = () => {
 				) : (
 					<img className="project-page__img" src={projectImg} alt={title} />
 				)}
+				<div>
+					<p className="project-page__title">{title}</p>
+					<p className="project-page__title-desc">{titleDesc}</p>
+				</div>
+				<div>
+					<span className="project-page__desc-title">Overview</span>
+					<p className="project-page__desc">{desc}</p>
+				</div>
+				<div className="project-page__details">
+					{liveSite && (
+						<div className="project-page__link-container">
+							<div className="work-link__dot"></div>
+							<a
+								onMouseOver={interactCursor}
+								onMouseLeave={removeInteractCursor}
+								onMouseDown={removeInteractCursor}
+								onMouseUp={interactCursor}
+								href={liveSite}
+								target="_blank"
+							>
+								Live Site
+							</a>
+						</div>
+					)}
+				</div>
 			</div>
 		</>
 	);

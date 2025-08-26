@@ -136,6 +136,7 @@ const MemoryCardGame = () => {
 			card.classList = "card";
 			face.classList = "face";
 			back.classList = "back";
+			icon.classList = "icon";
 
 			section.current?.appendChild(card);
 			card.appendChild(face);
@@ -143,7 +144,7 @@ const MemoryCardGame = () => {
 			face.appendChild(icon);
 
 			// face.src = item.imgSrc;
-			icon.className = item.imgSrc;
+			// icon.className = item.imgSrc;
 			card.setAttribute("name", item.name);
 
 			card.addEventListener("click", (event) => {
@@ -168,14 +169,13 @@ const MemoryCardGame = () => {
 		playerLives = ["❤", "❤", "❤", "❤", "❤", "❤"];
 		lives();
 		const randomCardData = randomize();
-		const faces = document.querySelectorAll(
-			".face"
-		) as NodeListOf<HTMLImageElement>;
+
+		const icons = document.querySelectorAll(".icon") as NodeListOf<HTMLElement>;
 		const cards = document.querySelectorAll(".card") as NodeListOf<HTMLElement>;
 
 		randomCardData.forEach((item, index) => {
-			if (!faces || !cards) return;
-			faces[index].src = item.imgSrc;
+			if (!icons || !cards) return;
+			icons[index].className = item.imgSrc;
 			cards[index].setAttribute("name", item.name);
 		});
 		cards.forEach((item) => {
@@ -228,6 +228,7 @@ const MemoryCardGame = () => {
 		const toggleCards = document.querySelectorAll(
 			".toggle-card"
 		) as NodeListOf<HTMLElement>;
+
 		if (flippedCards.length === 2) {
 			if (
 				flippedCards[0].getAttribute("name") ===
