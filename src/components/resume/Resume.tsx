@@ -1,5 +1,5 @@
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
-import resumeFile from "/pdf/stepan-dordiai-cv-v8.pdf";
+import resumeFile from "/pdf/stepan-dordiai-cv.pdf";
 import "./Resume.scss";
 
 const Resume = () => {
