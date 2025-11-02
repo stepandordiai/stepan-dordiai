@@ -10,8 +10,9 @@ const ScrollBtn = ({ className }: ScrollBtnProps) => {
 	useEffect(() => {
 		const element = document.querySelector(className) as HTMLDivElement | null;
 
-		let scrollUpInterval: number;
-		let scrollDownInterval: number;
+		// FIXME:
+		let scrollUpInterval: any;
+		let scrollDownInterval: any;
 
 		function scrollUp() {
 			if (!element) return;

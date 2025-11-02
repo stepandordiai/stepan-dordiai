@@ -8,6 +8,7 @@ import "./Contact.scss";
 function Contact() {
 	AnimateElements(".text-line", "revealTextLine 1s forwards");
 
+	// FIXME:
 	useEffect(() => {
 		const contactLinks = document.querySelectorAll(
 			".contact__link"

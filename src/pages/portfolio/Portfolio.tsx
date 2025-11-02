@@ -27,7 +27,7 @@ function Portfolio() {
 					More projects
 				</a>
 			</div>
-			<ScrollBtn className={".js-portfolio"} />
+			<ScrollBtn className=".js-portfolio" />
 		</>
 	);
 }

@@ -8,7 +8,10 @@ function DarkMode() {
 	// FIXME:
 	type ModeThemes = "light" | "dark";
 
-	const [darkMode, setDarkMode] = useLocalStorage("darkMode", "light");
+	const [darkMode, setDarkMode] = useLocalStorage(
+		"darkMode",
+		"light" as ModeThemes
+	);
 
 	const refBtn = useRef<HTMLButtonElement | null>(null);
 
@@ -46,7 +49,7 @@ function DarkMode() {
 	}, [darkMode]);
 
 	const toggleDarkMode = () => {
-		setDarkMode((currentMode: any) =>
+		setDarkMode((currentMode: string) =>
 			currentMode === "light" ? "dark" : "light"
 		);
 	};

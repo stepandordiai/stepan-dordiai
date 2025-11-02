@@ -4,6 +4,7 @@ import "./CustomCursor.scss";
 
 const CustomCursor = () => {
 	// i use useeffect to handle the condition once when load page
+	// FIXME:
 	useEffect(() => {
 		const customCursor = document.querySelector(
 			"#custom-cursor"

@@ -4,27 +4,27 @@ import { useParams, NavLink } from "react-router-dom";
 import { interactCursor } from "../../utils/cursorState";
 import { removeInteractCursor } from "../../utils/cursorState";
 import "./ProjectPage.scss";
+import Home from "../home/Home";
+
+interface Project {
+	title: string;
+	desc: string;
+	titleDesc: string;
+	liveSite: string;
+	projectVideo?: string;
+	projectImg: string;
+}
 
 const ProjectPage = () => {
 	const { id } = useParams();
 
 	const project = portfolioData.find((project) => project.id == id);
 
-	// TODO:
+	// FIXME:
 	if (!project) {
-		// Handle the case where no project is found
-		throw new Error(`Project with id ${id} not found`);
-		// Or return early, or show a message, depending on your use case
+		return <Home />;
+		// throw new Error(`Project with id ${id} not found`);
 	}
-
-	type ProjectType = {
-		title: string;
-		desc: string;
-		titleDesc: string;
-		liveSite: string;
-		projectVideo?: string;
-		projectImg: string;
-	};
 
 	const {
 		title,
@@ -33,7 +33,7 @@ const ProjectPage = () => {
 		liveSite,
 		projectVideo,
 		projectImg,
-	}: ProjectType = project;
+	}: Project = project;
 
 	return (
 		<>
@@ -55,10 +55,10 @@ const ProjectPage = () => {
 				{projectVideo ? (
 					<video
 						className="project-page__video"
-						autoPlay={true}
-						loop={true}
-						playsInline={true}
-						muted={true}
+						autoPlay
+						loop
+						playsInline
+						muted
 					>
 						<source src={projectVideo} type="video/mp4" />
 						Your browser does not support the video tag.

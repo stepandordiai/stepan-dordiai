@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import "./Home.scss";
 
 function Home() {
+	// FIXME:
 	function addAnimation() {
 		const scroller = document.querySelector(
 			".scroller"
@@ -82,7 +83,7 @@ function Home() {
 			</Helmet>
 			<div className="home">
 				<NavLink
-					to={"/contact"}
+					to="/contact"
 					onMouseEnter={interactCursor}
 					onMouseLeave={removeInteractCursor}
 					onMouseDown={removeInteractCursor}

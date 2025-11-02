@@ -36,7 +36,7 @@ const Playground = () => {
 					})
 					.reverse()}
 			</div>
-			<ScrollBtn className={".js-pg"} />
+			<ScrollBtn className=".js-pg" />
 		</>
 	);
 };

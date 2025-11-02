@@ -29,7 +29,7 @@ function Skills() {
 					);
 				})}
 			</div>
-			<ScrollBtn className={".js-skills"} />
+			<ScrollBtn className=".js-skills" />
 		</>
 	);
 }

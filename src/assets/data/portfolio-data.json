@@ -7,17 +7,16 @@
 		"titleDesc": "Business website",
 		"liveSite": "https://yagodakarpat.com/",
 		"projectVideo": "/videos/yagoda-karpat-video.mp4",
-		"projectImg": "/screenshots/yagoda-karpat-ss-v6-c.png"
+		"projectImg": "/screenshots/yagoda-karpat-ss-v9-c.png"
 	},
 	{
-		"id": "heeeyooo-studio",
-		"title": "heeeyooo studio",
-		"desc": "I crafted the heeeyooo studio website to reflect its playful yet professional character. Built with a responsive layout and rich interactive elements, the site showcases their wide array of services—animations, brand copywriting, social content and motion strategy—all infused with vibrant energy and creative flair.",
-		"date": "April | 2025",
+		"id": "pixel-flower",
+		"title": "pixel flower",
+		"desc": "I designed and developed a modern, responsive website for a business offering custom site-envelopes (mini-websites) for weddings, christenings, and other special events. The goal was to create a visually appealing, easy-to-use platform where clients could explore templates, compare pricing options, and learn about the service.",
+		"date": "August | 2025",
 		"titleDesc": "Studio website",
-		"liveSite": "https://heeeyooo.studio/",
-		"projectVideo": "/videos/heeeyooo-studio-video-v1-c.mp4",
-		"projectImg": "/screenshots/01-c.png"
+		"liveSite": "https://pixelflower.netlify.app/",
+		"projectImg": "/screenshots/pixel-flower-ss-v3-c.png"
 	},
 	{
 		"id": "fve-stavby",
@@ -27,7 +26,7 @@
 		"titleDesc": "Business website",
 		"liveSite": "https://fvestavby.cz/",
 		"projectVideo": "/videos/fve-stavby-video.mp4",
-		"projectImg": "/screenshots/fve-stavby-ss-v6-c.png"
+		"projectImg": "/screenshots/fve-stavby-ss-v7-c.png"
 	},
 	{
 		"id": "flovas",
@@ -37,7 +36,7 @@
 		"titleDesc": "Agency website",
 		"liveSite": "https://flovas.cz/",
 		"projectVideo": "/videos/flovas-video.mp4",
-		"projectImg": "/screenshots/flovas-ss-v4-c.png"
+		"projectImg": "/screenshots/flovas-ss-v6-c.png"
 	},
 	{
 		"id": "shelfy",
@@ -47,7 +46,7 @@
 		"titleDesc": "E-commerce website",
 		"liveSite": "https://shelfy-project.netlify.app/",
 		"projectVideo": "/videos/shelfy-video-v1-c.mp4",
-		"projectImg": "/screenshots/shelfy-ss-v2-c.png"
+		"projectImg": "/screenshots/shelfy-ss-v3-c.png"
 	},
 	{
 		"id": "yolk",

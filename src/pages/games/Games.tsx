@@ -6,6 +6,7 @@ import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./Games.scss";
 
 const Games = () => {
+	// FIXME:
 	useEffect(() => {
 		const games = document.querySelector(".games") as HTMLDivElement | null;
 

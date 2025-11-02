@@ -5,6 +5,7 @@ import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
 import "./MemoryCardGame.scss";
 
 const MemoryCardGame = () => {
+	// FIXME:
 	const section = useRef<HTMLElement | null>(null);
 
 	useEffect(() => {

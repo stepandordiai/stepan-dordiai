@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./Loading.scss";
 
 function Loading() {
+	// FIXME:
 	useEffect(() => {
 		const loading = document.querySelector(
 			".loading"
