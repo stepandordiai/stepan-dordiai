@@ -11,7 +11,7 @@ function Portfolio() {
 			<Helmet>
 				<title>PORTFOLIO | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="portfolio js-portfolio">
+			<main className="portfolio js-portfolio">
 				{[...portfolioData].reverse().map((project, index) => {
 					return <Project key={project.id} project={project} index={index} />;
 				})}
@@ -26,7 +26,7 @@ function Portfolio() {
 				>
 					More projects
 				</a>
-			</div>
+			</main>
 			<ScrollBtn className=".js-portfolio" />
 		</>
 	);

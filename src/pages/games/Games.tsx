@@ -121,7 +121,7 @@ const Games = () => {
 			<Helmet>
 				<title>GAMES | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="games">
+			<main className="games">
 				<div
 					className="game-wrapper"
 					onMouseMove={(e) => addTiltEffect(e, ".js-game-one-container")}
@@ -170,7 +170,7 @@ const Games = () => {
 						<button className="game-container__start-btn">Start</button>
 					</div>
 				</div>
-			</div>
+			</main>
 			<div className="games-section__pagination">
 				<span
 					onMouseEnter={interactCursor}

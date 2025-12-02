@@ -40,7 +40,7 @@ const ProjectPage = () => {
 			<Helmet>
 				<title>{title} | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="project-page">
+			<main className="project-page">
 				<NavLink
 					onMouseEnter={interactCursor}
 					onMouseLeave={removeInteractCursor}
@@ -91,7 +91,7 @@ const ProjectPage = () => {
 						</div>
 					)}
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

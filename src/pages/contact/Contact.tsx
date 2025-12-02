@@ -36,7 +36,7 @@ function Contact() {
 			<Helmet>
 				<title>CONTACT | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="contact">
+			<main className="contact">
 				<div className="contact-list">
 					<TextLine>
 						<a className="contact__link" href="mailto:stepandordiai@gmail.com">
@@ -96,7 +96,7 @@ function Contact() {
 						</a>
 					</TextLine>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 }

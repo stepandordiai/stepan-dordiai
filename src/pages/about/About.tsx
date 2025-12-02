@@ -12,7 +12,7 @@ function About() {
 			<Helmet>
 				<title>ABOUT | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="about">
+			<main className="about">
 				{`Self-taught Front-End Developer with over 2 years of experience designing and building interactive websites and applications using React, TypeScript, and Sass. Driven by a passion for problem-solving and innovative solutions, with a strong focus on creating intuitive, user-centric projects and meticulous attention to detail.`
 					.split(" ")
 					.map((word, index) => {
@@ -23,7 +23,7 @@ function About() {
 							</React.Fragment>
 						);
 					})}
-			</div>
+			</main>
 		</>
 	);
 }

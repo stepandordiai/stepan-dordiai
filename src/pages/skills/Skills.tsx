@@ -13,7 +13,7 @@ function Skills() {
 			<Helmet>
 				<title>SKILLS | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="skills js-skills">
+			<main className="skills js-skills">
 				{uniqueSkillTypes.map((skillType) => {
 					return (
 						<React.Fragment key={skillType}>
@@ -28,7 +28,7 @@ function Skills() {
 						</React.Fragment>
 					);
 				})}
-			</div>
+			</main>
 			<ScrollBtn className=".js-skills" />
 		</>
 	);

@@ -284,7 +284,7 @@ const MemoryCardGame = () => {
 			<Helmet>
 				<title>MEMORY CARD GAME | STEPAN DORDIAI</title>
 			</Helmet>
-			<div className="game-1-section">
+			<main className="game-1-section">
 				<NavLink
 					onMouseEnter={interactCursor}
 					onMouseLeave={removeInteractCursor}
@@ -327,7 +327,7 @@ const MemoryCardGame = () => {
 						</button>
 					</div>
 				</div>
-			</div>
+			</main>
 			<div className="rotate-container none">
 				<p className="rotate-font-img">
 					<i className="fa-solid fa-rotate"></i>
