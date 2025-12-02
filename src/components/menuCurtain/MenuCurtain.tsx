@@ -16,24 +16,36 @@ const linksData = [
 	{ id: 7, name: "Games", path: "/games" },
 ];
 
-function Nav() {
-	useEffect(() => {
-		// Hide nav menu on window resize (when touch device rotates)
-		window.addEventListener("resize", () => setMenuActive(false));
-	}, []);
-
-	// burger-btn
-
+function MenuCurtain() {
 	const [menuActive, setMenuActive] = useState(false);
 
+	useEffect(() => {
+		if (!menuActive) return;
+
+		const closeMenu = () => {
+			setMenuActive(false);
+		};
+
+		// Hide nav menu on window resize (when touch device rotates)
+		window.addEventListener("resize", closeMenu);
+
+		return () => window.removeEventListener("resize", closeMenu);
+	}, []);
+
 	const toggleBurgerBtn = () => {
-		if (!isTouchDevice()) setMenuActive((prev) => !prev);
+		if (isTouchDevice()) setMenuActive((prev) => !prev);
+	};
+
+	const handleMenuBtn = (props: boolean): void => {
+		if (!isTouchDevice()) {
+			setMenuActive(props);
+		}
 	};
 
 	return (
 		<div
-			onMouseEnter={() => setMenuActive(true)}
-			onMouseLeave={() => setMenuActive(false)}
+			onMouseEnter={() => handleMenuBtn(true)}
+			onMouseLeave={() => handleMenuBtn(false)}
 			className={`menu-curtain ${menuActive ? "menu-curtain--active" : ""}`}
 		>
 			<div onClick={toggleBurgerBtn} className="burger-btn__container">
@@ -51,11 +63,11 @@ function Nav() {
 				{linksData.map((link) => {
 					return (
 						<NavLink
+							key={link.id}
 							onClick={() => setMenuActive(false)}
 							onMouseEnter={interactCursor}
 							onMouseLeave={removeInteractCursor}
 							onMouseDown={removeInteractCursor}
-							// onMouseUp={interactCursor}
 							className={({ isActive }) =>
 								`nav__link ${isActive ? "nav__link--active" : ""}`
 							}
@@ -77,9 +89,9 @@ function Nav() {
 					onMouseOver={interactCursor}
 					onMouseLeave={removeInteractCursor}
 					onMouseDown={removeInteractCursor}
-					// onMouseUp={interactCursor}
 					href="https://github.com/stepandordiai"
 					target="_blank"
+					title="GitHub"
 				>
 					<i className="fa-brands fa-github"></i>
 				</a>
@@ -87,9 +99,9 @@ function Nav() {
 					onMouseOver={interactCursor}
 					onMouseLeave={removeInteractCursor}
 					onMouseDown={removeInteractCursor}
-					// onMouseUp={interactCursor}
 					href="https://www.linkedin.com/in/stepandordiai"
 					target="_blank"
+					title="LinkedIn"
 				>
 					<i className="fa-brands fa-linkedin"></i>
 				</a>
@@ -97,9 +109,9 @@ function Nav() {
 					onMouseOver={interactCursor}
 					onMouseLeave={removeInteractCursor}
 					onMouseDown={removeInteractCursor}
-					// onMouseUp={interactCursor}
 					href="https://t.me/heeeyooo"
 					target="_blank"
+					title="Telegram"
 				>
 					<i className="fa-brands fa-telegram"></i>
 				</a>
@@ -108,4 +120,4 @@ function Nav() {
 	);
 }
 
-export default Nav;
+export default MenuCurtain;
