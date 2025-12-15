@@ -17,13 +17,14 @@ const linksData = [
 ];
 
 function MenuCurtain() {
-	const [menuActive, setMenuActive] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
+	const [menuVisible, setMenuVisible] = useState(false);
 
 	useEffect(() => {
-		if (!menuActive) return;
+		if (!menuOpen) return;
 
 		const closeMenu = () => {
-			setMenuActive(false);
+			setMenuOpen(false);
 		};
 
 		// Hide nav menu on window resize (when touch device rotates)
@@ -32,13 +33,13 @@ function MenuCurtain() {
 		return () => window.removeEventListener("resize", closeMenu);
 	}, []);
 
-	const toggleBurgerBtn = () => {
-		if (isTouchDevice()) setMenuActive((prev) => !prev);
+	const toggleMenu = () => {
+		if (isTouchDevice()) setMenuOpen((prev) => !prev);
 	};
 
 	const handleMenuBtn = (props: boolean): void => {
 		if (!isTouchDevice()) {
-			setMenuActive(props);
+			setMenuVisible(props);
 		}
 	};
 
@@ -46,14 +47,18 @@ function MenuCurtain() {
 		<div
 			onMouseEnter={() => handleMenuBtn(true)}
 			onMouseLeave={() => handleMenuBtn(false)}
-			className={`menu-curtain ${menuActive ? "menu-curtain--active" : ""}`}
+			className={`menu-curtain ${menuVisible ? "menu-curtain--visible" : ""} ${
+				menuOpen ? "menu-curtain--active" : ""
+			}`.trimEnd()}
 		>
-			<div onClick={toggleBurgerBtn} className="burger-btn__container">
+			<button onClick={toggleMenu} className="burger-btn__container">
 				<span className="burger-btn__title">MENU</span>
-				<div
-					className={`burger-btn ${menuActive ? "burger-btn--active" : ""}`}
-				></div>
-			</div>
+				<span
+					className={`burger-btn ${
+						menuOpen || menuVisible ? "burger-btn--active" : ""
+					}`}
+				></span>
+			</button>
 			<div className="menu-curtain__header">
 				<h1 className="menu-curtain__header-logo">
 					STEPAN DORDIAI <span>Portfolio</span>
@@ -64,7 +69,6 @@ function MenuCurtain() {
 					return (
 						<NavLink
 							key={link.id}
-							onClick={() => setMenuActive(false)}
 							onMouseEnter={interactCursor}
 							onMouseLeave={removeInteractCursor}
 							onMouseDown={removeInteractCursor}

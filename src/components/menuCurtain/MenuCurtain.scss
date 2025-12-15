@@ -21,7 +21,7 @@
 }
 
 /* Works only on mouse devices */
-.menu-curtain--hover {
+.menu-curtain--visible {
 	transform: translateX(calc(100% - 50px));
 }
 
@@ -135,6 +135,7 @@
 .burger-btn::before {
 	content: "";
 	position: absolute;
+	left: 0;
 	width: 100%;
 	height: 2px;
 	background-color: var(--txt-clr);
@@ -145,6 +146,7 @@
 .burger-btn::after {
 	content: "";
 	position: absolute;
+	left: 0;
 	width: 100%;
 	height: 2px;
 	background-color: var(--txt-clr);
@@ -179,7 +181,7 @@
 		}
 	}
 
-	.menu-curtain--hover {
+	.menu-curtain--visible {
 		transform: translateX(calc(100% - 25px));
 	}
 
