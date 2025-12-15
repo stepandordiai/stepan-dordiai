@@ -1,0 +1,19 @@
+<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="260" height="260" fill="white"/>
+<mask id="path-2-inside-1_1378_128" fill="white">
+<path d="M40 160H100V220H40V160Z"/>
+</mask>
+<path d="M40 220H30V230H40V220ZM100 220V210H40V220V230H100V220ZM40 220H50V160H40H30V220H40Z" fill="black" mask="url(#path-2-inside-1_1378_128)"/>
+<mask id="path-4-inside-2_1378_128" fill="white">
+<path d="M160 160H220V220H160V160Z"/>
+</mask>
+<path d="M220 220V230H230V220H220ZM220 160H210V220H220H230V160H220ZM220 220V210H160V220V230H220V220Z" fill="black" mask="url(#path-4-inside-2_1378_128)"/>
+<mask id="path-6-inside-3_1378_128" fill="white">
+<path d="M160 40H220V100H160V40Z"/>
+</mask>
+<path d="M220 40H230V30H220V40ZM160 40V50H220V40V30H160V40ZM220 40H210V100H220H230V40H220Z" fill="black" mask="url(#path-6-inside-3_1378_128)"/>
+<mask id="path-8-inside-4_1378_128" fill="white">
+<path d="M40 40H100V100H40V40Z"/>
+</mask>
+<path d="M40 40V30H30V40H40ZM40 40V50H100V40V30H40V40ZM40 100H50V40H40H30V100H40Z" fill="black" mask="url(#path-8-inside-4_1378_128)"/>
+</svg>
