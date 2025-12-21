@@ -29,27 +29,9 @@ const skillsData: SkillsData[] = [
 	},
 	{
 		id: uuidv4(),
-		name: "Git",
-		type: "Other",
-		icon: "/skill-icons/git.svg",
-	},
-	{
-		id: uuidv4(),
-		name: "GitHub",
-		type: "Other",
-		icon: "/skill-icons/git-hub.svg",
-	},
-	{
-		id: uuidv4(),
 		name: "SASS",
 		type: "Front-end",
 		icon: "/skill-icons/sass.svg",
-	},
-	{
-		id: uuidv4(),
-		name: "Figma",
-		type: "Design",
-		icon: "/skill-icons/figma.svg",
 	},
 	{
 		id: uuidv4(),
@@ -98,6 +80,36 @@ const skillsData: SkillsData[] = [
 		name: "Python",
 		type: "Back-end",
 		icon: "/skill-icons/python.svg",
+	},
+	{
+		id: uuidv4(),
+		name: "Postman",
+		type: "Tests",
+		icon: "/skill-icons/postman.svg",
+	},
+	{
+		id: uuidv4(),
+		name: "Insomnia",
+		type: "Tests",
+		icon: "/skill-icons/insomnia.svg",
+	},
+	{
+		id: uuidv4(),
+		name: "Figma",
+		type: "Design",
+		icon: "/skill-icons/figma.svg",
+	},
+	{
+		id: uuidv4(),
+		name: "Git",
+		type: "Other",
+		icon: "/skill-icons/git.svg",
+	},
+	{
+		id: uuidv4(),
+		name: "GitHub",
+		type: "Other",
+		icon: "/skill-icons/git-hub.svg",
 	},
 ];
 

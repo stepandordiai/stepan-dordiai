@@ -15,7 +15,7 @@
 		"desc": "I designed and developed a modern, responsive website for a business offering custom site-envelopes (mini-websites) for weddings, christenings, and other special events. The goal was to create a visually appealing, easy-to-use platform where clients could explore templates, compare pricing options, and learn about the service.",
 		"date": "August | 2025",
 		"titleDesc": "Studio website",
-		"liveSite": "https://pixelflower.netlify.app/",
+		"liveSite": "https://www.pixelflower.studio/",
 		"projectImg": "/screenshots/pixel-flower-ss-v3-c.png"
 	},
 	{
@@ -49,13 +49,12 @@
 		"projectImg": "/screenshots/shelfy-ss-v3-c.png"
 	},
 	{
-		"id": "yolk",
-		"title": "Yolk",
-		"desc": "Yolk is a modern, user-friendly restaurant website designed to showcase the brand’s unique dining experience while providing customers with convenient online features. The platform highlights the restaurant’s menu, promotes daily specials, and allows customers to purchase meals and gift cards directly from the website.",
-		"date": "July | 2025",
-		"titleDesc": "Restaurant website",
-		"liveSite": "https://yolk-project.netlify.app/",
-		"projectVideo": "/videos/yolk-video-v1-c.mp4",
-		"projectImg": "/screenshots/yolk-ss-v1-c.png"
+		"id": "heeeyooo-studio",
+		"title": "heeeyooo studio",
+		"desc": "Service website for a digital studio offering website design, development, and SEO services for businesses. The platform introduces the studio’s capabilities, highlights completed work, and supports client communication by clearly presenting services and contact options.",
+		"date": "April | 2025",
+		"titleDesc": "Studio website",
+		"liveSite": "https://www.heeeyooo.studio/",
+		"projectImg": "/screenshots/heeeyooo-studio-ss-v4-c.png"
 	}
 ]
