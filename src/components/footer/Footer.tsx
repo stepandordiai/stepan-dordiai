@@ -4,7 +4,7 @@ function Footer() {
 	return (
 		<footer className="footer">
 			<p className="copyright">
-				&copy; 2024 - <span>{new Date().getFullYear()}</span> STEPAN DORDIAI
+				&copy; 2024-{new Date().getFullYear()} STEPAN DORDIAI
 			</p>
 		</footer>
 	);
