@@ -1,5 +1,8 @@
 # STEPAN DORDIAI
 
-October 2024
+![STEPAN DORDIAI hero screenshot](./docs/screenshots/stepan-dordiai-ss-v4-c.png)
 
-![STEPAN DORDIAI hero screenshot](./public/screenshots/stepan-dordiai-ss-v4-c.png)
+## Tech stack
+
+- React (TypeScript)
+- SCSS
