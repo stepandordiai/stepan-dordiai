@@ -1,15 +1,11 @@
 import AnimateElements from "../../utils/AnimateElements";
 import { NavLink } from "react-router-dom";
 import { interactCursor, removeInteractCursor } from "../../utils/cursorState";
+import ProjectInterface from "../../types/Project";
 import "./Project.scss";
 
 type ProjectProps = {
-	project: {
-		id: string;
-		title: string;
-		date: string;
-		projectImg: string;
-	};
+	project: ProjectInterface;
 	index: number;
 };
 
@@ -30,17 +26,17 @@ function Project({ project, index }: ProjectProps) {
 				to={`/project-page/${project.id}`}
 			></NavLink>
 			<p className="project__number">
-				{index + 1 < 10 ? `0${index + 1}` : index + 1}
+				{(index + 1).toString().padStart(2, "0")}
 			</p>
 			<div className="project__right-side">
 				<div className="project__info-container">
-					<p className="project__title">{project.title}</p>
+					<p className="project__title">{project.name}</p>
 					<p className="project__date">{project.date}</p>
 				</div>
 				<img
 					className="project__img"
-					src={project.projectImg}
-					alt={project.title}
+					src={project.img[0]}
+					alt={project.name}
 					loading="lazy"
 				/>
 			</div>
