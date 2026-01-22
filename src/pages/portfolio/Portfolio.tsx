@@ -6,9 +6,8 @@ import getPortfolioData from "../../lib/api";
 import ProjectInterface from "../../types/Project";
 import "./Portfolio.scss";
 
-const portfolio: ProjectInterface[] = await getPortfolioData();
-
-function Portfolio() {
+async function Portfolio() {
+	const portfolio: ProjectInterface[] = await getPortfolioData();
 	return (
 		<>
 			<Helmet>
