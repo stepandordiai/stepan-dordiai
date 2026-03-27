@@ -1,12 +1,21 @@
 import { Helmet } from "react-helmet-async";
-import skillsData from "../../assets/data/skillsData";
+import skills from "../../assets/data/skills.json";
 import Skill from "../../components/skill/Skill";
 import ScrollBtn from "../../components/scrollBtn/ScrollBtn";
-import React from "react";
+import { Fragment } from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./Skills.scss";
 
+const updatedSkills = skills.map((skill) => ({
+	id: uuidv4(),
+	name: skill.name,
+	type: skill.type,
+}));
+
 function Skills() {
-	const uniqueSkillTypes = [...new Set(skillsData.map((skill) => skill.type))];
+	const uniqueSkillTypes = [
+		...new Set(updatedSkills.map((skill) => skill.type)),
+	];
 
 	return (
 		<>
@@ -16,16 +25,16 @@ function Skills() {
 			<main className="skills js-skills">
 				{uniqueSkillTypes.map((skillType) => {
 					return (
-						<React.Fragment key={skillType}>
+						<Fragment key={skillType}>
 							<p className="skills__title">{skillType}</p>
 							<div className="skills-grid">
-								{skillsData
+								{updatedSkills
 									.filter((skill) => skill.type === skillType)
 									.map((skill) => {
 										return <Skill key={skill.id} skill={skill} />;
 									})}
 							</div>
-						</React.Fragment>
+						</Fragment>
 					);
 				})}
 			</main>

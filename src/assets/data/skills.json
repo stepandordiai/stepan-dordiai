@@ -1,0 +1,74 @@
+[
+	{
+		"name": "HTML",
+		"type": "Frontend"
+	},
+	{
+		"name": "CSS",
+		"type": "Frontend"
+	},
+	{
+		"name": "JavaScript",
+		"type": "Backend"
+	},
+	{
+		"name": "SASS",
+		"type": "Frontend"
+	},
+	{
+		"name": "React.js",
+		"type": "Frontend"
+	},
+	{
+		"name": "Bootstrap",
+		"type": "Frontend"
+	},
+	{
+		"name": "TypeScript",
+		"type": "Backend"
+	},
+	{
+		"name": "MongoDB",
+		"type": "Database"
+	},
+	{
+		"name": "Express.js",
+		"type": "Backend"
+	},
+	{
+		"name": "Node.js",
+		"type": "Backend"
+	},
+	{
+		"name": "Next.js",
+		"type": "Frontend"
+	},
+	{
+		"name": "Python",
+		"type": "Backend"
+	},
+	{
+		"name": "Postman",
+		"type": "API testing"
+	},
+	{
+		"name": "Insomnia",
+		"type": "API testing"
+	},
+	{
+		"name": "Figma",
+		"type": "Design"
+	},
+	{
+		"name": "Git",
+		"type": "Other"
+	},
+	{
+		"name": "GitHub",
+		"type": "Other"
+	},
+	{
+		"name": "PostgreSQL",
+		"type": "Database"
+	}
+]

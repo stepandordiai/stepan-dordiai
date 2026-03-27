@@ -4,7 +4,6 @@ import "./Skill.scss";
 
 type SkillProps = {
 	skill: {
-		icon: string;
 		name: string;
 	};
 };
@@ -17,7 +16,7 @@ function Skill({ skill }: SkillProps) {
 			onMouseLeave={makeCursorNormal}
 			className="skill"
 		>
-			<img src={skill.icon} alt={skill.name + "logo"} />
+			<span>{skill.name}</span>
 		</div>
 	);
 }
