@@ -37,7 +37,7 @@ function Project({ project, index }: ProjectProps) {
 					className="project__img"
 					src={project.img[0]}
 					alt={project.name}
-					loading="lazy"
+					// loading="lazy"
 				/>
 			</div>
 		</div>

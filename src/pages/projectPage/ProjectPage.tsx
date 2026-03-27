@@ -1,44 +1,36 @@
 import { Helmet } from "react-helmet-async";
-import portfolioData from "../../assets/data/portfolio-data.json";
 import { useParams, NavLink } from "react-router-dom";
 import { interactCursor } from "../../utils/cursorState";
 import { removeInteractCursor } from "../../utils/cursorState";
-import "./ProjectPage.scss";
 import Home from "../home/Home";
-
-interface Project {
-	title: string;
-	desc: string;
-	titleDesc: string;
-	liveSite: string;
-	projectVideo?: string;
-	projectImg: string;
-}
+import ProjectInterface from "../../types/Project";
+import { useQuery } from "@tanstack/react-query";
+import getPortfolio from "../../lib/api/portfolio";
+import "./ProjectPage.scss";
 
 const ProjectPage = () => {
 	const { id } = useParams();
 
-	const project = portfolioData.find((project) => project.id == id);
+	const { data, isLoading, isError } = useQuery<ProjectInterface[]>({
+		queryKey: ["portfolio"],
+		queryFn: getPortfolio,
+	});
 
-	// FIXME:
+	if (isLoading) return <p>Loading...</p>;
+	if (isError) return <p>Smth went wrong</p>;
+
+	const project = (data ?? []).find((project) => project.id === id);
+
 	if (!project) {
+		// FIXME:
 		return <Home />;
 		// throw new Error(`Project with id ${id} not found`);
 	}
 
-	const {
-		title,
-		desc,
-		titleDesc,
-		liveSite,
-		projectVideo,
-		projectImg,
-	}: Project = project;
-
 	return (
 		<>
 			<Helmet>
-				<title>{title} | STEPAN DORDIAI</title>
+				<title>{project.name} | STEPAN DORDIAI</title>
 			</Helmet>
 			<main className="project-page">
 				<NavLink
@@ -52,44 +44,30 @@ const ProjectPage = () => {
 				>
 					Back
 				</NavLink>
-				{projectVideo ? (
-					<video
-						className="project-page__video"
-						autoPlay
-						loop
-						playsInline
-						muted
-					>
-						<source src={projectVideo} type="video/mp4" />
-						Your browser does not support the video tag.
-					</video>
-				) : (
-					<img className="project-page__img" src={projectImg} alt={title} />
-				)}
-				<div>
-					<p className="project-page__title">{title}</p>
-					<p className="project-page__title-desc">{titleDesc}</p>
-				</div>
+				<img
+					className="project-page__img"
+					src={project.img[0]}
+					alt={project.name}
+				/>
+				<p className="project-page__title">{project.name}</p>
 				<div>
 					<span className="project-page__desc-title">Overview</span>
-					<p className="project-page__desc">{desc}</p>
+					<p className="project-page__desc">{project.desc}</p>
 				</div>
 				<div className="project-page__details">
-					{liveSite && (
-						<div className="project-page__link-container">
-							<div className="work-link__dot"></div>
-							<a
-								onMouseOver={interactCursor}
-								onMouseLeave={removeInteractCursor}
-								onMouseDown={removeInteractCursor}
-								onMouseUp={interactCursor}
-								href={liveSite}
-								target="_blank"
-							>
-								Live Site
-							</a>
-						</div>
-					)}
+					<div className="project-page__link-container">
+						<div className="work-link__dot"></div>
+						<a
+							onMouseOver={interactCursor}
+							onMouseLeave={removeInteractCursor}
+							onMouseDown={removeInteractCursor}
+							onMouseUp={interactCursor}
+							href={project.siteUrl}
+							target="_blank"
+						>
+							Live Site
+						</a>
+					</div>
 				</div>
 			</main>
 		</>
